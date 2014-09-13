@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+  <id>tag:linuxfr.org,2005:/news</id>
+  <link rel="alternate" type="text/html" href="http://linuxfr.org/news"/>
+  <link rel="self" type="application/atom+xml" href="http://linuxfr.org/news.atom"/>
+  <title>LinuxFr.org : les dÃ©pÃªches</title>
+  <updated>2014-03-15T12:05:54+01:00</updated>
+  <icon>/favicon.png</icon>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35140</id>
+    <published>2014-03-15T12:05:54+01:00</published>
+    <updated>2014-03-15T12:05:54+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/apache-ofbiz-s-invite-dans-l-usine"/>
+    <title>Apache-OFBiz s'invite dans l'usine</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;La sociÃ©tÃ© Nomaka annonce le lancement de la version 0.14.3 de l'extension (&lt;em&gt;add-on&lt;/em&gt;) de &lt;a href="http://fr.wikipedia.org/wiki/Gestion_de_la_production"&gt;suivi de production&lt;/a&gt; pour le &lt;a href="http://fr.wikipedia.org/wiki/progiciel%20de%20gestion%20int%C3%A9gr%C3%A9" title="DÃ©finition WikipÃ©dia"&gt;progiciel de gestion intÃ©grÃ©&lt;/a&gt; (ERP) Apache-OFBiz. Sous licence LGPL et s'appuyant sur le moteur et les fonctionnalitÃ©s d'OFBiz, cette extension permet Ã  OFBiz d'Ãªtre disponible dans l'atelier.&lt;/p&gt;
+
+&lt;p&gt;DivisÃ© en 2 parties, elle se compose d'une interface dÃ©diÃ©e au responsable de production disponible dans les applications OFBiz, ainsi qu'une interface autonome dÃ©diÃ©e Ã  l'atelier. Un soin particulier a Ã©tÃ© apportÃ© Ã  cette derniÃ¨re pour qu'elle soit efficace et adaptÃ©e Ã  un public non informaticien.&lt;/p&gt;
+
+&lt;p&gt;Cette premiÃ¨re version utilise la configuration de la &lt;a href="http://fr.wikipedia.org/wiki/Gestion_de_la_production_assist%C3%A9e_par_ordinateur"&gt;GPAO&lt;/a&gt; d'OFBiz pour avoir le suivi des opÃ©rations de production, mais Ã©voluera pour s'intÃ©grer Ã  la solution NÃ©ogia et sa gestion des ressources (MRP2). D'autres fonctionnalitÃ©s arriveront au cours de l'annÃ©e (traÃ§abilitÃ© matiÃ¨re, gestion des Ã©vÃ¨nements, tableaux de bords, etc.)&lt;/p&gt;
+
+&lt;p&gt;Venez dÃ©couvrir la solution de suivi de production lors de l'ApÃ©ro Libre organisÃ© par Alliance Libre, le 27 mars Ã  18h45, Ã  la cantine numÃ©rique de Nantes.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89619" hreflang="fr" title="http://www.nomaka.fr"&gt;Site de Nomaka&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89620" hreflang="en" title="http://www.ofbiz.org"&gt;Site d&amp;#x27;Apache-OFBiz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89621" hreflang="fr" title="http://www.neogia.org"&gt;Site de NÃ©ogia&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89623" hreflang="fr" title="http://www.alliance-libre.org/actualite/aperolibre-2014-03.html"&gt;Site d&amp;#x27;Alliance Libre - ApÃ©ro du Libre&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/687474703a2f2f7777772e6e6f6d616b612e66722f73697465732f64656661756c742f66696c65732f666f6c6c6f7775702d332d3830302e706e67/followup-3-800.png" alt="followup" title="Source : http://www.nomaka.fr/sites/default/files/followup-3-800.png"&gt;&lt;/p&gt;
+&lt;h4 id="apache-ofbiz"&gt;Apache-OFBiz&lt;/h4&gt;
+
+&lt;p&gt;Le projet Apache Open For Business (&lt;a href="http://fr.wikipedia.org/wiki/Apache_OFBiz"&gt;Apache-OFBiz&lt;/a&gt;) est un logiciel de type &lt;a href="http://fr.wikipedia.org/wiki/Progiciel_de_gestion_int%C3%A9gr%C3%A9"&gt;ERP&lt;/a&gt; (ou PGI en francais) constituÃ© d'un framework fonctionnel et d'applications dÃ©diÃ©es Ã  la gestion d'une entreprise (gestion commerciale, comptabilitÃ©, gestion de production, etc.).&lt;/p&gt;
+&lt;h4 id="le-projet-de-suivi-de-production"&gt;Le projet de suivi de production&lt;/h4&gt;
+
+&lt;p&gt;En s'appuyant sur les fonctionnalitÃ©s de l'ERP OFBiz, l'extension de suivi de production permet de connaitre en temps rÃ©el l'avancement des Ã©tapes de production.&lt;/p&gt;
+
+&lt;p&gt;Les opÃ©rations peuvent Ãªtre mises en pause et reprises Ã  volontÃ© par l'opÃ©rateur. Le temps passÃ© sur chaque opÃ©ration de production ainsi que le nombre de ruptures est enregistrÃ©&lt;/p&gt;
+
+&lt;p&gt;Ces informations sont utiles Ã  plusieurs services au sein de l'entreprise, l'aspect temps rÃ©el indique la disponibilitÃ© des commandes (responsable de production, commercial, client) et l'aspect statistique fournit les tendances liÃ©es Ã  la fabrication tels que les coÃ»ts (directeur) ou les temps moyens de production (responsable de production).&lt;/p&gt;
+
+&lt;p&gt;L'ensemble des informations permettra alors d'avoir des statistiques sur la fabrication des produits (coÃ»t de production, temps de production, etc.).&lt;/p&gt;
+&lt;h4 id="feuille-de-route-2014"&gt;Feuille de route 2014&lt;/h4&gt;
+
+&lt;p&gt;Le projet n'en est qu'Ã  ses dÃ©buts, mais prÃ©voit d'Ã©voluer pour devenir un incontournable de la gestion de production Libre et inclura prochainement les modules suivants : &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;framework gÃ©nÃ©ral
+
+&lt;ul&gt;
+&lt;li&gt;compatibilitÃ© NÃ©ogia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;interface atelier
+
+&lt;ul&gt;
+&lt;li&gt;gestion de la traÃ§abilitÃ© (lot, coulÃ©e, nÂ° de sÃ©rie, etc.)&lt;/li&gt;
+&lt;li&gt;gestion des Ã©vÃ¨nements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;interface bureau
+
+&lt;ul&gt;
+&lt;li&gt;tableaux de bords de gestion de production&lt;/li&gt;
+&lt;li&gt;suivi de la traÃ§abilitÃ©&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/apache-ofbiz-s-invite-dans-l-usine.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/apache-ofbiz-s-invite-dans-l-usine#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>juliennicolas</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>BAud</name>
+    </author>
+    <author>
+      <name>NÃ¿co</name>
+    </author>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <category term="Commercial"/>
+    <category term="mes"/>
+    <category term="gpao"/>
+    <category term="ofbiz"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101440/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35167</id>
+    <published>2014-03-15T11:09:19+01:00</published>
+    <updated>2014-03-15T11:09:18+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/pses2014-proposez-vos-hacks"/>
+    <title>PSES2014 - proposez vos hacks</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;La 5Ã¨me Ã©dition de Pas-sage en Seine aura lieu Ã  Paris du 26 au 29 juin 2014 Ã  NUMA. Comme tout les ans, tout le monde est bienvenue, l'entrÃ©e est libre, les confÃ©rences nombreuses, les ateliers sympas, et le club-matÃ© coule Ã  flot. &lt;/p&gt;
+
+&lt;p&gt;Les sujets abordÃ©s sont vastes et nombreux : sÃ©curitÃ©, cuisine (Laurent Chemla veut faire un atelier macaron), opendata, arts, surveillance, musique, cryptographie, Ã©ducation, (rÃ©tro)gaming, naturisme (ou j'ai peut-Ãªtre mal lu la proposition de talks de bortzmeyer), projection de filmâ€¦ il y en aura pour tout les goÃ»tsÂ !&lt;/p&gt;
+
+&lt;p&gt;En parallÃ¨le, vous pourrez trouver des ateliers sur comment chiffrer ses mails (GPG), protÃ©ger sa navigation, Ãªtre un peu plus anonyme (tor), chiffrer ses donnÃ©es, sÃ©curiser ton tÃ©lÃ©phoneâ€¦&lt;/p&gt;
+
+&lt;p&gt;La liste est encore longue, et il ne tient qu'Ã  vous de l'allonger encore plus en participantÂ !&lt;/p&gt;
+
+&lt;p&gt;Cette annÃ©e, nous avons 2 salles de confÃ©rences et 4 salles pour les ateliers/lightning talks&lt;/p&gt;
+
+&lt;p&gt;Si vous avez peur de proposer un talk, ou que vous Ãªtes timides, il y a un dÃ©but Ã  tout, et c'est le bon endroit oÃ¹ commencerÂ ;-).&lt;/p&gt;
+
+&lt;p&gt;Ã€ bientÃ´t o/&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89716" hreflang="fr" title="http://passageenseine.org/"&gt;Le site de l&amp;#x27;Ã©vÃ¨nement&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89717" hreflang="fr" title="http://www.passageenseine.org/Passage/call-for-hacks"&gt;Call for papers/hacks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89718" hreflang="fr" title="http://www.passageenseine.org/Passage/archives/pses-2013/pas-sage-en-seine-2013"&gt;Prog&amp;#x27; 2013&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89719" hreflang="fr" title="http://www.passageenseine.org/Passage/archives/pses-2012"&gt;Prog&amp;#x27; 2012&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°5 : &lt;a href="http://linuxfr.org/redirect/89720" hreflang="fr" title="http://www.passageenseine.org/Passage/archives/pses-2011"&gt;Prog&amp;#x27; 2011&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°6 : &lt;a href="http://linuxfr.org/redirect/89721" hreflang="fr" title="http://www.passageenseine.org/Passage/archives/pses-2010"&gt;Prog&amp;#x27; 2010&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°7 : &lt;a href="http://linuxfr.org/redirect/89722" hreflang="fr" title="https://www.numaparis.com"&gt;NUMA&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°8 : &lt;a href="http://linuxfr.org/redirect/89723" hreflang="fr" title="https://twitter.com/passageenseine"&gt;Twitter @passageenseine&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/pses2014-proposez-vos-hacks.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/pses2014-proposez-vos-hacks#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>skhaen</name>
+    </author>
+    <author>
+      <name>NÃ¿co</name>
+    </author>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <category term="Culture"/>
+    <category term="seine"/>
+    <category term="sage"/>
+    <category term="2014"/>
+    <category term="pses"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101521/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35170</id>
+    <published>2014-03-15T10:23:30+01:00</published>
+    <updated>2014-03-15T10:23:30+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/l-erp-openconcerto-disponible-en-version-1-3"/>
+    <title>L'ERP OpenConcerto disponible en version 1.3</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;La version 1.3 du logiciel OpenConcerto vient de sortir. OpenConcerto est un logiciel complet de gestion dâ€™entreprise incluant : gestion commerciale, comptabilitÃ© et paye. Il dispose aussi dâ€™une interface de caisse pour les points de vente.&lt;/p&gt;
+
+&lt;p&gt;OpenConcerto est disponible pour Linux, Macâ€¯OSâ€¯X et Windows. Une version Cloud est proposÃ©e pour une solution clef en main.&lt;/p&gt;
+
+&lt;p&gt;Le logiciel, sous licence GPL, est tÃ©lÃ©chargeable dÃ¨s maintenant en version 1.3 sur toutes les platesâ€formes prises en charge en versions monoposte et multiposte. La version 1.3 est l'occasion d'intÃ©grer de nouveaux modules ainsi qu' une interface graphique de crÃ©ation d'extensions (modules simplifiÃ©s) qui permet d'ajouter de nouvelles fonctionnalitÃ©s sans Ã©crire la moindre ligne de code.&lt;/p&gt;
+
+&lt;p&gt;Ã€ la diffÃ©rence des solutions habituelles du secteur que lâ€™on peut trouver dans les logiciels libres, OpenConcerto nâ€™est pas une application Web, mais une application riche. Avec lâ€™ajout de modules spÃ©cifiques, OpenConcerto constitue un PGI (ERP) vÃ©loce et adaptable. Il est actuellement utilisÃ© en production dans des sociÃ©tÃ©s avec plus de 150 utilisateurs simultanÃ©s.&lt;/p&gt;
+
+&lt;p&gt;Cette application Ã©crite en Java repose sur des bases de donnÃ©es libres, dont PostgreSQL et H2.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89731" hreflang="fr" title="http://www.openconcerto.org"&gt;Site officiel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89732" hreflang="fr" title="http://openconcerto.org/fr/version_1.3.html"&gt;NouveautÃ©s de la version 1.3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89733" hreflang="fr" title="http://www.openconcerto.org/fr/telechargement.html"&gt;Page de tÃ©lÃ©chargement&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89734" hreflang="fr" title="http://cloud.openconcerto.org"&gt;L&amp;#x27;offre Cloud&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°5 : &lt;a href="http://linuxfr.org/redirect/89735" hreflang="fr" title="http://www.openconcerto.org/fr/documentation.html"&gt;Le manuel&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;OpenConcerto est un progiciel de gestion intÃ©grÃ© (PGI, ERP en anglais pour Enterprise Resource Planning) proche en architecture de Microsoft Dynamics Nav.  Au niveau des fonctionnalitÃ©s, vous trouverez les grands classiques des produits Â«Â en boÃ®teÂ Â», mais Ã©galement les Ã©lÃ©ments dâ€™un PGI complet, comme la gestion multiâ€sociÃ©tÃ©s, multiâ€postes, multiâ€utilisateurs ou encore la traÃ§abilitÃ©.&lt;/p&gt;
+
+&lt;p&gt;Devis, factures, avoirs, commandes, rÃ¨glements et bons de livraison, tout y est. Le logiciel permet de gÃ©rer facilement clients, fournisseurs, achats, ventes, articles et stocks. La gestion commerciale est directement liÃ©e Ã  la comptabilitÃ© (norme franÃ§aise) ce qui Ã©vite les doubles saisies.&lt;/p&gt;
+
+&lt;p&gt;Lâ€™accent est portÃ© pour lâ€™instant sur le retour utilisateur, afin de pouvoir fournir une base la plus complÃ¨te possible. Le logiciel sâ€™adresse Ã  un public large :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lâ€™autoâ€entrepreneur, qui y trouvera de quoi rÃ©aliser devis, factures, paye et comptabilitÃ©â€¯;&lt;/li&gt;
+&lt;li&gt;la petite entreprise, qui y verra une solution multiposte complÃ¨teâ€¯;&lt;/li&gt;
+&lt;li&gt;la moyenne entreprise qui, Ã©conomisant un coÃ»t de licence, pourra investir dans la crÃ©ation de modules spÃ©cifiques Ã  son activitÃ©.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;En plus de la rÃ©solution attendue des bogues de la version 1.2, et d'un grand nombre d'amÃ©liorations de l'interface, OpenConcerto 1.3 apporte principalement :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;la gestion des factures intermÃ©diaires et de solde  (factures d'acomptes, de situtationâ€¦)&lt;/li&gt;
+&lt;li&gt;de nouveaux exports (dont FEC)&lt;/li&gt;
+&lt;li&gt;les extensions&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Il est Ã  noter que, pour une utilisation professionnelle, sont proposÃ©s : formation, manuel et contrat de maintenance. &lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/l-erp-openconcerto-disponible-en-version-1-3.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/l-erp-openconcerto-disponible-en-version-1-3#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Guillaume Maillard</name>
+    </author>
+    <author>
+      <name>tankey</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <author>
+      <name>NÃ¿co</name>
+    </author>
+    <category term="Commercial"/>
+    <category term="gestion"/>
+    <category term="comptabilitÃ©"/>
+    <category term="erp"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101532/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35171</id>
+    <published>2014-03-14T21:15:32+01:00</published>
+    <updated>2014-03-15T12:33:23+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/chiffrofete-a-numa-paris-le-29-mars-2014"/>
+    <title>ChiffrofÃªte Ã  Numa Paris le 29 mars 2014</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Qu'est ce qu'une chiffrofÃªteÂ ? Le terme de &lt;em&gt;cryptoparty&lt;/em&gt; (contraction de &lt;em&gt;crypto&lt;/em&gt; - chiffrement et &lt;em&gt;party&lt;/em&gt; - fÃªte) est souvent francisÃ© en cryptopartie mais nous utilisons le terme de chiffrofÃªte (contraction de chiffrement et fÃªte) qui se veut une traduction moins connotÃ©e de ce terme. L'autre appellation que nous utilisons pour ce mÃªme type d'Ã©vÃ¨nement Ã©tant le CafÃ© vie privÃ©e. &lt;/p&gt;
+
+&lt;p&gt;Les outils techniques qui permettent de conserver un peu de vie privÃ©e sur un rÃ©seau Internet oÃ¹ nous sommes constamment espionnÃ©s et surveillÃ©s (par les publicitaires, les rÃ©seaux sociaux, les gouvernementsâ€¦) ne doivent pas Ãªtre lâ€™apanage dâ€™une petite poignÃ©e de gens plus habiles que les autres avec lâ€™informatique. Chacun est en droit de s'approprier, Ã  la hauteur de son niveau de comprÃ©hension, de ses besoins, de ses envies, ses diffÃ©rents outils.&lt;/p&gt;
+
+&lt;p&gt;Les chiffrofÃªtes sont donc des Ã©vÃ©nements dÃ©diÃ©s Ã  lâ€™apprentissage de la sÃ©curitÃ© des communications en environnement numÃ©rique (Internet, mais Ã©galement tÃ©lÃ©phoniques (SMS)). Le maitre mot Ã©tant la pÃ©dagogie.&lt;/p&gt;
+
+&lt;p&gt;La prochaine ChiffrofÃªte aura donc lieu Ã  Numa Paris, au 39, rue du Caire (Paris 2e) le 29 mars 2014.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89742" hreflang="fr" title="https://events.numaparis.com/Evenements/Chiffro-fete-3.0"&gt;Annonce de la chiffrofÃªte sur le site de Numa&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89743" hreflang="fr" title="http://www.openstreetmap.org/?mlat=48.86766&amp;amp;mlon=2.34959#map=19/48.86766/2.34959"&gt;Numa Paris sur OpenStreetMap&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Quel est le public ciblÃ©/concernÃ© par les chiffrofÃªtesÂ ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Le public est divers et variÃ© :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;journalistes&lt;/li&gt;
+&lt;li&gt;scolaires (lycÃ©ens, Ã©tudiants)&lt;/li&gt;
+&lt;li&gt;grand public (tout Ã¢ge confondu)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;D'une faÃ§on gÃ©nÃ©rale, ce peut Ãªtre toute personne sensibilisÃ©e/concernÃ©e par les problÃ©matiques de la vie privÃ©e, de la sÃ©curisation de ses communicationsâ€¦&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Comment se dÃ©roule la chiffrofÃªteÂ ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;En dÃ©but de sÃ©ance, un petit sondage/tour de table permet de dÃ©finir les attentes et les ateliers qui seront menÃ©s durant l'aprÃ¨s-midi.&lt;/p&gt;
+
+&lt;p&gt;La durÃ©e conseillÃ©e pour les ateliers Ã©tant de 1h30 et deux ateliers successifs semblent suffisants pour commencer (cela fait 3h avec une pause entre les deux).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quels sont les ateliers possibles?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Chaque atelier s'articule d'une technologie, un logiciel ou une thÃ©matique donnÃ©e et la liste suivante est non exhaustive.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OTR â€œoff the recordâ€&lt;/li&gt;
+&lt;li&gt;Tor : prÃ©sentation de Tor, utilisation via le Tor Browser bundle et/ou le live-cd Tails&lt;/li&gt;
+&lt;li&gt;TrueCrypt (NdM : gratuit et Ã  code source disponible, mais non sous une licence libre) : prÃ©sentation, crÃ©ation d'un conteneur chiffrÃ©, utilisation avancÃ©e (Conteneur cachÃ©)&lt;/li&gt;
+&lt;li&gt;GPG : Thunderbird et Enigmail, crÃ©ation et gestion des clefs, rÃ©seau de confianceâ€¦&lt;/li&gt;
+&lt;li&gt;le &lt;em&gt;tracking&lt;/em&gt; sur Internet : utilisation d'extensions pour Firefox&lt;/li&gt;
+&lt;li&gt;Darknet : I2P etc.&lt;/li&gt;
+&lt;li&gt;crypto avancÃ©e : installation et configuration d'un serveur de fichiers chiffrÃ© et distribuÃ© (TAHOE-LAFS, Luks et autres), liste de diffusion chiffrÃ©e sur serveur chiffrÃ©â€¦&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Quels sont les lieux susceptibles d'accueillir une chiffrofÃªteÂ ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Les chiffrofÃªtes Ã©tant destinÃ©es Ã  un public variÃ©, du grand public aux utilisateurs plus avancÃ©, les lieux peuvent Ãªtre des mÃ©diathÃ¨ques, des salons informatiquesâ€¦&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Qui peut faire une chiffrofÃªteÂ ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Toute personne qui a les connaissances minimales et qui souhaite les partager peut se lancer dans la mise en place de sa propre chiffrofÃªte.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quelques slogans peut-on utiliser pour promouvoir les chiffrofÃªtesÂ ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Venez apprendre Ã  protÃ©ger vos communications en ligneÂ !&lt;/li&gt;
+&lt;li&gt;Chiffrement et anonymat : reprenez le contrÃ´le de votre vie privÃ©e.&lt;/li&gt;
+&lt;li&gt;Surfez &amp;amp; chattez couverts avec des cypherpunks gentils.&lt;/li&gt;
+&lt;li&gt;Parce que prÃ©server sa vie privÃ©e est un droit,&lt;/li&gt;
+&lt;li&gt;Parce quâ€™on peut avoir envie de ne pas Ãªtre espionnÃ©,&lt;/li&gt;
+&lt;li&gt;Parce que l'on a TOUS quelque chose Ã  cacher,&lt;/li&gt;
+&lt;li&gt;Parce que les outils existent et ne sont pas si compliquÃ©sâ€¦&lt;/li&gt;
+&lt;li&gt;Venez apprendre Ã  vous protÃ©ger en ligneÂ !&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Et le logiciel libre dans tout Ã§aÂ ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;DÃ¨s que possible, &lt;strong&gt;c'est le logiciel libre qui est privilÃ©giÃ©&lt;/strong&gt;. Toutefois, chacun vient avec son ordinateur et quel que soit le systÃ¨me d'exploitation (GNU/Linux, MacOSX, Windows, Android), les logiciels les plus adaptÃ©s (du logiciel libre essentiellement) sont proposÃ©s, installÃ©s.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/chiffrofete-a-numa-paris-le-29-mars-2014.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/chiffrofete-a-numa-paris-le-29-mars-2014#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>genma</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <category term="SÃ©curitÃ©"/>
+    <category term="numa"/>
+    <category term="cryptopartie"/>
+    <category term="chiffrofÃªte"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101542/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35168</id>
+    <published>2014-03-14T15:20:02+01:00</published>
+    <updated>2014-03-14T15:20:02+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/install-party-gnu-linux-le-29-mars-2014-a-marseille"/>
+    <title>Install Party GNU/Linux le 29 mars 2014 Ã  Marseille</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Lâ€™association &lt;strong&gt;CercLL&lt;/strong&gt; (CercLL dâ€™Entraide et RÃ©seau CoopÃ©ratif autour des Logiciels Libres) Ã  lâ€™occasion de la &lt;strong&gt;12Ã¨me Ã©dition&lt;/strong&gt; de &lt;strong&gt;Libre en FÃªte&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;vous invite Ã  une install party &lt;strong&gt;GNU/Linux&lt;/strong&gt;, le samedi 29 mars 2014 de 14h30 Ã  19h30, dans la salle de la &lt;strong&gt;Fabulerie&lt;/strong&gt; au 4 rue de la BibliothÃ¨que 13001 Marseille  (prÃ¨s du Conservatoire).&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89724" hreflang="fr" title="http://cercll.wordpress.com/"&gt;CercLL&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89725" hreflang="fr" title="http://www.agendadulibre.org/showevent.php?id=8309"&gt;Agenda du Libre&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89726" hreflang="fr" title="http://www.openstreetmap.org/node/2118530202#map=19/43.29531/5.38390"&gt;Openstreetmap&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;Vous avez envie de dÃ©couvrir un systÃ¨me dâ€™exploitation libre, simple dâ€™utilisation, stable, rapide et sÃ©curisÃ©. Une nouvelle faÃ§on dâ€™utiliser votre ordinateur.&lt;/p&gt;
+
+&lt;p&gt;Vous vous sentez une affection naissante pour le Gnou et le Manchot, les mascottes de GNU/Linux.&lt;/p&gt;
+
+&lt;p&gt;Au programme :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;DÃ©couverte de lâ€™univers des logiciels libres&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Installation dâ€™un environnement GNU/Linux, ainsi que le meilleur des logiciels libres&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DÃ©monstration de jeux vidÃ©o sous Linux&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Venez avec votre ordinateur nous installerons ensemble une distribution  GNU/Linux  avec un ensemble de logiciels libres et gratuits pour une utilisation quotidienne.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EntrÃ©e libre&lt;/strong&gt; â€“ &lt;strong&gt;accessible aux dÃ©butants&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Plus dâ€™informations sur lâ€™initiative &lt;strong&gt;Libre  en  FÃªte&lt;/strong&gt; sur le site officiel &lt;a href="http://www.libre-en-fete.net/"&gt;http://www.libre-en-fete.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="//img.linuxfr.org/img/687474703a2f2f636572636c6c2e66696c65732e776f726470726573732e636f6d2f323031342f30322f616666696368656d617273356c696272652d656e2d66657465323031342e706e673f773d35313226683d373234/affichemars5libre-en-fete2014.png?w=512&amp;amp;h=724" alt="Affiche" title="Source : http://cercll.files.wordpress.com/2014/02/affichemars5libre-en-fete2014.png?w=512&amp;amp;h=724"&gt;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/install-party-gnu-linux-le-29-mars-2014-a-marseille.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/install-party-gnu-linux-le-29-mars-2014-a-marseille#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>CercLL</name>
+    </author>
+    <author>
+      <name>Pierre Jarillon</name>
+    </author>
+    <category term="Lug"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101526/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35166</id>
+    <published>2014-03-14T15:14:17+01:00</published>
+    <updated>2014-03-16T11:07:56+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/chiffrement-vie-privee-et-logiciel-libre"/>
+    <title>Chiffrement, vie privÃ©e et logiciel libre</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Quelques actualitÃ©s rÃ©centes autour de la sÃ©curitÃ©, de la vie privÃ©e et du logiciel libre :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;l'avocat M&lt;sup&gt;e&lt;/sup&gt; Eolas qui nous parle de secret professionnel, de chiffrement et de logiciel libreÂ ;&lt;/li&gt;
+&lt;li&gt;FrÃ©dÃ©ric Couchet et Lionel Allorge (April) qui donnent la prioritÃ© au logiciel libre pour une informatique de confianceÂ ;&lt;/li&gt;
+&lt;li&gt;JÃ©rÃ©mie Zimmermann (la Quadrature du net) qui rappelle l'importance de l'humain et l'existence d'outils libres pour protÃ©ger les Ã©changesÂ ;&lt;/li&gt;
+&lt;li&gt;le lanceur d'alertes Edward Snowden qui Ã©voque l'importance du chiffrement et divers outils libres pour protÃ©ger la vie privÃ©eÂ ;&lt;/li&gt;
+&lt;li&gt;le journaliste Jean-Marc Manach qui explique comment protÃ©ger ses sourcesÂ ;&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Tout Ã§a et plus dans la seconde partie de la dÃ©pÃªche.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/687474703a2f2f676e7570672e6f72672f73686172652f6c6f676f2d676e7570672d6c696768742d707572706c652d62672e706e67/logo-gnupg-light-purple-bg.png" alt="GnuPG" title="Source : http://gnupg.org/share/logo-gnupg-light-purple-bg.png"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;l'avocat blogueur M&lt;sup&gt;e&lt;/sup&gt; Eolas, dans un &lt;a href="http://www.maitre-eolas.fr/post/2014/03/08/All%C3%B4-oui-j-%C3%A9coute"&gt;article sur les Ã©coutes administratives et judiciaires&lt;/a&gt; Ã©voque les bonnes pratiques que les avocats devraient avoir pour protÃ©ger le secret professionel : Â«Â &lt;em&gt;La protection de notre secret nous incombe au premier chef. Le tÃ©lÃ©phone doit servir exclusivement Ã  des banalitÃ©s. (â€¦) Il est plus que temps que nous utilisions TOUS des solutions de chiffrement de mails et de piÃ¨ces jointes comme OpenPGP (câ€™est efficace et gratuit), des logiciels comme TrueCrypt [NdM: voir la &lt;a href="//linuxfr.org/news/chiffrement-vie-privee-et-logiciel-libre#comment-1526337"&gt;discussion sur sa licence&lt;/a&gt; qui serait non libre], gratuit aussi, pour chiffrer nos fichiers (avec des sauvegardes idoines bien sÃ»r). Ce sont des logiciels libres, que vous paierez par des dons du montant que vous souhaiterez au rythme que vous souhaiterez (â€¦)&lt;/em&gt;Â Â» Voir aussi &lt;a href="http://reflets.info/secret-des-correspondances-pour-les-avocats-non-plus-ca-ne-tombe-pas-du-ciel/"&gt;la version plus directe de Reflets.info&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/68747470733a2f2f7777772e746f7270726f6a6563742e6f72672f696d616765732f746f722d6c6f676f2e6a7067/tor-logo.jpg" alt="Tor" title="Source : https://www.torproject.org/images/tor-logo.jpg"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FrÃ©dÃ©ric Couchet et Lionel Allorge (respectivement dÃ©lÃ©guÃ© gÃ©nÃ©ral et prÃ©sident de l'association April) &lt;a href="http://www.april.org/l-apres-snowden-donner-la-priorite-au-logiciel-libre-pour-une-informatique-de-confiance"&gt;ont publiÃ© une tribune&lt;/a&gt; &lt;em&gt;Lâ€™aprÃ¨s-Snowden : donner la prioritÃ© au logiciel libre pour une informatique de confiance&lt;/em&gt; dans le quotidien franÃ§ais LibÃ©ration le 25 fÃ©vrier dernier (dÃ©jÃ  Ã©voquÃ© &lt;a href="//linuxfr.org/news/revue-de-presse-de-l-april-pour-la-semaine-9-de-l-annee-2014"&gt;dans la revue de presse April&lt;/a&gt;) : Â«Â &lt;em&gt;Le logiciel libre n'est certainement pas la solution ultime et unique Ã  cette problÃ©matique, mais il constitue une brique essentielle et nÃ©cessaire dans le combat pour les libertÃ©s.&lt;/em&gt;Â Â» On pourra aussi retrouver une discussion &lt;a href="http://reflets.info/lapres-snowden-la-confidentialite-cest-pas-simple-comme-linstallation-dubuntu/"&gt;Lâ€™aprÃ¨s Snowden : la confidentialitÃ©, câ€™est pas simple comme lâ€™installation dâ€™Ubuntu&lt;/a&gt;  chez Reflets.info.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/68747470733a2f2f6f74722e63797068657270756e6b732e63612f68656c702f332e322e302f636f6e762d6d656e7561757468656e7469636174652e706e67/conv-menuauthenticate.png" alt="Pidgin + OTR" title="Source : https://otr.cypherpunks.ca/help/3.2.0/conv-menuauthenticate.png"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JÃ©rÃ©mie Zimmermann (co-fondateur de La Quadrature du net) Ã©voque dans l'entretien Â«Â &lt;a href="http://www.atlantico.fr/decryptage/surveillance-numerique-generalisee-capacite-proteger-vie-privee-va-t-elle-devenir-comble-luxe-jeremie-zimmermann-1006880.html"&gt;Surveillance numÃ©rique gÃ©nÃ©ralisÃ©e : la capacitÃ© Ã  protÃ©ger sa vie privÃ©e va-t-elle devenir le comble du luxeÂ ?&lt;/a&gt;Â Â» : Â«Â &lt;em&gt;Aujourd'hui la confiance, donc notre  protection passe par l'Ã©change avec des humains, des humaines, qui utilisent des outils, dÃ©jÃ  sur la table : des logiciels libres, des services dÃ©centralisÃ©sâ€¦ conÃ§us par les citoyens pour les citoyens. (â€¦) Il faut commencer par l'humain.&lt;/em&gt;Â Â»&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/687474703a2f2f6e6f7363726970742e6e65742f6e6f7363726970742f6c6f676f2e706e67/logo.png" alt="NoScript" title="Source : http://noscript.net/noscript/logo.png"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;le lanceur d'alerte Edward Snowden dans une confÃ©rence Ã  SXSW &lt;a href="http://www.lemonde.fr/technologies/article/2014/03/10/edward-snowden-a-sxsw-la-nsa-met-le-feu-a-internet-vous-etes-les-pompiers-qui-peuvent-la-sauver_4380705_651865.html"&gt;cite divers outils libres&lt;/a&gt; comme Tor, NoScript, etc. pour protÃ©ger la vie privÃ©e.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/687474703a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32652f48545450535f457665727977686572655f6c6f676f2e6a70672f393670782d48545450535f457665727977686572655f6c6f676f2e6a7067/96px-HTTPS_Everywhere_logo.jpg" alt="HTTPS Everywhere" title="Source : http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/HTTPS_Everywhere_logo.jpg/96px-HTTPS_Everywhere_logo.jpg"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;le journaliste Jean-Marc Manach a publiÃ© &lt;a href="http://bugbrother.blog.lemonde.fr/comment-proteger-ses-sources/"&gt;Comment protÃ©ger ses sourcesÂ ?&lt;/a&gt; : Â«Â &lt;em&gt;Le mieux, pour ceux qui sont amenÃ©s Ã  se connecter en territoire hostile, (â€¦) est encore d'utiliser Tails ("The Amnesic Incognito Live System") (â€¦) il est impossible de faire confiance aux logiciels propriÃ©taires, qui -contrairement aux logiciels libres- interdisent de vÃ©rifier l'intÃ©gritÃ© de leurs codes sources, et donc la prÃ©sence de failles de sÃ©curitÃ©, ou de portes dÃ©robÃ©es. (â€¦) Tails rÃ©unit l'essentiel des outils et logiciels (libres) permettant de communiquer en toute sÃ©curitÃ©.&lt;/em&gt;Â Â» Et cite de nombreux autres logiciels libres. Voir aussi &lt;a href="http://www.pcinpact.com/news/85644-14h42-la-vie-privee-est-elle-morte-ou-cherche-t-on-a-vous-faire-croire.htm"&gt;l'Ã©mission #14h42 : La vie privÃ©e est-elle morte, ou cherche-t-on Ã  vous le faire croireÂ ?&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/chiffrement-vie-privee-et-logiciel-libre.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/chiffrement-vie-privee-et-logiciel-libre#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>tankey</name>
+    </author>
+    <author>
+      <name>NeoX</name>
+    </author>
+    <category term="SÃ©curitÃ©"/>
+    <category term="chiffrement"/>
+    <category term="vie_privÃ©e"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101518/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35165</id>
+    <published>2014-03-13T14:53:39+01:00</published>
+    <updated>2014-03-13T14:53:38+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/deploiement-automatise-d-applications-ruby-on-rails-a-mons-le-20-mars"/>
+    <title>DÃ©ploiement automatisÃ© dâ€™applications Ruby on Rails Ã  Mons le 20 mars</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Ce &lt;strong&gt;jeudi 20 mars 2014 Ã  19h&lt;/strong&gt; se dÃ©roulera la 27Ã¨me sÃ©ance montoise des Jeudis du Libre de Belgique.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ThÃ©matique&lt;/strong&gt; : Internet|sysadmin|dÃ©veloppement&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Public&lt;/strong&gt; : sysadmin|entreprises|Ã©tudiants&lt;/p&gt;
+
+&lt;p&gt;Lâ€™animateur confÃ©rencier : &lt;strong&gt;Etienne Charlier&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt; : terme issu de la contraction des mots anglais &lt;em&gt;development&lt;/em&gt; (dÃ©veloppement) et &lt;em&gt;operations&lt;/em&gt; (exploitation), le DevOps est une approche industrielle recouvrant un ensemble de techniques et de principes visant Ã  faciliter la mise Ã  disposition des applications en rÃ©conciliant les Ã©tapes de dÃ©veloppement et de dÃ©ploiement. Cette prÃ©sentation portera sur le DevOps. Cependant, elle ne fera quâ€™effleurer le cÃ´tÃ© purement &lt;em&gt;Ops&lt;/em&gt; du DevOps (i.e. le passage Ã  lâ€™Ã©chelle, lâ€™adaptation Ã  la charge, â€¦) pour se concentrer sur les contraintes pour les dÃ©veloppeurs. Le sujet sera dÃ©veloppÃ© au travers dâ€™un exemple basÃ© sur Ruby et le framework Ruby on Rails (RoR).&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89711" hreflang="fr" title="http://jeudisdulibre.be/"&gt;Jeudis du Libre&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89712" hreflang="fr" title="http://jeudisdulibre.fikket.com/"&gt;Inscription&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89713" hreflang="fr" title="http://www.openstreetmap.org/?mlat=50.46138&amp;amp;mlon=3.95800#map=18/50.46138/3.95800"&gt;Plan OSM&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89714" hreflang="fr" title="https://www.cetic.be/"&gt;Cetic&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;Le dÃ©ploiement dâ€™applications Ruby on Rails pose des difficultÃ©s spÃ©cifiques, principalement la non synchronisation des versions de dÃ©pendances logicielles entre, dâ€™une part, ce qui est disponible dans les dÃ©pÃ´ts des distributions GNU/Linux (Ubuntu) et, dâ€™autre part, les nÃ©cessitÃ©s des applications Ruby on Rails. Lors de cette prÃ©sentation, vous dÃ©couvrirez:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comment mettre un place un environnement de dÃ©veloppement orientÃ© DevOps sur votre ordinateur (Mac ou Ubuntu)Â ?&lt;/li&gt;
+&lt;li&gt;Comment configurer et utiliser des outils tels que Virtualbox, Vagrant, Puppet et CapistranoÂ ?&lt;/li&gt;
+&lt;li&gt;Comment dÃ©ployer les logiciels finalisÃ©s sur une machine virtuelle Amazon EC2Â ?&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Lieu de cette sÃ©ance : Campus technique (ISIMs) de la Haute Ecole en Hainaut, Avenue V. Maistriau, 8a, Salle AcadÃ©mique, 2e bÃ¢timent (cf. &lt;a href="http://www.heh.be/article-19-Plan-d-acces-a-la-categorie-technique-ISIMs-de-la-HEH"&gt;ce plan sur le site de lâ€™ISIMs&lt;/a&gt;, et &lt;a href="http://www.openstreetmap.org/?mlat=50.46138&amp;amp;mlon=3.95800#map=18/50.46138/3.95800"&gt;ici sur la carte Openstreetmap&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;La participation sera gratuite et ne nÃ©cessitera que votre inscription nominative, de prÃ©fÃ©rence prÃ©alable, ou Ã  lâ€™entrÃ©e de la sÃ©ance. Merci dâ€™indiquer votre intention en vous inscrivant via la page &lt;a href="http://jeudisdulibre.fikket.com/"&gt;http://jeudisdulibre.fikket.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cette sÃ©ance sera suivie dâ€™un verre de lâ€™amitiÃ©, offert par la catÃ©gorie technique de la Haute Ecole en Hainaut (lâ€™ISIMs).&lt;/p&gt;
+
+&lt;p&gt;Si vous Ãªtes intÃ©ressÃ©(e) par ce cycle mensuel, nâ€™hÃ©sitez pas Ã  consulter lâ€™agenda et Ã  vous inscrire sur la liste de diffusion afin de recevoir systÃ©matiquement les annonces.&lt;/p&gt;
+
+&lt;p&gt;Pour rappel, les Jeudis du Libre se veulent des rencontres autour de thÃ©matiques des Logiciels Libres. Les rencontres montoises se dÃ©roulent chaque troisiÃ¨me jeudi du mois, et sont organisÃ©es dans des locaux et en collaboration avec des Hautes Ã‰coles et FacultÃ©s Universitaires du PÃ´le Hainuyer dâ€™enseignement supÃ©rieur impliquÃ©es dans les formations dâ€™informaticiens (UMONS, HEH et Condorcet), et avec le concours de lâ€™A.S.B.L. &lt;a href="http://www.loligrub.be/blog/"&gt;LoLiGrUB&lt;/a&gt;, active dans la promotion des logiciels libres.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/deploiement-automatise-d-applications-ruby-on-rails-a-mons-le-20-mars.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/deploiement-automatise-d-applications-ruby-on-rails-a-mons-le-20-mars#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Francois Bayart</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>tankey</name>
+    </author>
+    <category term="CommunautÃ©"/>
+    <category term="intÃ©gration"/>
+    <category term="ruby"/>
+    <category term="jeudisdulibre"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101511/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35149</id>
+    <published>2014-03-13T14:44:24+01:00</published>
+    <updated>2014-03-13T14:44:24+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/appel-a-dons-pour-le-logiciel-de-montage-video-pitivi"/>
+    <title>Appel Ã  dons pour le logiciel de montage vidÃ©o Pitivi</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;&lt;a href="http://pitivi.org/"&gt;Pitivi&lt;/a&gt; est un logiciel de montage vidÃ©o sous linux. Les auteurs lancent une &lt;a href="http://fundraiser.pitivi.org/"&gt;campagne&lt;/a&gt; de dons pour la sortie de la version 1.0 du logiciel, puis pour des fonctionnalitÃ©s Ã  choisir par les donateurs. La campagne passe par la fondation Gnome. &lt;/p&gt;
+
+&lt;p&gt;&lt;abbr title="Note des modÃ©rateurs"&gt;NdM&lt;/abbr&gt; : merci Ã  Axone pour son journal.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89664" hreflang="fr" title="http://linuxfr.org/users/axone/journaux/appel-a-dons-chez-pitivi"&gt;Journal Ã  l&amp;#x27;origine de la dÃ©pÃªche&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89665" hreflang="en" title="http://pitivi.org/"&gt;Site de Pitvi&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89666" hreflang="en" title="http://fundraiser.pitivi.org/"&gt;Participer Ã  la campagne de dons pour Pitivi&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;(NdM: dans la suite du texte, Â«Â jeÂ Â» dÃ©signe l'auteur du journal initial, Ã  savoir Axone)&lt;/p&gt;
+
+&lt;p&gt;Le but est d'atteindre 35.000 euros, pour travailler Ã  plein temps sur cette sortie majeure. Ensuite, l'argent rÃ©coltÃ© en plus servira Ã  financer des fonctionnalitÃ©s Ã©lues par les donateurs parmi un choix prÃ©sentÃ© sur la page de la campagne. Toutes ces fonctionnalitÃ©s sont chiffrÃ©es en terme de coÃ»ts (cela va de 425 Ã  22.192 euros).&lt;/p&gt;
+
+&lt;p&gt;Ã€ noter que plus on donne, plus on a des droits Ã  voter, sans que cela soit linÃ©aire mais logarithmique selon la volontÃ© des auteurs. Autrement dit, donner deux fois plus qu'un autre, ne donne pas droit Ã  deux fois plus de votes.&lt;/p&gt;
+
+&lt;p&gt;Cette campagne m'a l'air bien rÃ©alisÃ©e, je pense que je vais y participer. MÃªme si je ne me sers pas (encore pour l'instantÂ ?) de Pitivi, j'aime bien ce projet. Je me rappelle d'une interview il y a quelques annÃ©es oÃ¹ les auteurs expliquaient qu'ils travaillaient d'abord Ã  bien stabiliser les fondations. C'est pourquoi ils avaient beaucoup contribuÃ©s Ã  gstreamer (la base de Pitivi), pour chasser plein de bugs dedans. Ce fut une pÃ©riode assez longue pour eux oÃ¹ finalement rien de bien visible nesortait, mais ce fut nÃ©cessaire pour la suite du projet.&lt;/p&gt;
+
+&lt;p&gt;D'une maniÃ¨re plus gÃ©nÃ©rale, j'aime bien ces appels Ã  dons, mais le problÃ¨me Ã  chaque fois est la multiplication des plate-formes de dons. Ce qui demande Ã  chaque fois d'ouvrir un nouveau compte et cela me gÃªne, je veux limiter le nombre de mes comptes. J'ai failli participer au plugin gimp sur &lt;a href="http://funding.openinitiative.com/funding/1578/"&gt;Openfunding&lt;/a&gt;, mais quelque chose me rebute sur cette plate-forme. J'aime bien Ulule oÃ¹ on a pu procÃ©der Ã  la &lt;a href="http://fr.ulule.com/liberation-cahier-admin-debian/"&gt;LibÃ©ration&lt;/a&gt; d'un livre sur Debian.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/appel-a-dons-pour-le-logiciel-de-montage-video-pitivi.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/appel-a-dons-pour-le-logiciel-de-montage-video-pitivi#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>BAud</name>
+    </author>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>M5oul</name>
+    </author>
+    <author>
+      <name>Axone</name>
+    </author>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <author>
+      <name>Jeff</name>
+    </author>
+    <category term="Audiovisuel"/>
+    <category term="campagne_dons"/>
+    <category term="dons"/>
+    <category term="pitivi"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101470/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35155</id>
+    <published>2014-03-13T11:36:31+01:00</published>
+    <updated>2014-03-13T11:36:31+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/caranille-4-5-1-un-editeur-de-mmorpg-en-php"/>
+    <title>Caranille 4.5.1, un Ã©diteur de MMORPG en PHP</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Caranille est un projet qui vient de fÃªter ses trois ans dâ€™existence. C'est un logiciel qui a pour but de vous aider Ã  bÃ¢tir rapidement et gratuitement votre propre &lt;a href="http://fr.wikipedia.org/wiki/Jeu_de_r%C3%B4le_en_ligne_massivement_multijoueur"&gt;MMORPG&lt;/a&gt;. Voici un aperÃ§u de toutes les fonctionnalitÃ©s de ce logiciel :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;crÃ©ation d'un mode histoireÂ ;&lt;/li&gt;
+&lt;li&gt;crÃ©ation de mission (en parallÃ¨le avec l'histoire)Â ;&lt;/li&gt;
+&lt;li&gt;crÃ©ation de monstresÂ ;&lt;/li&gt;
+&lt;li&gt;crÃ©ation d'armes, de boucliers, de casques, de bottes et de gants pour personnaliser toujours plus votre personnageÂ ;&lt;/li&gt;
+&lt;li&gt;messagerie privÃ©e entre joueursÂ ;&lt;/li&gt;
+&lt;li&gt;chat publicÂ ;&lt;/li&gt;
+&lt;li&gt;possibilitÃ© de modifier le design directement depuis le panel d'administrationÂ ;&lt;/li&gt;
+&lt;li&gt;possibilitÃ© de bannir un utilisateur.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89676" hreflang="fr" title="http://www.caranille.fr"&gt;Site officiel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89677" hreflang="fr" title="http://creativecommons.org/licenses/by/4.0/deed.fr"&gt;Licence Creative Commons By 4.0&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89715" hreflang="fr" title="http://linuxfr.org/news/caranille-3-5-editeur-de-mmorpg-en-php"&gt;DLFP : Caranille 3.5 - Ã‰diteur de MMORPG en PHP&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;Voici certaines des modifications apportÃ©es depuis la &lt;a href="//linuxfr.org/news/caranille-3-5-editeur-de-mmorpg-en-php"&gt;version 3.5&lt;/a&gt;Â :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;une revÃ©rification du codeÂ ;&lt;/li&gt;
+&lt;li&gt;une optimisation de celui-ciÂ ;&lt;/li&gt;
+&lt;li&gt;une traduction des variables qui Ã©taient en franÃ§ais et qui pouvaient gÃªner les joueurs/dÃ©veloppeurs non francophonesÂ ;&lt;/li&gt;
+&lt;li&gt;la possibilitÃ© de bannir un joueurÂ ;&lt;/li&gt;
+&lt;li&gt;une sÃ©curitÃ© qui indique Ã  l'utilisateur s'il y a eu des connexions suspectes.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Ce logiciel, entiÃ¨rement codÃ© en PHP, va vous permettre de crÃ©er un RPG/MMORPG entiÃ¨rement en PHP et de faÃ§on gratuite.&lt;/p&gt;
+
+&lt;p&gt;Le logiciel est sous licence Creative Commons Attribution 4.0 International &lt;a href="http://creativecommons.org/licenses/by/4.0/"&gt;CC BY 4.0&lt;/a&gt; ce qui va vous permettre de modifier entiÃ¨rement le programme que ce soit en terme de design ou de fonctionnalitÃ©s.&lt;/p&gt;
+
+&lt;p&gt;Je tiens Ã  remercier la communautÃ© de LinuxFr.org qui m'a bien aidÃ©e lors de la publication de la dÃ©pÃªche sur la version 3.5. N'hÃ©sitez pas Ã  me laisser un commentaire avec des suggestions, voire des critiques fondÃ©es.&lt;/p&gt;
+
+&lt;p&gt;De plus j'anticipe en prÃ©cisant que je ne compte pas utiliser de framework en PHP pour Caranille.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/caranille-4-5-1-un-editeur-de-mmorpg-en-php.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/caranille-4-5-1-un-editeur-de-mmorpg-en-php#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>tankey</name>
+    </author>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <author>
+      <name>Pierre Jarillon</name>
+    </author>
+    <author>
+      <name>caranille</name>
+    </author>
+    <category term="Jeu"/>
+    <category term="meuporg"/>
+    <category term="mmorpg"/>
+    <category term="rpg"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101489/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35145</id>
+    <published>2014-03-12T22:39:45+01:00</published>
+    <updated>2014-03-12T22:39:45+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/un-devcamp-alternc-a-paris-du-26-au-28-mars"/>
+    <title>Un DevCamp Alternc Ã  Paris du 26 au 28 mars</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;h2 id="un-devcamp"&gt;Un DevCampÂ ?&lt;/h2&gt;
+
+&lt;p&gt;Pour rappel l'objectif d'un DevCamp est de rassembler pÃ©riodiquement toute personne intÃ©ressÃ©e et voulant aider Ã  amÃ©liorer un mÃªme projet. Cela concerne donc tant les dÃ©veloppeurs que ses testeurs, utilisateurs, traducteurs, conjoint(e)s, â€¦  Chacun Ã  notre niveau pouvons contribuer, que ce soit durant une demi-journÃ©e ou bien durant plusieurs jours. Ce qui compte c'est d'apporter sa pierre Ã  l'Ã©difice.&lt;/p&gt;
+&lt;h2 id="alternc"&gt;AlterncÂ ?&lt;/h2&gt;
+
+&lt;p&gt;Alternc est un projet libre dont la vocation est d'aider la gestion de l'hÃ©bergement de vos noms de domaines, emails, sites webs, mailing lists, etc. Il est utilisÃ© tant par des sociÃ©tÃ©s d'hÃ©bergement que par des particuliers, des associations ou toutes autres entitÃ©s voulant hÃ©berger plus d'un projet Internet.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89645" hreflang="fr" title="http://alternc.org/wiki/DevCamp2014"&gt;DevCamp 2014&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89646" hreflang="fr" title="http://alternc.org/wiki/DevCamp2013"&gt;DevCamp 2013&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89647" hreflang="fr" title="http://alternc.org/"&gt;Le projet Alternc&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89648" hreflang="en" title="https://www.transifex.com/projects/p/alternc/"&gt;L&amp;#x27;espace de traduction collaboratif&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°5 : &lt;a href="http://linuxfr.org/redirect/89701" hreflang="fr" title="http://webchat.freenode.net/?channels=alternc"&gt;IRC pour discuter en direct&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;h2 id="contexte"&gt;Contexte&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;QuandÂ ?&lt;/strong&gt; Du 26 au  28 mars 2014&lt;br&gt;&lt;strong&gt;QuiÂ ?&lt;/strong&gt; Ouvert aux dÃ©veloppeurs, et bien sur mais aussi aux testeurs dont nous avons grand besoin pour cette nouvelle version, aucun niveau de base requisÂ !&lt;br&gt;&lt;strong&gt;OÃ¹Â ?&lt;/strong&gt; Paris&lt;/p&gt;
+
+&lt;p&gt;Nous avons la possibilitÃ© d'accueillir jusqu'Ã  une trentaine de personnes. Comme nous souhaitons un lieu convivial et adaptÃ© au nombre de prÃ©sents, ni trop grand, ni trop petit, le lieu dÃ©finitif est encore Ã  prÃ©ciser.&lt;/p&gt;
+&lt;h2 id="que-faire"&gt;Que faireÂ ?&lt;/h2&gt;
+
+&lt;p&gt;La liste prÃ©cise des tÃ¢ches pour les trois jours n'est pas dÃ©finitive. NÃ©anmoins, nous avons dÃ©jÃ  un certain nombre d'idÃ©es :)&lt;br&gt;
+Pour vous donner des pistes, voici notre liste au moment de la rÃ©daction de cette dÃ©pÃªche :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;amÃ©liorer la gestion des tests unitairesÂ ;&lt;/li&gt;
+&lt;li&gt;complÃ©ter ou ouvrir de nouvelles traductionsÂ ;&lt;/li&gt;
+&lt;li&gt;tester l'ergonomie utilisateur et remonter tous les problÃ¨mes d'usageÂ ;&lt;/li&gt;
+&lt;li&gt;corriger les problÃ¨mes d'ergonomie dÃ©tectÃ©sÂ ;&lt;/li&gt;
+&lt;li&gt;amÃ©liorer le paquet DebianÂ ;&lt;/li&gt;
+&lt;li&gt;tester et corriger les rÃ©gressions lors des montÃ©es de versionÂ ;&lt;/li&gt;
+&lt;li&gt;amÃ©liorer la documentation (doxygenâ€¦).&lt;/li&gt;
+&lt;/ul&gt;&lt;h2 id="comment-participer"&gt;Comment participerÂ ?&lt;/h2&gt;
+
+&lt;p&gt;Comme vous l'avez devinÃ©, si nous publions cette dÃ©pÃªche c'est parce que nous souhaitons que vous, lecteur, puissiez participer Ã  cet Ã©vÃ©nement. N'oubliez pas que mÃªme venir au moins une demi-journÃ©e, c'est dÃ©jÃ  essentielÂ !&lt;br&gt;
+Nous vous invitons Ã  nous envoyer un petit courriel sur &lt;a href="mailto:devcamp@alternc.com"&gt;devcamp@alternc.com&lt;/a&gt; pour nous indiquer votre participation. Pensez Ã  nous indiquer ce que vous intÃ©resse et combien de temps vous pensez Ãªtre prÃ©sent.&lt;/p&gt;
+
+&lt;p&gt;Merci Ã  vous lecteur d'Ãªtre arrivÃ© Ã  cette derniÃ¨re ligne, nous espÃ©rons qu'Ã  votre tour vous prendrez votre clavier pour nous aider :) &lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/un-devcamp-alternc-a-paris-du-26-au-28-mars.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/un-devcamp-alternc-a-paris-du-26-au-28-mars#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>azerttyu</name>
+    </author>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>BAud</name>
+    </author>
+    <author>
+      <name>FranÃ§ois</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <author>
+      <name>albancrommer</name>
+    </author>
+    <category term="CommunautÃ©"/>
+    <category term="hÃ©bergement"/>
+    <category term="alternc"/>
+    <category term="devcamp"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101452/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35161</id>
+    <published>2014-03-12T22:39:29+01:00</published>
+    <updated>2014-03-12T22:39:29+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/sortie-de-beyond-linux-from-scratch-v7-5-et-elle-est-traduite"/>
+    <title>Sortie de Beyond Linux From Scratch v7.5 (et elle est traduite !)</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Beyond Linux From Scratch (BLFS) est le livre Ã  lire aprÃ¨s avoir construit LFS. En effet, si LFS se propose de vous guider dans l'installation d'un systÃ¨me trÃ¨s basique, BLFS vous donne la possibilitÃ© d'installer environ 750 paquets.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89694" hreflang="fr" title="http://linuxfr.org/news/sortie-de-linux-from-scratch-7-5-traduite-en-plus"&gt;L&amp;#x27;annonce de sortie de LFS 7.5&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89695" hreflang="fr" title="http://lfs.traduc.org/view/blfs-7.5-fr/"&gt;Lire BLFS 7.5 en franÃ§ais&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89696" hreflang="en" title="http://www.linuxfromscratch.org/blfs/view/stable/"&gt;Read BLFS 7.5&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89697" hreflang="fr" title="http://lfs.traduc.org/BLFS/"&gt;Page du projet BLFS-fr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°5 : &lt;a href="http://linuxfr.org/redirect/89698" hreflang="fr" title="http://lfs.traduc.org/BLFS/participez.php"&gt;Vous souhaitez participer Ã  la traduction ?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°6 : &lt;a href="http://linuxfr.org/redirect/89699" hreflang="fr" title="http://www.traduc.org/PageD%27Accueil"&gt;Association traduc.org&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°7 : &lt;a href="http://linuxfr.org/redirect/89700" hreflang="fr" title="http://linuxfromscratch.org/mailman/listinfo/lfs-traducfr"&gt;La liste de diffusion LFS-fr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;En utilisant BLFS 7.5, vous Ãªtes certain que l'ensemble des instructions donnÃ©es dans le livre fonctionne avec une LFS 7.5. Cela peut paraÃ®tre normal, il faut savoir qu'en l'espace d'environ 2 semaines, la petite Ã©quipe des rÃ©dacteurs de la version anglaise a testÃ© les 750 paquets environ pour valider ces instructions.&lt;/p&gt;
+
+&lt;p&gt;Il est possible de transformer sa LFS en serveur LAMP, en serveur de fichiers, en PC de bureau avec KDE, LXDE ou XFCE, et il est possible en se basant sur BLFS de construire un OS simplifiÃ© avec seulement les fonctions que vous utilisez.&lt;/p&gt;
+
+&lt;p&gt;Tous les paquets sont prÃ©sentÃ©s dans leur derniÃ¨re version stable publiÃ©e.&lt;/p&gt;
+
+&lt;p&gt;Le devise de [B]LFS, Â«Â votre systÃ¨me, vos rÃ¨glesÂ Â», rÃ©sume Ã  mon sens la philosophie du projet.&lt;/p&gt;
+
+&lt;p&gt;L'Ã©quipe franÃ§aise publie cette version franÃ§aise quelques jours aprÃ¨s la VO.&lt;/p&gt;
+
+&lt;p&gt;Si vous souhaitez des renseignements, de l'aide, en discuter, vous pouvez venir nous rejoindre soit sur la liste de diffusion, soit sur le salon IRC (#lfs-fr sur irc.freenode.net).&lt;/p&gt;
+
+&lt;p&gt;Je remercie Ã©galement l'association traduc.org, qui soutient le projet en l'hÃ©bergeant.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/sortie-de-beyond-linux-from-scratch-v7-5-et-elle-est-traduite.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/sortie-de-beyond-linux-from-scratch-v7-5-et-elle-est-traduite#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>myou</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <author>
+      <name>BAud</name>
+    </author>
+    <author>
+      <name>NÃ¿co</name>
+    </author>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <category term="Do It Yourself"/>
+    <category term="lfs"/>
+    <category term="blfs"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101496/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35160</id>
+    <published>2014-03-11T22:43:36+01:00</published>
+    <updated>2014-03-11T22:43:36+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/le-translathon-2014-session-de-traduction-de-gnome-a-paris"/>
+    <title>Le Translathon 2014, session de traduction de GNOME Ã  Paris</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Dix jours avant la sortie de GNOME 3.12, l'Ã©quipe de traduction francophone de GNOME se retrouve le temps d'un week-end (15/16 mars) pour en assurer la meilleure des traductions.  Cela se passe Ã  Paris et c'est l'occasion pour toute personne intÃ©ressÃ©e de venir dÃ©couvrir le travail d'internationalisation et de localisation, ainsi que les outils utilisÃ©s, et de prÃªter main-forte Ã  cette importante Å“uvre.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89690" hreflang="en" title="https://wiki.gnome.org/Hackfests/LeTranslathon2014"&gt;Le Translathon sur le wiki de GNOME&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89691" hreflang="fr" title="https://l10n.gnome.org/teams/fr/"&gt;La page de l&amp;#x27;Ã©quipe de traduction&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;h2 id="contexte"&gt;Contexte&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;QuandÂ ? Le week-end du 15 et 16 mars 2014&lt;/li&gt;
+&lt;li&gt;QuiÂ ? Ouvert Ã  tout le monde, aucune connaissance prÃ©alable requise.&lt;/li&gt;
+&lt;li&gt;OÃ¹Â ? Les bureaux de Mozilla, Ã  Paris&lt;/li&gt;
+&lt;/ul&gt;&lt;h2 id="objectifs"&gt;Objectifs&lt;/h2&gt;
+
+&lt;p&gt;Assurer la traduction de l'interface et de la documentation de GNOME 3.12, traduire de nouvelles applications, commencer Ã  traduire les notes de publication, rÃ©duire la liste de relectures en attente, corriger des bugs de localisation et d'internationalisation, montrer aux nouveaux venus comment tout cela fonctionne et documenter cela par la mÃªme occasion.&lt;/p&gt;
+&lt;h2 id="comment-participer"&gt;Comment participer&lt;/h2&gt;
+
+&lt;p&gt;Il suffit de venir frapper Ã  la porte, Ã  partir de 10h (et pas aprÃ¨s 18h), c'est au 16b boulevard Montmartre et nos amis de Mozilla fournissent les &lt;a href="https://wiki.mozilla.org/Paris#Finding_the_Space"&gt;instructions pour y arriver&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vous pouvez Ã©galement vous inscrire sur la &lt;a href="https://wiki.gnome.org/Hackfests/LeTranslathon2014"&gt;page correspondante du wiki de GNOME&lt;/a&gt;, Ã§a aidera un tout petit peu l'organisation.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/le-translathon-2014-session-de-traduction-de-gnome-a-paris.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/le-translathon-2014-session-de-traduction-de-gnome-a-paris#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>FrÃ©dÃ©ric PÃ©ters</name>
+    </author>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>tuiu pol</name>
+    </author>
+    <category term="Gnome"/>
+    <category term="traduction"/>
+    <category term="gnome"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101495/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35157</id>
+    <published>2014-03-11T18:10:40+01:00</published>
+    <updated>2014-03-11T20:34:16+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/nouveau-site-communautaire-de-la-forge-libre-tuleap"/>
+    <title>Nouveau site communautaire de la forge libre Tuleap</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Tuleap est une forge logicielle libre publiÃ©e sous licence GPL, proposÃ©e par la sociÃ©tÃ© Enalean. &lt;br&gt;
+Depuis une plateforme centralisÃ©e, Tuleap permet aux Ã©quipes de dÃ©veloppement de planifier et gÃ©rer leurs projets logiciels (agile ou non agile) avec une palette d'outilsÂ : un systÃ¨me de suivi de tickets (bugs, tÃ¢ches, et.) personnalisable par projet, une intÃ©gration poussÃ©e avec Git et SVN pour le code source, Jenkins-Hudson pour lâ€™intÃ©gration continue, Gerrit pour la revue de code, un plugin avec Mylyn pour suivre les tÃ¢ches depuis Eclipse, ainsi qu'un gestionnaire de document par projet et des outils de collaboration.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89682" hreflang="en" title="http://www.tuleap.org"&gt;Site Communautaire Tuleap.org&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89683" hreflang="en" title="https://tuleap.net"&gt;Forge de dÃ©veloppement du projet Tuleap&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;&lt;img src="//img.linuxfr.org/img/687474703a2f2f7777772e74756c6561702e6f72672f73697465732f64656661756c742f66696c65732f7374796c65732f73637265656e73686f745f67616c6c6572792f7075626c69632f6361726477616c6c2d6167696c652e706e67/cardwall-agile.png" alt="Example of Sprint Cardwall" title="Source : http://www.tuleap.org/sites/default/files/styles/screenshot_gallery/public/cardwall-agile.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Le projet Tuleap a mis en ligne un nouveau site communautaire &lt;a href="http://www.tuleap.org"&gt;www.tuleap.org&lt;/a&gt; qui prÃ©sente les fonctionnalitÃ©s de la forge et explique lâ€™Ã©tat dâ€™esprit de la communautÃ© qui promeut les principes agiles, la transparence des dÃ©veloppements en cours et les livraisons continues. &lt;/p&gt;
+
+&lt;p&gt;Sur tuleap.org, vous trouverez notammentÂ :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="http://www.tuleap.org/about-tuleap/features/administration"&gt;un descriptif des fonctionnalitÃ©s&lt;/a&gt;Â ;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="http://www.tuleap.org/about-tuleap/screenshot-gallery"&gt;une galerie de captures Ã©cran&lt;/a&gt;Â ;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="http://www.tuleap.org/community/agile-floss-spirit"&gt;lâ€™Ã©tat dâ€™esprit de la communautÃ©&lt;/a&gt;Â ;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="http://www.tuleap.org/about-tuleap/release-notes"&gt;les release notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;En parallÃ¨le de tuleap.org qui a un caractÃ¨re informatif, la forge tuleap.net est lâ€™environnement de dÃ©veloppement du projet Tuleap proprement dit. Sur tuleap.net, vous trouverez :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;les infos pour &lt;a href="https://tuleap.net/wiki/?group_id=101&amp;amp;pagename=Installation+%26+Administration%2FHow+to+install"&gt;installer Tuleap&lt;/a&gt; ou rÃ©cupÃ©rer &lt;a href="https://tuleap.net/file/showfiles.php?group_id=101"&gt;une machine virtuelle avec Tulead prÃ©installÃ©&lt;/a&gt;Â ;&lt;/li&gt;
+&lt;li&gt;les &lt;a href="https://tuleap.net/plugins/agiledashboard/?group_id=101"&gt;dÃ©veloppements en cours&lt;/a&gt;Â ;&lt;/li&gt;
+&lt;li&gt;la &lt;a href="https://tuleap.net/plugins/forumml/message.php?group_id=101&amp;amp;list=1"&gt;liste de discussion&lt;/a&gt; : &lt;a href="mailto:tuleap-devel@tuleap.net"&gt;tuleap-devel@tuleap.net&lt;/a&gt;Â ;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="https://tuleap.net/account/register.php"&gt;crÃ©er un compte&lt;/a&gt; pour rejoindre la communautÃ© .&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/nouveau-site-communautaire-de-la-forge-libre-tuleap.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/nouveau-site-communautaire-de-la-forge-libre-tuleap#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>ManonM</name>
+    </author>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <category term="CommunautÃ©"/>
+    <category term="developpement"/>
+    <category term="forge"/>
+    <category term="tuleap"/>
+    <category term="communautÃ©"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101491/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35139</id>
+    <published>2014-03-11T16:52:57+01:00</published>
+    <updated>2014-03-11T16:52:57+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/foss4g-fr-2014-appel-a-propositions"/>
+    <title> FOSS4G-fr 2014 - appel Ã  propositions</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Le FOSS4G-fr 2014, Ã©vÃ©nement dÃ©diÃ© Ã  la &lt;a href="http://fr.wikipedia.org/wiki/g%C3%A9omatique" title="DÃ©finition WikipÃ©dia"&gt;gÃ©omatique&lt;/a&gt; libre et aux donnÃ©es, se dÃ©roulera du 20 au 22 mai 2014 Ã  Marne-la-VallÃ©e.&lt;/p&gt;
+
+&lt;p&gt;Au programme : trois jours de confÃ©rences et ateliers, abordant des sujets techniques mais aussi des retours d'expÃ©riences, permettant de dÃ©couvrir les derniÃ¨res tendances et technologies du domaine, ainsi que leurs applications concrÃ¨tes. &lt;/p&gt;
+
+&lt;p&gt;Suite au succÃ¨s de la confÃ©rence FROG 2013, ces nouvelles rencontres seront l'occasion pour la communautÃ© de se rencontrer, d'Ã©changer et de partager projets et expÃ©riences. &lt;/p&gt;
+
+&lt;p&gt;Vous Ãªtes expert sur un domaine liÃ© aux &lt;a href="http://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27information_g%C3%A9ographique"&gt;SIG&lt;/a&gt; libresÂ ? Vous avez utilisÃ© les outils de l'OSGeo dans un contexte spÃ©cifique (projet d'envergure, donnÃ©es trÃ¨s volumineuses, client reconnu, projet innovant, etc.)Â ? Vous participez Ã  un projet libre liÃ© Ã  l'OSGeoÂ ? Alors venez prÃ©senter les derniÃ¨res tendances et technologies Open Source pour les SystÃ¨mes d'Information GÃ©ographique, et proposez une confÃ©rence, avant le 15 mars 2014 minuit (heure de Paris) : &lt;a href="http://foss4g.osgeo.fr/Programme"&gt;http://foss4g.osgeo.fr/Programme&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pour toute information ou question, vous pouvez contacter les responsables Ã  l'OSGeo-frâ€¯: conferences CHEZ osgeo.asso.fr&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89618" hreflang="fr" title="http://foss4g.osgeo.fr/Accueil"&gt;FOSS4G-FR&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89692" hreflang="fr" title="http://osgeo.asso.fr/"&gt;Association osgeo.fr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89693" hreflang="fr" title="http://wiki.osgeo.org/wiki/Francophone"&gt;Wiki francophone sur osgeo.org&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Ã€ propos de l'OSGeo-fr :&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;Lâ€™association &lt;strong&gt;OSGeo.fr&lt;/strong&gt; est la reprÃ©sentation Francophone de la fondation Open Source Geospatial dont la mission est dâ€™aider et de promouvoir le dÃ©veloppement collaboratif des donnÃ©es et des technologies gÃ©ospatiales ouvertes. Lâ€™association est une entitÃ© lÃ©gale grÃ¢ce Ã  laquelle les membres de la communautÃ© peuvent contribuer au code, aux finances et aux autres ressources, et sâ€™assurer que leurs contributions seront maintenues au bÃ©nÃ©fice du public. &lt;/p&gt;
+
+&lt;p&gt;Lâ€™OSGeo.fr sert Ã©galement dâ€™organisation de rÃ©fÃ©rence et dâ€™assistance pour la communautÃ© gÃ©ospatiale libre, et fournit un forum commun et une infrastructure partagÃ©e pour amÃ©liorer la collaboration entre les projets. &lt;/p&gt;
+
+&lt;p&gt;La participation est ouverte Ã  lâ€™ensemble de la communautÃ© open source. Tous les travaux de lâ€™association sont publiÃ©s sur des forums publics au sein desquels peut sâ€™investir une communautÃ© libre de participants. Les projets de la Fondation OSGeo sont tous librement disponibles et utilisables sous une licence open source certifiÃ©e par lâ€™OSI. &lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/foss4g-fr-2014-appel-a-propositions.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/foss4g-fr-2014-appel-a-propositions#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>ZeroHeure</name>
+    </author>
+    <author>
+      <name>BenoÃ®t Sibaud</name>
+    </author>
+    <author>
+      <name>tankey</name>
+    </author>
+    <author>
+      <name>Nils Ratusznik</name>
+    </author>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>Xavier Claude</name>
+    </author>
+    <author>
+      <name>Vi</name>
+    </author>
+    <author>
+      <name>NeoX</name>
+    </author>
+    <category term="CommunautÃ©"/>
+    <category term="osgeo"/>
+    <category term="sig"/>
+    <category term="gÃ©omatique"/>
+    <category term="foss4g"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101437/comments.atom</wfw:commentRss>
+  </entry>
+  <entry>
+    <id>tag:linuxfr.org,2005:News/35156</id>
+    <published>2014-03-11T16:14:53+01:00</published>
+    <updated>2014-03-11T16:14:53+01:00</updated>
+    <link rel="alternate" type="text/html" href="http://linuxfr.org/news/apero-python-php-a-lyon-le-mardi-25-mars"/>
+    <title>ApÃ©ro Python/PHP Ã  Lyon le mardi 25 mars</title>
+    <rights>Licence CC by-sa http://creativecommons.org/licenses/by-sa/4.0/deed.fr</rights>
+    <content type="html">&lt;div&gt;&lt;p&gt;Les antennes lyonnaises de lâ€™AFPy et de lâ€™AFUP organisent ensemble un apÃ©ro le mardi 25 mars Ã  partir de 19h Ã  l'Antre-Autre (11 rue Terme, Lyon 1er).&lt;/p&gt;
+
+&lt;p&gt;Une prÃ©sentation sera donnÃ©e sur la sÃ©curitÃ© web. AprÃ¨s un aperÃ§u des principales failles prÃ©sentes dans les applications web, une rÃ©flexion sur les failles XSS sera exposÃ©e et une mÃ©thode de protection efficace contre une partie de celles-ci sera prÃ©sentÃ©e. Enfin, le thÃ¨me de la sÃ©curitÃ© sera abordÃ© de faÃ§on plus gÃ©nÃ©rale (politique de sÃ©curitÃ©, bonnes pratiquesâ€¦).&lt;/p&gt;
+
+&lt;p&gt;Ã€ lâ€™issue de cette prÃ©sentation, nous pourrons Ã©changer librement sur ces deux langages de programmation, autour dâ€™un verre et/ou dâ€™une assiette.&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;lien nÂ°1 : &lt;a href="http://linuxfr.org/redirect/89678" hreflang="fr" title="http://lyon.afup.org/2014/03/10/apero-phppython-mardi-25-mars-a-19h/"&gt;Page de l&amp;#x27;apÃ©ro PHP&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°2 : &lt;a href="http://linuxfr.org/redirect/89679" hreflang="fr" title="http://afpyro.afpy.org/dates/2014/2014_03_25.html"&gt;Page de l&amp;#x27;apÃ©ro Python &lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°3 : &lt;a href="http://linuxfr.org/redirect/89680" hreflang="fr" title="http://www.lantreautre.fr/"&gt;L&amp;#x27;Antre Autre&lt;/a&gt;&lt;/li&gt;&lt;li&gt;lien nÂ°4 : &lt;a href="http://linuxfr.org/redirect/89681" hreflang="fr" title="http://www.openstreetmap.org/?mlat=45.769148&amp;amp;mlon=4.831513&amp;amp;zoom=18#map=18/45.76915/4.83151"&gt;Plan d&amp;#x27;accÃ¨s&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;a href="http://linuxfr.org/news/apero-python-php-a-lyon-le-mardi-25-mars.epub"&gt;TÃ©lÃ©charger ce contenu au format Epub&lt;/a&gt;&lt;/div&gt;    &lt;p&gt;&lt;a href="http://linuxfr.org/news/apero-python-php-a-lyon-le-mardi-25-mars#comments"&gt;Lire les commentaires&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>RenÃ© Poussi</name>
+    </author>
+    <author>
+      <name>Xavier Teyssier</name>
+    </author>
+    <author>
+      <name>palm123</name>
+    </author>
+    <category term="CommunautÃ©"/>
+    <category term="afup"/>
+    <category term="afpy"/>
+    <category term="afpyro"/>
+    <category term="lyon"/>
+    <category term="python"/>
+    <category term="web"/>
+    <category term="php"/>
+    <wfw:commentRss>http://linuxfr.org/nodes/101490/comments.atom</wfw:commentRss>
+  </entry>
+</feed>
+

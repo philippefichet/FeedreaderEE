@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+  <id>http://www.developpez.com/index/atom</id>
+  <title><![CDATA[Developpez.com, le club des développeurs et IT Pro]]></title>
+  <updated>2014-09-09T12:54:07+02:00</updated>
+  <published>2014-09-09T12:54:07+02:00</published>
+  <link rel="self" href="http://www.developpez.com/index/atom" hreflang="fr-FR"/>
+  <subtitle><![CDATA[Club des développeurs et IT Pro]]></subtitle>
+  <rights>Copyright © 2000-2014 http://www.developpez.com</rights>
+  <logo>http://www.developpez.com/template/favicon.png</logo>
+  <generator>http://www.developpez.com</generator>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/75004/Le-framework-open-source-Django-sort-en-version-1-7-avec-un-lot-de-nouveautes-pour-accelerer-le-developpement-web-2-0/</id>
+    <title><![CDATA[Le framework open source Django sort en version 1.7 avec un lot de nouveautés pour accélérer le développement web 2.0]]></title>
+    <updated>2014-09-09T12:24:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/75004/Le-framework-open-source-Django-sort-en-version-1-7-avec-un-lot-de-nouveautes-pour-accelerer-le-developpement-web-2-0/"/>
+    <summary><![CDATA[<b>Le framework open source Django sort en version 1.7</b><br />
+<b>avec un lot de nouveautés pour accélérer le développement web 2.0</b> <br/><br/>Le framework Django 1.7 est disponible après plus d'un an de développement. Il s'agit de la version la plus importante depuis la version 1.0.<br/><br/>Pour rappel, Django est un framework populaire écrit en Python.  Il a pour but de rendre le développement web 2.0 simple et rapide. D'ailleurs, le projet a pour slogan « le framework web pour les perfectionnistes sous pression ».<br/><br/>Django est...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/python.gif" type="image/jpeg" length="2428"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/75004/Le-framework-open-source-Django-sort-en-version-1-7-avec-un-lot-de-nouveautes-pour-accelerer-le-developpement-web-2-0/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://qt.developpez.com/actu/74985/Sortie-de-Qt-5-4-Alpha-avec-un-port-pour-Windows-RT-mature-un-meilleur-support-d-OpenGL-et-une-integration-de-Chromium/</id>
+    <title><![CDATA[Sortie de Qt 5.4 Alpha, avec un port pour Windows RT mature, un meilleur support d'OpenGL et une intégration de Chromium]]></title>
+    <updated>2014-09-08T21:58:00+02:00</updated>
+    <link rel="alternate" href="http://qt.developpez.com/actu/74985/Sortie-de-Qt-5-4-Alpha-avec-un-port-pour-Windows-RT-mature-un-meilleur-support-d-OpenGL-et-une-integration-de-Chromium/"/>
+    <summary><![CDATA[Le processus de peaufinage de Qt 5.4 est entamé avec la sortie de la première préversion, Qt 5.4 Alpha. Aucune nouvelle fonctionnalité ne devrait arriver d'ici à la version finale, juste des corrections de défauts. Cette version apporte son lot de nouveautés, avec un grand nombre de fonctionnalités mais également la finalisation du port vers Windows RT.<br />
+<br />
+<b>Plateformes mobiles<br />
+</b><br />
+Après moult tests, <a href="http://qt.developpez.com/actu/66933/Sortie-de-Qt-5-2-avec-la-finalisation-des-ports-pour-iOS-et-Android-ainsi-qu-une-preversion-pour-Windows-RT/" target="_blank">la préversion du port pour Windows RT arrivée avec Qt 5.2, fin 2013</a>, est devenue mature. Pour Windows Phone,...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/qt.gif" type="image/jpeg" length="2381"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://qt.developpez.com/actu/74985/Sortie-de-Qt-5-4-Alpha-avec-un-port-pour-Windows-RT-mature-un-meilleur-support-d-OpenGL-et-une-integration-de-Chromium/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74995/Android-des-failles-dans-plusieurs-applications-pourraient-etre-exploitees-pour-intercepter-des-donnees-selon-un-chercheur-en-securite/</id>
+    <title><![CDATA[Android : des failles dans plusieurs applications pourraient être exploitées pour intercepter des données, selon un chercheur en sécurité]]></title>
+    <updated>2014-09-08T21:41:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74995/Android-des-failles-dans-plusieurs-applications-pourraient-etre-exploitees-pour-intercepter-des-donnees-selon-un-chercheur-en-securite/"/>
+    <summary><![CDATA[<b>Android : des failles dans plusieurs applications pourraient être exploitées pour intercepter des données</b><br />
+<b>selon un chercheur en sécurité</b><br/><br/>Les terminaux mobiles font partie de nos jours du quotidien des consommateurs.  De nombreuses opérations se font désormais au travers d'applications mobiles, au détriment des sites Web.  Cependant, les applications mobiles n'offriraient pas une bonne sécurisation des transmissions des données, par rapport aux sites Web.<br/><br/>Selon l'expert en sécurité Will Dormann du...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/android.gif" type="image/jpeg" length="1990"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74995/Android-des-failles-dans-plusieurs-applications-pourraient-etre-exploitees-pour-intercepter-des-donnees-selon-un-chercheur-en-securite/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74975/Intel-RealSense-le-replay-du-Webinar-sur-la-camera-3D-de-reconnaissance-faciale-disponible-pour-preparer-le-concours-de-creation-d-applications-NUI/</id>
+    <title><![CDATA[Intel RealSense : le replay du Webinar sur la camera 3D de reconnaissance faciale disponible, pour préparer le concours de création d'applications NUI]]></title>
+    <updated>2014-09-08T12:36:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74975/Intel-RealSense-le-replay-du-Webinar-sur-la-camera-3D-de-reconnaissance-faciale-disponible-pour-preparer-le-concours-de-creation-d-applications-NUI/"/>
+    <summary><![CDATA[<b>Intel RealSense : le replay du Webinar sur la camera 3D de reconnaissance faciale disponible</b><br />
+<b>pour préparer le concours de création d'applications NUI</b> <br/><br/>Intel a récemment annoncé l'édition 2014 de son concours Perceptual Computing App Challenge, articulé autour de sa technologie « d'informatique perceptuelle » RealSense.<br/><br/>RealSense est une camera 3D qui embarque entre autres un système de reconnaisse faciale, vocale, la suppression des arrières plans, la réalité augmentée ainsi qu'une technologie de...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/intel.gif" type="image/jpeg" length="2205"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74975/Intel-RealSense-le-replay-du-Webinar-sur-la-camera-3D-de-reconnaissance-faciale-disponible-pour-preparer-le-concours-de-creation-d-applications-NUI/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74971/Google-annonce-la-fin-du-support-de-SHA-1-dans-Chrome-la-firme-accelere-la-mort-de-l-algorithme-de-hachage-cryptographique/</id>
+    <title><![CDATA[Google annonce la fin du support de SHA-1 dans Chrome, la firme accélère la mort de l'algorithme de hachage cryptographique]]></title>
+    <updated>2014-09-08T12:28:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74971/Google-annonce-la-fin-du-support-de-SHA-1-dans-Chrome-la-firme-accelere-la-mort-de-l-algorithme-de-hachage-cryptographique/"/>
+    <summary><![CDATA[<b>Google met fin au support de SHA-1 dans Chrome</b><br />
+<b>la firme accélère la mort de l'algorithme de hachage cryptographique</b><br/><br/>Google vient d'annoncer dans un billet de blog qu'il n'offrira plus une prise en charge de l'algorithme de hachage cryptographique SHA-1 (Secure Hash Algorithm).<br/><br/>Pour rappel, SHA-1 une solution de sécurité qui avait été développée en 1995 par l'agence nationale de sécurité  des États-Unis (NSA). La fonction de hachage avait été publiée comme un standard fédéral de traitement de l'information...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/google2.gif" type="image/jpeg" length="1988"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74971/Google-annonce-la-fin-du-support-de-SHA-1-dans-Chrome-la-firme-accelere-la-mort-de-l-algorithme-de-hachage-cryptographique/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74964/Windows-9-pourrait-integrer-un-centre-de-notifications-Microsoft-pourrait-adopter-une-nouvelle-strategie-de-nommage/</id>
+    <title><![CDATA[Windows 9 pourrait intégrer un centre de notifications, Microsoft pourrait adopter une nouvelle stratégie de nommage]]></title>
+    <updated>2014-09-08T10:57:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74964/Windows-9-pourrait-integrer-un-centre-de-notifications-Microsoft-pourrait-adopter-une-nouvelle-strategie-de-nommage/"/>
+    <summary><![CDATA[<b>Windows 9 pourrait intégrer un centre de notifications</b><br />
+<b>Microsoft pourrait adopter une nouvelle stratégie de nommage</b><br/><br/>Alors que Microsoft est en train de peaufiner la prochaine version majeure de son système d'exploitation pour la sortie d'une préversion à des fins de tests à la fin de ce mois, de nouvelles rumeurs viennent livrer plus de détails sur les nouveautés de l'OS.<br/><br/>En plus des fonctionnalités que nous avons présentées jusqu'ici, Windows 9 devrait être doté d'un centre de notifications tout...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/win8-pre-2.gif" type="image/jpeg" length="5055"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74964/Windows-9-pourrait-integrer-un-centre-de-notifications-Microsoft-pourrait-adopter-une-nouvelle-strategie-de-nommage/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74945/TEG-presente-son-disque-dur-externe-le-Toshiba-Canvio-Alu-dotee-de-la-technologie-Ramp-Loading-Technology-pour-se-premunir-des-accidents-et-chute/</id>
+    <title><![CDATA[TEG présente son disque dur externe le Toshiba Canvio Alu, dotée de la technologie « Ramp Loading Technology » pour se prémunir des accidents et chute]]></title>
+    <updated>2014-09-08T09:43:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74945/TEG-presente-son-disque-dur-externe-le-Toshiba-Canvio-Alu-dotee-de-la-technologie-Ramp-Loading-Technology-pour-se-premunir-des-accidents-et-chute/"/>
+    <summary><![CDATA[<b>TEG présente son disque dur externe le Toshiba Canvio Alu,  </b><br />
+<b>dotée de la technologie « Ramp Loading Technology » pour se prémunir des accidents et chutes   </b><br/><br/>La division des périphériques de stockage (Storage Peripherals Division) de Toshiba Europe GmbH (TEG) présente son tout nouveau disque dur externe baptisé Canvio Alu. Comme son nom le suggère, ce disque dur portable arbore un boîtier tout en aluminium. Notons qu'il intègre un détecteur de choc en plus de la technologie « Ramp Loading Technology...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/calendrier.gif" type="image/jpeg" length="2226"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74945/TEG-presente-son-disque-dur-externe-le-Toshiba-Canvio-Alu-dotee-de-la-technologie-Ramp-Loading-Technology-pour-se-premunir-des-accidents-et-chute/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://arolla.developpez.com/tutoriels/java/google-catch-exception/</id>
+    <title><![CDATA[Introduction à Google Catch-Exception pour tester vos exceptions sur JUnit, un tutoriel de Yakhya Dabo]]></title>
+    <updated>2014-09-08T09:00:00+02:00</updated>
+    <link rel="alternate" href="http://arolla.developpez.com/tutoriels/java/google-catch-exception/"/>
+    <summary><![CDATA[La société Arolla, cabinet de conseil en technologies de l'information, vous propose un article sur Catch-Exception utilisée pour tester vos exceptions sur JUnit.<br />
+<br />
+Le lien de l'article : <a href="http://arolla.developpez.com/tutoriels/java/catch-exception/" target="_blank">http://arolla.developpez.com/tutorie...tch-exception/</a><br/><br/>Merci pour leurs contributions<br/><br/>L'équipe]]></summary>
+  </entry>
+  <entry>
+    <id>http://appcoda.developpez.com/tutoriels/debuter/envoyer-sms-application-iphone/</id>
+    <title><![CDATA[Envoyer des SMS avec une application iPhone, un tutoriel par Simon ng]]></title>
+    <updated>2014-09-08T07:01:00+02:00</updated>
+    <link rel="alternate" href="http://appcoda.developpez.com/tutoriels/debuter/envoyer-sms-application-iphone/"/>
+    <summary><![CDATA[Bonjour, <br/><br/>Je vous présente ce tutoriel traduit par ram-0000 intitulé : <br/><br/><b><a href="http://appcoda.developpez.com/tutoriels/debuter/envoyer-sms-application-iphone/" target="_blank"><b>Envoyer des SMS avec une application iPhone</b></a></b><br/><br/>
+	
+		
+			Ce tutoriel est une suite du précédent article concernant l'envoi de courriels avec des pièces jointes. Certains d'entre vous m'ont demandé si je pouvais écrire un court tutoriel sur l'envoi de messages texte SMS avec une application iOS. Alors, on y va.
+	<br />
+Je vous souhaite une bonne lecture.<br/><br/>Les commentaires et les suggestions d'amélioration sont les bienvenus, alors, après...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/ios.gif" type="image/jpeg" length="3869"/>
+  </entry>
+  <entry>
+    <id>http://winnt.developpez.com/tutoriels/latex-references/</id>
+    <title><![CDATA[Les références croisées avec LaTeX , un tutoriel de Christophe Boulet]]></title>
+    <updated>2014-09-07T12:53:00+02:00</updated>
+    <link rel="alternate" href="http://winnt.developpez.com/tutoriels/latex-references/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/latex.gif" type="image/jpeg" length="2094"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/74941/Le-WebGL-a-t-il-un-avenir-Faisons-le-point-sur-le-standard-Web-permettant-d-integrer-un-rendu-3D-dans-une-page-Web/</id>
+    <title><![CDATA[WebGL a-t-il un avenir ? Faisons le point sur le standard]]></title>
+    <updated>2014-09-05T18:31:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/74941/Le-WebGL-a-t-il-un-avenir-Faisons-le-point-sur-le-standard-Web-permettant-d-integrer-un-rendu-3D-dans-une-page-Web/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/discussions.gif" type="image/jpeg" length="1157"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/74941/Le-WebGL-a-t-il-un-avenir-Faisons-le-point-sur-le-standard-Web-permettant-d-integrer-un-rendu-3D-dans-une-page-Web/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74949/USA-Google-va-proceder-au-remboursement-de-19-millions-de-dollars-pour-les-achats-in-app-non-autorises-par-les-parents/</id>
+    <title><![CDATA[USA : Google va procéder au remboursement de 19 millions de dollars pour les achats in-app non autorisés par les parents]]></title>
+    <updated>2014-09-05T18:26:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74949/USA-Google-va-proceder-au-remboursement-de-19-millions-de-dollars-pour-les-achats-in-app-non-autorises-par-les-parents/"/>
+    <summary><![CDATA[<b>USA : Google va procéder au remboursement de 19 millions de dollars</b><br />
+<b>pour les achats in-app non autorisés par les parents</b><br/><br/>Le régulateur du commerce américain continue à mettre de l'ordre dans les galeries d'applications pour protéger les consommateurs. Après Apple, c'est au tour de Google de se conformer aux recommandations de la FTC.<br/><br/>La  Federal Trade Commission (FTC) a sommé la firme de procéder au remboursement de près de 19 millions de dollars pour les achats in-app qui ont été effectués par les...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/google2.gif" type="image/jpeg" length="1988"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74949/USA-Google-va-proceder-au-remboursement-de-19-millions-de-dollars-pour-les-achats-in-app-non-autorises-par-les-parents/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://open-source.developpez.com/actu/74936/Utilisez-vous-des-logiciels-open-source-Lesquels-Que-pensez-vous-des-resultats-obtenus/</id>
+    <title><![CDATA[Utilisez-vous des logiciels open source ? Lesquels ? Avez-vous été satisfait des résultats obtenus ?]]></title>
+    <updated>2014-09-05T15:00:00+02:00</updated>
+    <link rel="alternate" href="http://open-source.developpez.com/actu/74936/Utilisez-vous-des-logiciels-open-source-Lesquels-Que-pensez-vous-des-resultats-obtenus/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/libres-open-source.png" type="image/jpeg" length="3386"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://open-source.developpez.com/actu/74936/Utilisez-vous-des-logiciels-open-source-Lesquels-Que-pensez-vous-des-resultats-obtenus/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/</id>
+    <title><![CDATA[Mise à jour de la FAQ Python, 254 réponses à vos questions dont 36 nouvelles]]></title>
+    <updated>2014-09-05T11:24:00+02:00</updated>
+    <link rel="alternate" href="http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/"/>
+    <summary><![CDATA[Chers membres du Club, <br/><br/>La rédaction Python sur Developpez.com a le plaisir de vous annoncer la mise à jour de la <b><a href="http://python.developpez.com/faq/" target="_blank">FAQ Python</a></b>.<br/><br/>Notre FAQ, contenant 254 questions rédigées par 14 auteurs, a été améliorée grâce à plusieurs relectures.<br/><br/><br />
+<b><br />
+<ul><li style=""> 36 Questions/Réponses ont été ajoutées</li></ul><br />
+</b><br/><br/>N'hésitez pas à nous envoyer vos remarques et suggestions sur la FAQ. <img src="http://www.developpez.net/forums/images/smilies/ccool.gif" border="0" alt="" title=":ccool:" class="inlineimg" /><br/><br/><img src="http://python.developpez.com/faq/images/FAQPython.gif" /><br />
+<b>Nos remerciements sincères à tous les contributeurs :</b><br/><br/><ul><li style="">Gestion/management :<br />
+<ul><li style=""><a href="http://www.developpez.net/forums/u588513/lana-bauer/" target="_blank">Lana.Bauer</a></li></ul><br /></li><li style="">Rédaction/relecture technique :<br />
+<ul><li style=""><a href="http://www.developpez.net/forums/u283256/f-leb/" target="_blank">f-leb</a></li><li style=""><a href="http://www.developpez.net/forums/u751933/tarball69/" target="_blank">tarball69</a></li></ul></li></ul><br/><br/><br />
+<b><br />
+<a href="http://python.developpez.com/actu/72220/Appel-a-contributeurs-rubrique-Python-etes-vous-notre-prochain-redacteur-traducteur-moderateur-newser/" target="_blank">Vous aussi vous pouvez contribuer...</a></b>]]></summary>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/74922/Le-moteur-de-jeux-pour-PC-et-mobiles-Donkey-Tech-3-passe-Open-Source-et-offre-un-editeur-de-scripts-visuel/</id>
+    <title><![CDATA[Le moteur de jeux pour PC et mobiles Donkey Tech 3 devient open source, et offre un éditeur de scripts visuel]]></title>
+    <updated>2014-09-05T09:37:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/74922/Le-moteur-de-jeux-pour-PC-et-mobiles-Donkey-Tech-3-passe-Open-Source-et-offre-un-editeur-de-scripts-visuel/"/>
+    <summary><![CDATA[<b>Le moteur de jeux pour PC et mobiles Donkey Tech 3 passe Open Source</b><br/><br/>Le moteur de jeux pour PC et mobiles <b>Donkey Tech 3</b>, un moteur interne, passe Open Source. Le moteur est programmé C++ utilisant Qt. Le moteur inclut un éditeur de monde 3D ainsi qu'un système de script visuel, comparable aux blueprints de Unreal Engine.<br/><br/>
+
+<br />
+Le moteur de jeux est construit pour être le plus générique possible et permet donc de faire aussi bien des jeux 2D et 3D.<br/><br/>Le code est disponible <a href="https://github.com/smellslikedonkey" target="_blank">sur Github</a>.<br/><br/><b>Source</b><br/><br/><a href="http://smellslikedonkey.com/wordpress/" target="_blank">Site officiel...</a>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/74922/Le-moteur-de-jeux-pour-PC-et-mobiles-Donkey-Tech-3-passe-Open-Source-et-offre-un-editeur-de-scripts-visuel/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/74921/Sony-met-en-Open-Source-un-editeur-de-niveau-generique-sous-licence-Apache-2-et-reposant-sur-leur-framework-Open-Source/</id>
+    <title><![CDATA[Sony met en open source un éditeur de niveau générique, sous licence Apache 2 et reposant sur leur framework open source]]></title>
+    <updated>2014-09-05T09:32:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/74921/Sony-met-en-Open-Source-un-editeur-de-niveau-generique-sous-licence-Apache-2-et-reposant-sur-leur-framework-Open-Source/"/>
+    <summary><![CDATA[<b>Sony met en Open Source un éditeur de niveau générique</b><br/><br/>Il y a quelques mois, Sony avait publié <a href="http://jeux.developpez.com/actu/68618/Authoring-Tools-Framework-l-outil-de-Sony-est-maintenant-disponible-en-Open-Source-et-vous-aidera-a-creer-vos-outils-pour-vos-jeux-video/" target="_blank">son outil de création d'outils en C#/.NET</a> : <b>Authoring Tools Framework (ATF)</b>. Grâce à celui-ci, les développeurs pouvaient ainsi facilement automatiser leurs tâches, ou encore, créer leurs propres outils et ainsi rendre le développement d'un jeu plus simple.<br/><br/><a href="http://jeux.developpez.com/images/news/sony-level-editor-Terrain.png" target="_blank"><img src="http://jeux.developpez.com/images/news/sony-level-editor-Terrain-thumb.png" /></a><br />
+C'est d'ailleurs grâce à cet outil dont le code avec été publié en Open Source que Sony a pu créer un éditeur de niveaux, maintenant, Open Source,...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/74921/Sony-met-en-Open-Source-un-editeur-de-niveau-generique-sous-licence-Apache-2-et-reposant-sur-leur-framework-Open-Source/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://open-source.developpez.com/actu/74888/Gravit-un-open-source-de-design-complet-en-version-Beta-0-0-3-1-pour-remplacer-Freehand-et-Stagestack/</id>
+    <title><![CDATA[Gravit : un outil open source de design complet sort en version bêta 0.0.3.1 pour remplacer Freehand et Stagestack]]></title>
+    <updated>2014-09-05T09:00:00+02:00</updated>
+    <link rel="alternate" href="http://open-source.developpez.com/actu/74888/Gravit-un-open-source-de-design-complet-en-version-Beta-0-0-3-1-pour-remplacer-Freehand-et-Stagestack/"/>
+    <summary><![CDATA[<b>Gravit : un open source de design complet en version Beta 0.0.3.1<br />
+pour remplacer Freehand et Stagestack</b><br/><br/>Gravit est une application de design, offrant les possibilités créatives d'une suite de conception complète, tout en restant de taille confortable. Puissant mais facile à manipuler, Gravit a été conçu en mettant l'accent sur la polyvalence, la fluidité et l'élégance. Les tâches de conception complexes sont simplifiées grâce à sa suite d'outils robustes et un environnement de travail très réactif.<br/><br/><img src="http://gravit.io/img/home/desktop.png" /><br />
+Gravit...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://open-source.developpez.com/actu/74888/Gravit-un-open-source-de-design-complet-en-version-Beta-0-0-3-1-pour-remplacer-Freehand-et-Stagestack/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74916/Cplusplus-AMP-s-ouvre-a-d-autres-plateformes-une-version-libre-de-l-outil-de-conception-d-applications-paralleles-en-Cplusplus-utilisant-la-puissance-du-GPU-sort/</id>
+    <title><![CDATA[C++ AMP s'ouvre à d'autres plateformes, une version libre de l'outil de conception d'applications parallèles en C++ utilisant la puissance du GPU sort]]></title>
+    <updated>2014-09-04T19:18:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74916/Cplusplus-AMP-s-ouvre-a-d-autres-plateformes-une-version-libre-de-l-outil-de-conception-d-applications-paralleles-en-Cplusplus-utilisant-la-puissance-du-GPU-sort/"/>
+    <summary><![CDATA[<b>C++ AMP s'ouvre à d'autres plateformes</b><br />
+<b>une version libre de l'outil de conception d'applications parallèles en C++ utilisant la puissance du GPU sort</b><br/><br/>C++ AMP (Accelerated Massive Parallelism), l'outil développé initialement par Microsoft et disponible uniquement sur Windows peut désormais être utilisé sur d'autres plateformes.<br/><br/>Les développeurs d'AMD, en collaboration avec Microsoft, ont publié C++ AMP version 1.2, un compilateur open source  qui est disponible à la fois pour Linux, Windows et pourra...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/c++.gif" type="image/jpeg" length="3259"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74916/Cplusplus-AMP-s-ouvre-a-d-autres-plateformes-une-version-libre-de-l-outil-de-conception-d-applications-paralleles-en-Cplusplus-utilisant-la-puissance-du-GPU-sort/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74912/Java-pourrait-etre-dote-d-un-interpreteur-boucle-lecture-moins-evaluation-moins-impression-REPL-le-projet-Kulla-nait-sur-OpenJDK/</id>
+    <title><![CDATA[Java pourrait être doté d'un interpréteur boucle : lecture - évaluation - impression (REPL), le projet Kulla nait sur OpenJDK]]></title>
+    <updated>2014-09-04T18:27:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74912/Java-pourrait-etre-dote-d-un-interpreteur-boucle-lecture-moins-evaluation-moins-impression-REPL-le-projet-Kulla-nait-sur-OpenJDK/"/>
+    <summary><![CDATA[<b>Java pourrait être doté d'un interpréteur boucle : lecture - évaluation  impression (REPL)</b><br />
+<b>le projet Kulla nait sur OpenJDK</b><br/><br/>La plateforme Java pourrait dans le futur être dotée de fonctionnalités REPL (Read Evaluate Print Loop) comme pour le langage de programmation LISP.<br/><br/>Les développeurs d'OpenJDK, la déclinaison open source de Java, étudient la possibilité d'ajouter officiellement l'outil au langage de programmation.<br/><br/>La discussion est effectuée dans le cadre du projet  Kulla, qui a vu le jour le...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/java-2.gif" type="image/jpeg" length="3131"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74912/Java-pourrait-etre-dote-d-un-interpreteur-boucle-lecture-moins-evaluation-moins-impression-REPL-le-projet-Kulla-nait-sur-OpenJDK/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74906/Conference-IDC-DevOps-comment-reconcilier-ses-equipes-developpement-et-operations-Rendez-vous-le-18-septembre-prochain-a-Paris/</id>
+    <title><![CDATA[Conférence IDC DevOps : comment réconcilier ses équipes développement et opérations ? Rendez-vous le 18 septembre prochain à Paris]]></title>
+    <updated>2014-09-04T15:51:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74906/Conference-IDC-DevOps-comment-reconcilier-ses-equipes-developpement-et-operations-Rendez-vous-le-18-septembre-prochain-a-Paris/"/>
+    <summary><![CDATA[<b>Conférence IDC DevOps : comment réconcilier ses équipes développement et opérations ?<br />
+<i>Agilité, Tests &amp; Qualité, Collaboration aux centres de l'événement</i></b><br/><br/>IDC organise une matinée sur les enjeux d'une stratégie DevOps, qui sera l'occasion de partager quelques clés sur les bonnes pratiques afin de réconcilier IT et Business, d'accélérer le Time to Market et de répondre plus dynamiquement aux besoins métiers. <br/><br/>L'événement aura lieu le jeudi 18 septembre prochain, au Cercle National des Armées, Paris...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/event.gif" type="image/jpeg" length="2883"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74906/Conference-IDC-DevOps-comment-reconcilier-ses-equipes-developpement-et-operations-Rendez-vous-le-18-septembre-prochain-a-Paris/#comments</wfw:comment>
+  </entry>
+</feed>

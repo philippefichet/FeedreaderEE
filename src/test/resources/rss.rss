@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Java</title>
+    <description>Ressources sur la JVM et son écosystème (Java, Play framework, Scala...)</description>
+    <link>http://news.humancoders.com/t/java</link>
+    <item>
+      <title>La notion de BOM avec Maven</title>
+      <description>
+        <![CDATA[<p>Maven est une solution de gestion de production de projets mature et connue du plus grand nombre. Sa dernière release majeure (version 3.0) date de 2010 et depuis, peu de grandes nouveautés ont été ajoutées (nous en sommes à la release 3.1.1).</p>
+
+<p>Dans cet article, nous allons revenir sur une fonctionnalité de Maven ancienne mais moins utilisée, la notion de BOM ou Bill Of Materials. Ce principe remonte à la release 2.0.9 de Maven d’avril 2008 et s’appuie sur l’ajout du scope import.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8388-la-notion-de-bom-avec-maven#comments</comments>
+      <pubDate>Sun, 02 Mar 2014 08:47:19 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8388-la-notion-de-bom-avec-maven</link>
+      <guid isPermaLink="false">8388</guid>
+      <dc:creator>lionel tougne</dc:creator>
+    </item>
+    <item>
+      <title>Le Protocole Direct de Sockets sous Java 7 - Ecrit une fois, exécuté partout...</title>
+      <description>
+        <![CDATA[<p>Cet article aborde le nouveau Protocole Direct de Sockets, une avancée récemment introduite dans le SDK Java 7. Le SDP permet à la communauté de l’Informatique Ultra Haute Performance (UHPC) d’utiliser les fonctionnalités et les mérites ubiquitaires de Java dans un but peu commun : l’accès natif à la capacité d’Accès Direct à la Mémoire à Distance(RDMA) d’InfiniBand.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8337-le-protocole-direct-de-sockets-sous-java-7-ecrit-u#comments</comments>
+      <pubDate>Tue, 25 Feb 2014 15:16:30 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8337-le-protocole-direct-de-sockets-sous-java-7-ecrit-u</link>
+      <guid isPermaLink="false">8337</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Repenser la propagation des exceptions avec Java 8</title>
+      <description>
+        <![CDATA[<p>La sortie de Java 8 est prévu pour le 18 mars prochain ; les plus curieux d’entre nous ont déjà pris un peu de temps pour se familiariser avec quelques unes de ses nouveautés et en particulier avec les lambda et l’API java.util.stream.</p>
+
+<p>L’objet de cet article est d’étudier en quoi l’utilisation de cette API va nous amener à réfléchir la manière dont nous manipulons les exceptions Java.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8327-repenser-la-propagation-des-exceptions-avec-java-8#comments</comments>
+      <pubDate>Mon, 24 Feb 2014 20:37:35 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8327-repenser-la-propagation-des-exceptions-avec-java-8</link>
+      <guid isPermaLink="false">8327</guid>
+      <dc:creator>Clément Cunin</dc:creator>
+    </item>
+    <item>
+      <title>Comment marchent les annotations et à quoi servent-elles ?</title>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8307-comment-marchent-les-annotations-et-a-quoi-servent#comments</comments>
+      <pubDate>Sat, 22 Feb 2014 08:06:34 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8307-comment-marchent-les-annotations-et-a-quoi-servent</link>
+      <guid isPermaLink="false">8307</guid>
+      <dc:creator>lionel tougne</dc:creator>
+    </item>
+    <item>
+      <title>Release Candidates Disponibles, Nouveaux Atomic Numbers et Stripped Implementations Abandonées</title>
+      <description>
+        <![CDATA[<p>Les premières Release Candidates de Java 8 sont apparues début Février. La toute première, b128, le 4 Février, et une seconde annoncée sur la liste de diffusion OpenJDK une semaine plus tard. Java 8 RC2 corrige un défaut sérieux dans sa nouvelle API Comparator, dans laquelle le nouveau thenComparing() avait une restriction de type non nécessaire.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8264-release-candidates-disponibles-nouveaux-atomic-num#comments</comments>
+      <pubDate>Wed, 19 Feb 2014 09:44:15 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8264-release-candidates-disponibles-nouveaux-atomic-num</link>
+      <guid isPermaLink="false">8264</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>[Java 8] Comment le compilateur pour Nashorn fonctionne ?</title>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8226-java-8-comment-le-compilateur-pour-nashorn-fonctio#comments</comments>
+      <pubDate>Mon, 17 Feb 2014 21:07:26 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8226-java-8-comment-le-compilateur-pour-nashorn-fonctio</link>
+      <guid isPermaLink="false">8226</guid>
+      <dc:creator>lionel tougne</dc:creator>
+    </item>
+    <item>
+      <title>JDK 8 &amp; Lambdas, Streams et Collectors</title>
+      <description>
+        <![CDATA[<p>José Paumard nous explique en détail les changements apportés par le JDK 8 qui vont complètement modifier notre façon de développer de tous les jours, et notamment la manipulation des collections. La présentation aborde la nouvelle API Stream ainsi que les Lambdas sur des exemples pragmatiques et progressifs.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8221-jdk-8-lambdas-streams-et-collectors#comments</comments>
+      <pubDate>Mon, 17 Feb 2014 15:42:38 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8221-jdk-8-lambdas-streams-et-collectors</link>
+      <guid isPermaLink="false">8221</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Comment fonctionne le garbage collector de Java</title>
+      <description>
+        <![CDATA[<p>Avertissement : cette page a vocation d’expliquer dans les grandes lignes le fonctionnement du garbage collector (GC) de la JVM à l’intention des développeurs. Par conséquent je prends volontairement quelques raccourcis pour éviter d’écrire des tartines là-dessus, mais qui ne changent rien à la compréhension des principes du GC.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8220-comment-fonctionne-le-garbage-collector-de-java#comments</comments>
+      <pubDate>Mon, 17 Feb 2014 14:32:02 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8220-comment-fonctionne-le-garbage-collector-de-java</link>
+      <guid isPermaLink="false">8220</guid>
+      <dc:creator>Wilhelm Emilie</dc:creator>
+    </item>
+    <item>
+      <title>Première publication du projet de garbage collector Shenandoah pour OpenJDK</title>
+      <description>
+        <![CDATA[<p>La première version des sources du JEP 189, le projet Shenandoah, visant à créer un garbage collector (GC) quasi sans pause pour OpenJDK a été publiée. Le projet Shenandoah a été annoncé en juin 2013 par Roman Kennke, Ingénieur chez Red Hat.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8196-premiere-publication-du-projet-de-garbage-collecto#comments</comments>
+      <pubDate>Fri, 14 Feb 2014 12:19:49 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8196-premiere-publication-du-projet-de-garbage-collecto</link>
+      <guid isPermaLink="false">8196</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Les standards de codage de Google</title>
+      <description>
+        <![CDATA[<p>Google a récemment publié leur définition complète des standards de codage pour le code source Java. Ce sont des règles strictes qui sont facilement applicables et suivies de manière universelle au sein de Google. Elles ne couvrent pas uniquement le formatage, mais aussi d’autres types de convention et de standard de codage.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8192-les-standards-de-codage-de-google#comments</comments>
+      <pubDate>Fri, 14 Feb 2014 09:17:25 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8192-les-standards-de-codage-de-google</link>
+      <guid isPermaLink="false">8192</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Questions/Réponses: Java Coding Guidelines</title>
+      <description>
+        <![CDATA[<p>La plupart des développeurs s’accordent sur la nécessité d’écrire du code sécurisé, mais ils constatent souvent que la pression de livrer quelque chose limite leur capacité à le faire. D’autres ne savent peut être tout simplement pas par où commencer. Dans les deux cas, avoir établi un guide peut s’avérer utile pour l’amélioration de leur approche.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8175-questions-reponses-java-coding-guidelines#comments</comments>
+      <pubDate>Thu, 13 Feb 2014 12:15:52 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8175-questions-reponses-java-coding-guidelines</link>
+      <guid isPermaLink="false">8175</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Ceylon : un java moderne et sans legacy</title>
+      <description>
+        <![CDATA[<p>J’ai récemment eu l’occasion d’assister à la conférence “ Ceylon Tour Paris 2014″. Je me suis intéressé à ce langage pour certains de ses objectifs : Être tellement simple à lire qu’un développeur connaissant l’Orienté Objet peut le comprendre sans apprendre le langage. Disposer d’un typage statique implicite.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8141-ceylon-un-java-moderne-et-sans-legacy#comments</comments>
+      <pubDate>Tue, 11 Feb 2014 14:52:59 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8141-ceylon-un-java-moderne-et-sans-legacy</link>
+      <guid isPermaLink="false">8141</guid>
+      <dc:creator>Cyrille MARTRAIRE</dc:creator>
+    </item>
+    <item>
+      <title>JHipster v0.9.0 nouvelle version du générateur Yeoman pour Spring/AngularJS</title>
+      <description>
+        <![CDATA[<p>JHipster continue de progresser, et vient d’atteindre la version v0.9.0.</p>
+
+<p>Cette nouvelle version est entièrement basée sur Spring Boot (côté serveur) et AngularJS (côté client), et propose d’utiliser Spring Loaded afin de mettre à jour les classes Java à chaud (à la JRebel).</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8125-jhipster-v0-9-0-nouvelle-version-du-generateur-yeo#comments</comments>
+      <pubDate>Mon, 10 Feb 2014 16:20:34 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8125-jhipster-v0-9-0-nouvelle-version-du-generateur-yeo</link>
+      <guid isPermaLink="false">8125</guid>
+      <dc:creator>Julien Dubois</dc:creator>
+    </item>
+    <item>
+      <title>[Clojure] Implémentation de structure de donnée : Liste simplement chainée</title>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8091-clojure-implementation-de-structure-de-donnee-list#comments</comments>
+      <pubDate>Thu, 06 Feb 2014 21:13:05 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8091-clojure-implementation-de-structure-de-donnee-list</link>
+      <guid isPermaLink="false">8091</guid>
+      <dc:creator>lionel tougne</dc:creator>
+    </item>
+    <item>
+      <title>Unsafe à tout prix; Oracle sonde la communauté à propos de sun.misc.Unsafe</title>
+      <description>
+        <![CDATA[<p>L’ingénieur logiciel Paul Sandoz d’Oracle a posté un message sur la liste de diffusion d’OpenJDK et envoyé un tweet la semaine dernière demandant au public son opinion sur la classe sun.misc.Unsafe en répondant à un sondage Survey Monkey. Le débat tourne autour de la question de la standardisation de certaines parties d’Unsafe.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8089-unsafe-a-tout-prix-oracle-sonde-la-communaute-a-pr#comments</comments>
+      <pubDate>Thu, 06 Feb 2014 15:32:06 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8089-unsafe-a-tout-prix-oracle-sonde-la-communaute-a-pr</link>
+      <guid isPermaLink="false">8089</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Eclipse Scout avec Jérémie Bresson</title>
+      <description>
+        <![CDATA[
+  
+    
+      Interview avec Jérémie Bresson par Pierre Queinnec le 05 févr. 2014
+      Bio Jérémie Bresson est développeur chez BSI Business Systems Integration AG, un éditeur de logiciel Suisse. Après avoir travaillé sur différents projets client utilisant le Framework Eclipse Scout, il rejoint l’équipe en charge du développement et devient commiter sur le projet au début de l’année 2013.
+    
+  
+
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8073-eclipse-scout-avec-jeremie-bresson#comments</comments>
+      <pubDate>Wed, 05 Feb 2014 15:16:42 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8073-eclipse-scout-avec-jeremie-bresson</link>
+      <guid isPermaLink="false">8073</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>Sortie de JArchitect v4.0</title>
+      <description>
+        <![CDATA[<p>La version 4.0 de JArchitect de CoderGears, un outil utilisé pour gérer des bases de code Java et le développement d’applications, est à présent disponible. JArchitect permet aux architectes et aux développeurs d’analyser une base de code, d’automatiser les revues de code, et de faciliter les refactorisations et les migrations.</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8033-sortie-de-jarchitect-v4-0#comments</comments>
+      <pubDate>Mon, 03 Feb 2014 12:23:02 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8033-sortie-de-jarchitect-v4-0</link>
+      <guid isPermaLink="false">8033</guid>
+      <dc:creator>Julien Vey</dc:creator>
+    </item>
+    <item>
+      <title>[Multithreading] Comment choisir le bon ExecutorService ?</title>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8025-multithreading-comment-choisir-le-bon-executorserv#comments</comments>
+      <pubDate>Sun, 02 Feb 2014 16:24:34 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8025-multithreading-comment-choisir-le-bon-executorserv</link>
+      <guid isPermaLink="false">8025</guid>
+      <dc:creator>lionel tougne</dc:creator>
+    </item>
+    <item>
+      <title>Lambda Java 8 et scala :  Comment sont t'ils implémentés au niveau du bytecode ?</title>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8010-lambda-java-8-et-scala-comment-sont-t-ils-implemen#comments</comments>
+      <pubDate>Fri, 31 Jan 2014 21:02:19 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8010-lambda-java-8-et-scala-comment-sont-t-ils-implemen</link>
+      <guid isPermaLink="false">8010</guid>
+      <dc:creator>lionel tougne</dc:creator>
+    </item>
+    <item>
+      <title>Arrête de jouer, deviens un ninja ! (web framework)</title>
+      <description>
+        <![CDATA[<p>Derrière ce titre a priori sans aucun sens se cache une présentation de mon dernier coup de cœur: un framework web full stack pour java. Là je vous entends dire: tiens tiens…il veut nous parler de Play! celui là ? Et bien non, je veux vous parler de …. Ninja!</p>
+]]>
+      </description>
+      <comments>http://news.humancoders.com/t/java/items/8002-arrete-de-jouer-deviens-un-ninja-web-framework#comments</comments>
+      <pubDate>Fri, 31 Jan 2014 14:53:20 +0000</pubDate>
+      <link>http://news.humancoders.com/t/java/items/8002-arrete-de-jouer-deviens-un-ninja-web-framework</link>
+      <guid isPermaLink="false">8002</guid>
+      <dc:creator>Cyrille MARTRAIRE</dc:creator>
+    </item>
+  </channel>
+</rss>

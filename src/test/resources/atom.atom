@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+  <id>http://www.developpez.com/index/atom</id>
+  <title><![CDATA[Developpez.com, le club des développeurs et IT Pro]]></title>
+  <updated>2014-03-03T20:41:20+01:00</updated>
+  <published>2014-03-03T20:41:20+01:00</published>
+  <link rel="self" href="http://www.developpez.com/index/atom" hreflang="fr-FR"/>
+  <subtitle><![CDATA[Club des développeurs et IT Pro]]></subtitle>
+  <rights>Copyright © 2000-2014 www.developpez.com</rights>
+  <logo>http://www.developpez.com/template/favicon.png</logo>
+  <generator>www.developpez.com</generator>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://open-source.developpez.com/actu/68242/Tor-veut-creer-une-messagerie-instantanee-anonyme-une-premiere-version-beta-pour-le-31-mars-2014/</id>
+    <title><![CDATA[Tor veut créer une messagerie instantanée anonyme, une première version bêta pour le 31 mars 2014]]></title>
+    <updated>2014-03-03T16:26:00+01:00</updated>
+    <link rel="alternate" href="http://open-source.developpez.com/actu/68242/Tor-veut-creer-une-messagerie-instantanee-anonyme-une-premiere-version-beta-pour-le-31-mars-2014/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/tor.png" type="image/jpeg" length="2480"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://open-source.developpez.com/actu/68242/Tor-veut-creer-une-messagerie-instantanee-anonyme-une-premiere-version-beta-pour-le-31-mars-2014/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/68108/Crytek-met-a-disposition-Renderdoc-un-outil-de-debogage-graphique-integrant-un-debogueur-de-shaders-et-de-multiples-outils-d-analyse/</id>
+    <title><![CDATA[Crytek met à disposition Renderdoc, un outil de débogage graphique intégrant un débogueur de shaders et de multiples outils d'analyse]]></title>
+    <updated>2014-03-03T16:24:00+01:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/68108/Crytek-met-a-disposition-Renderdoc-un-outil-de-debogage-graphique-integrant-un-debogueur-de-shaders-et-de-multiples-outils-d-analyse/"/>
+    <summary><![CDATA[<b>Crytek met à disposition Renderdoc, un outil de débogage graphique</b><br/><br/>Le célèbre studio de développement <b>Crytek</b>, développeur du moteur de jeu CryEngine, du jeu Far Cry et de la série Crysis propose son débogueur graphique en libre téléchargement. Celui-ci permet aux développeurs spécialisés dans les rendus graphiques de traquer les erreurs et de déboguer leurs effets.<br/><br/><a href="http://jeux.developpez.com/images/news/crytek-renderdoc1.png" target="_blank"><img src="http://jeux.developpez.com/images/news/crytek-renderdoc1-thumb.png" /></a><br />
+<b>Timeline, liste d'appels aux fonctions, navigateur d'événements...</b><br />
+Renderdoc fournit les outils nécessaires pour pleinement déboguer...]]></summary>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/68108/Crytek-met-a-disposition-Renderdoc-un-outil-de-debogage-graphique-integrant-un-debogueur-de-shaders-et-de-multiples-outils-d-analyse/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://qt.developpez.com/actu/68103/Sortie-de-Qt-5-3-en-version-alpha-qui-ameliore-la-stabilite-les-performances-et-facilite-la-premiere-utilisation-du-framework/</id>
+    <title><![CDATA[Qt 5.3 sort en version alpha, avec des améliorations de la stabilité, des performances et facilite la première utilisation du framework]]></title>
+    <updated>2014-03-03T16:23:00+01:00</updated>
+    <link rel="alternate" href="http://qt.developpez.com/actu/68103/Sortie-de-Qt-5-3-en-version-alpha-qui-ameliore-la-stabilite-les-performances-et-facilite-la-premiere-utilisation-du-framework/"/>
+    <summary><![CDATA[C'est aujourd'hui que sort la version alpha de Qt 5.3, avec un peu en avance sur le plan d'une sortie tous les six mois mais il a été décidé d'un nouveau cycle de sortie : une sortie au printemps et une autre en hiver. Qt 5.3 est la première version à bénéficier de ce nouveau cycle de sortie.<br/><br/><b>Qt </b><b>5.3 </b><b>améliore la stabilité, les performances et facilite la première utilisation du </b><b><i>framework</i></b><b>.</b> Les équipes de développement ont durant ces derniers mois cherché à amélioré la qualité de Qt, notamment sur les...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/qt.gif" type="image/jpeg" length="2381"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://qt.developpez.com/actu/68103/Sortie-de-Qt-5-3-en-version-alpha-qui-ameliore-la-stabilite-les-performances-et-facilite-la-premiere-utilisation-du-framework/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68262/Windows-XP-gagne-encore-des-parts-a-quelques-semaines-de-la-fin-de-son-support-Windows-8-1-progresse-lentement/</id>
+    <title><![CDATA[Windows XP gagne encore des parts à quelques semaines de la fin de son support, Windows 8.1 progresse lentement]]></title>
+    <updated>2014-03-03T16:02:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68262/Windows-XP-gagne-encore-des-parts-a-quelques-semaines-de-la-fin-de-son-support-Windows-8-1-progresse-lentement/"/>
+    <summary><![CDATA[<b>Marché des OS : Windows 8 baisse en faveur de Windows 8.1</b><br />
+<b>Windows XP reste à peu près stable, Linux et OS X enregistrent de légères baisses</b><br/><br/>Windows XP a la peau dure. Malgré les efforts de Microsoft pour encourager l'abandon de l'OS vieux de douze ans, dont la fin du support est prévue pour avril 2014, celui-ci garde sa place de second OS le plus populaire du monde et fléchir à peine en termes de part de marché.<br/><br/>Selon le dernier classement de NetApplications pour le mois de novembre 2013, Windows...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/windows-xp.gif" type="image/jpeg" length="2501"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68262/Windows-XP-gagne-encore-des-parts-a-quelques-semaines-de-la-fin-de-son-support-Windows-8-1-progresse-lentement/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68255/Google-integre-les-menus-des-restaurants-dans-les-resultats-de-recherche-une-fonction-disponible-sur-mobile-et-PC/</id>
+    <title><![CDATA[Google intègre les menus des restaurants dans les résultats de recherche,  une fonction disponible sur mobile et PC]]></title>
+    <updated>2014-03-03T13:57:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68255/Google-integre-les-menus-des-restaurants-dans-les-resultats-de-recherche-une-fonction-disponible-sur-mobile-et-PC/"/>
+    <summary><![CDATA[<b>Google intègre les menus des restaurants dans les résultats de recherche, </b><br />
+<b>une fonction disponible sur mobile et PC  </b><br/><br/>Ce weekend, Google a ajouté une option à son SERP, la page web générée par son moteur de recherche en fonction des mots clés entrés par l'utilisateur et pas des moindre. En tapant «show me the menu at» suivi du nom d'un restaurant, les utilisateurs peuvent avoir accès à tous les plats proposés par l'établissement. <br/><br/>Pour bien marquer la différence, les catégories sont spécifié (appetizers,...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/google2.gif" type="image/jpeg" length="1988"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68255/Google-integre-les-menus-des-restaurants-dans-les-resultats-de-recherche-une-fonction-disponible-sur-mobile-et-PC/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68252/Espionnage-Nokia-divulguerait-les-informations-privees-a-la-police-et-a-l-etranger-selon-des-enquetes-de-Helsingin-Sanomat/</id>
+    <title><![CDATA[Espionnage : Nokia divulguerait les informations privées à la police et à l'étranger, selon des enquêtes de Helsingin Sanomat]]></title>
+    <updated>2014-03-03T11:55:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68252/Espionnage-Nokia-divulguerait-les-informations-privees-a-la-police-et-a-l-etranger-selon-des-enquetes-de-Helsingin-Sanomat/"/>
+    <summary><![CDATA[<b>Espionnage : Nokia divulguerait les informations privées à la police et à l'étranger</b><br />
+<b>selon des enquêtes de Helsingin Sanomat</b><br/><br/>Les différentes révélations de l'ancien employé de la NSA, Edward Snowden, aux États-Unis n'ont pas fini de faire des victimes. Elles seraient la cause de remise en doute de la sécurité des données avec les smartphones Nokia.<br/><br/>Pour rappel, Nokia a signé un partenariat avec Microsoft depuis 2001 afin de fournir ses smartphones avec l'OS Windows Phone. Mais plusieurs documents...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/securite.gif" type="image/jpeg" length="2351"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68252/Espionnage-Nokia-divulguerait-les-informations-privees-a-la-police-et-a-l-etranger-selon-des-enquetes-de-Helsingin-Sanomat/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68249/Boeing-veut-concevoir-des-smartphones-espions-qui-s-autodetruisent-lorsqu-on-tente-de-demonter-le-boitier/</id>
+    <title><![CDATA[Boeing veut concevoir des smartphones espions qui s'autodétruisent lorsqu'on tente de démonter le boîtier]]></title>
+    <updated>2014-03-03T11:42:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68249/Boeing-veut-concevoir-des-smartphones-espions-qui-s-autodetruisent-lorsqu-on-tente-de-demonter-le-boitier/"/>
+    <summary><![CDATA[<b>Boeing veut concevoir des smartphones espions qui s'autodétruisent</b><br />
+<b>lorsqu'on tente de démonter le boîtier</b><br/><br/>La compagnie aéronautique Boeing aurait déposé des documents auprès du FCC afin de concevoir des smartphones d'espionnage. Ils seront dotés d'un pouvoir d' « autodestruction ». Boeing est une compagnie qui fournit de nombreuses technologies aux départements de la défense des Etats-Unis, ce qui lui permet de vouloir construire des smartphones sécurisés.<br/><br/>Le smartphone est baptisé « Black » (Noir)....]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/smartphone.png" type="image/jpeg" length="2361"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68249/Boeing-veut-concevoir-des-smartphones-espions-qui-s-autodetruisent-lorsqu-on-tente-de-demonter-le-boitier/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68247/Stephen-Wolfram-presente-le-langage-Wolfram-multi-paradigme-et-de-haut-niveau-base-sur-plus-de-30-ans-de-recherche/</id>
+    <title><![CDATA[Stephen Wolfram présente le langage Wolfram, multi-paradigme et de haut niveau, basé sur plus de 30 ans de recherche]]></title>
+    <updated>2014-03-03T11:37:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68247/Stephen-Wolfram-presente-le-langage-Wolfram-multi-paradigme-et-de-haut-niveau-base-sur-plus-de-30-ans-de-recherche/"/>
+    <summary><![CDATA[<b> Stephen Wolfram présente le langage Wolfram</b><br />
+<b> basé sur plus de 30ans de recherche </b><br/><br/>Stephen Wolfram fondateur et directeur général de Wolfram Research a présenté  dernièrement son nouveau langage de programmation, baptisé langage Wolfram (Wolfram Language).<br/><br/>Pour rappel Wolfram Research est l'éditeur de la célèbre suite Mathematica, elle  compte aussi à son actif le moteur de recherche Wolfram Alpha.<br/><br/>Ce nouveau langage s'inscrit dans le cadre d'un travail de longue haleine de la part de Wolfram sur...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/calendrier.gif" type="image/jpeg" length="2226"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68247/Stephen-Wolfram-presente-le-langage-Wolfram-multi-paradigme-et-de-haut-niveau-base-sur-plus-de-30-ans-de-recherche/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68244/ASP-NET-Microsoft-devoile-le-projet-Helios-qui-combine-les-avantages-offerts-par-l-hebergement-IIS-et-Self-Host/</id>
+    <title><![CDATA[ASP.NET : Microsoft dévoile le projet Helios, qui combine les avantages offerts par l'hébergement IIS et Self-Host]]></title>
+    <updated>2014-03-03T11:31:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68244/ASP-NET-Microsoft-devoile-le-projet-Helios-qui-combine-les-avantages-offerts-par-l-hebergement-IIS-et-Self-Host/"/>
+    <summary><![CDATA[<b>ASP.NET : Microsoft dévoile le projet Helios</b><br />
+<b>qui combine les avantages offerts par l'hébergement IIS et Self-Host</b><br/><br/>Microsoft a annoncé récemment le lancement de son nouveau projet Helios relatif à la plate-forme ASP .NET, ce projet s'inscrit dans la droite ligne du projet précédent Katana, lancé il y a quelques mois de cela.<br/><br/>Ce second projet traduit la volonté de Microsoft de repenser son cycle de développement de la plate-forme et des technologies ASP .NET pour les faire passer d'une plate-forme...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/microsoft-v2-3.gif" type="image/jpeg" length="2935"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68244/ASP-NET-Microsoft-devoile-le-projet-Helios-qui-combine-les-avantages-offerts-par-l-hebergement-IIS-et-Self-Host/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68236/Netflix-hack-day-Fitbit-detecte-lorsque-vous-dormez-et-met-automatiquement-vos-videos-sur-pause/</id>
+    <title><![CDATA[Netflix hack day : Fitbit détecte lorsque vous dormez,  et met automatiquement vos vidéos sur pause]]></title>
+    <updated>2014-03-03T10:07:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68236/Netflix-hack-day-Fitbit-detecte-lorsque-vous-dormez-et-met-automatiquement-vos-videos-sur-pause/"/>
+    <summary><![CDATA[<b>Netflix hack day : Fitbit détecte lorsque vous dormez,    </b><br />
+<b>et met automatiquement vos vidéos sur pause    </b><br/><br/>Les hackatons, cet évènement qui a vocation de réunir les développeurs pour une programmation informatique collective sur plusieurs jours, sont de plus en plus ancrés dans la philosophie de nombreuses entreprises technologiques.  C'est durant le Netflix Hack Day que ses ingénieurs se sont illustrés en présentant quelques projets somme toutes novateurs. <br/><br/>Tout d'abord notons le système mis sur...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/dvp.gif" type="image/jpeg" length="2138"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68236/Netflix-hack-day-Fitbit-detecte-lorsque-vous-dormez-et-met-automatiquement-vos-videos-sur-pause/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://rpouiller.developpez.com/tutoriels/eclipse/integration-mylyn-avec-redmine-et-jenkins/</id>
+    <title><![CDATA[Intégration d'Eclipse Mylyn avec Redmine et Jenkins, un tutoriel de Régis Pouiller]]></title>
+    <updated>2014-03-03T09:00:00+01:00</updated>
+    <link rel="alternate" href="http://rpouiller.developpez.com/tutoriels/eclipse/integration-mylyn-avec-redmine-et-jenkins/"/>
+    <summary><![CDATA[Bonjour à tous,<br/><br/>J'ai écrit un article intitulé "<a href="http://rpouiller.developpez.com/tutoriels/eclipse/integration-mylyn-avec-redmine-et-jenkins/" target="_blank">Tutoriel pour l'intégration d'Eclipse Mylyn avec Redmine et Jenkins</a>".<br/><br/>L'objectif de cet article est de présenter les bénéfices du gestionnaire de tâches Mylyn :<br />
+- la visualisation des tâches depuis un dépôt tel que Redmine et des résultats des constructions depuis un logiciel d'intégration continue tel que Jenkins ;<br />
+- la mise à jour des tâches (saisie des temps, commentaires, ...) ;<br />
+- le contexte permettant d'associer des fichiers du projet à une...]]></summary>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68231/Apple-un-lancement-d-iOS-in-the-Car-prevu-pour-la-semaine-prochaine-Trois-constructeurs-automobiles-en-auraient-la-primeur/</id>
+    <title><![CDATA[Apple : un lancement d'iOS in the Car prévu pour la semaine prochaine ?  Trois constructeurs automobiles en auraient la primeur]]></title>
+    <updated>2014-03-02T21:34:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68231/Apple-un-lancement-d-iOS-in-the-Car-prevu-pour-la-semaine-prochaine-Trois-constructeurs-automobiles-en-auraient-la-primeur/"/>
+    <summary><![CDATA[<b>Apple : un lancement d'iOS in the Car prévu pour la semaine prochaine ?   </b><br />
+<b>trois constructeurs automobiles en auraient la primeur    </b><br/><br/>Des sources du Financial Times affirment qu'à l'occasion du 84e salon de l'automobile à Genève qui aura lieu la semaine prochaine, Apple lancera, en partenariat avec trois constructeurs, son système iOS in the Car. La firme a choisi Ferrari, Volvo et Mercedes-Benz, trois compagnies produisant des voitures haut de gamme qui collent bien avec l'image de l'iPhone. Ci-dessous,...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/apple.gif" type="image/jpeg" length="2708"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68231/Apple-un-lancement-d-iOS-in-the-Car-prevu-pour-la-semaine-prochaine-Trois-constructeurs-automobiles-en-auraient-la-primeur/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68223/Telegram-Messenger-le-nouveau-concurrent-de-WhatsApp-L-application-mise-sur-la-vitesse-et-la-securite-des-donnees/</id>
+    <title><![CDATA[Telegram Messenger : le nouveau concurrent de WhatsApp ?  L'application mise sur la vitesse et la sécurité des données]]></title>
+    <updated>2014-03-02T16:10:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68223/Telegram-Messenger-le-nouveau-concurrent-de-WhatsApp-L-application-mise-sur-la-vitesse-et-la-securite-des-donnees/"/>
+    <summary><![CDATA[L'information a été confirmée par Facebook hier. L'application de messagerie WhatsApp va être acquise par Facebook pour la somme de 16 milliards de dollars. 12 milliards seront versés sous forme d'actions Facebook et 4 milliards seront payés en cash. L'accord prévoit le versement de la somme de 3 milliards de dollars en actions sous réserve du bouclage du rachat. Cette dernière somme sera versée aux fondateurs et salariés de l'application de messagerie.<br/><br/>WhatsApp compte à l'heure actuelle 450 millions...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/download.gif" type="image/jpeg" length="2123"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68223/Telegram-Messenger-le-nouveau-concurrent-de-WhatsApp-L-application-mise-sur-la-vitesse-et-la-securite-des-donnees/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68221/La-generation-Y-peu-soucieuse-des-donnees-de-l-entreprise-d-apres-une-enquete-comparative-de-Fortinet/</id>
+    <title><![CDATA[La génération Y peu soucieuse des données de l'entreprise, d'après une enquête comparative de Fortinet]]></title>
+    <updated>2014-03-02T11:40:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68221/La-generation-Y-peu-soucieuse-des-donnees-de-l-entreprise-d-apres-une-enquete-comparative-de-Fortinet/"/>
+    <summary><![CDATA[<b>Une enquête révèle un fossé entre les générations dans les habitudes en matière de sécurité et vie privée,    </b><br />
+<b>la génération Y peu soucieuse des données de l'entreprise ?     </b><br/><br/>L'américain Fortinet, spécialiste dans les solutions de sécurité pour les réseaux et les ordinateurs, a étudié les différences dans les habitudes liées à la gestion des mots de passe, aux données personnelles entre la génération X et la génération Y. Pour ce faire, l'entreprise a étudié un univers relativement petit en respectant...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/dvp.gif" type="image/jpeg" length="2138"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68221/La-generation-Y-peu-soucieuse-des-donnees-de-l-entreprise-d-apres-une-enquete-comparative-de-Fortinet/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68203/GitHub-presente-son-editeur-de-texte-pour-les-developpeurs-Atom-est-une-variante-specialisee-de-Chromium/</id>
+    <title><![CDATA[GitHub présente son éditeur de texte pour les développeurs,  Atom est une «variante spécialisée de Chromium»]]></title>
+    <updated>2014-03-01T21:31:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68203/GitHub-presente-son-editeur-de-texte-pour-les-developpeurs-Atom-est-une-variante-specialisee-de-Chromium/"/>
+    <summary><![CDATA[<b>GitHub présente son éditeur de texte pour les développeurs,    </b><br />
+<b>Atom est une «variante spécialisée de Chromium»     </b><br/><br/>Pour les développeurs en quête d'un outil performant pour l'édition de leur code, GitHub a lancé Atom, «<i>l'éditeur de texte que nous avons toujours voulu</i>».<br/><br/>Pour expliquer son projet, GitHub indique que «<i>les navigateurs web sont parfait pour surfer sur les pages web, mais l'écriture du code est une activité spécialisée qui mérite des outils dédiés. Plus important encore, le navigateur...</i>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/dvp.gif" type="image/jpeg" length="2138"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68203/GitHub-presente-son-editeur-de-texte-pour-les-developpeurs-Atom-est-une-variante-specialisee-de-Chromium/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68199/Windows-8-serait-plus-vulnerable-que-Windows-XP-d-apres-un-rapport-de-Secunia/</id>
+    <title><![CDATA[Windows 8 serait plus vulnérable que Windows XP,  d'après un rapport de Secunia]]></title>
+    <updated>2014-03-01T19:29:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68199/Windows-8-serait-plus-vulnerable-que-Windows-XP-d-apres-un-rapport-de-Secunia/"/>
+    <summary><![CDATA[<b>Windows 8 serait plus vulnérable que Windows XP,    </b><br />
+<b>d'après un rapport de Secunia    </b><br/><br/>La firme de sécurité Secunia a présenté son étude comparative sur le degré de vulnérabilité des différentes versions du système d'exploitation Windows à partir de XP jusqu'à la version 8. La conclusion a de quoi être surprenante puisqu'elle présente Windows 8 comme la plateforme la plus vulnérable, de facto plus vulnérable que Windows XP.<br/><br/><img src="http://www.developpez.com/public/images/news/evolution_os.jpg" /><br />
+Pour ceux qui se demandent pourquoi Windows 8 figure en tête de liste même...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/win8-1.gif" type="image/jpeg" length="2800"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68199/Windows-8-serait-plus-vulnerable-que-Windows-XP-d-apres-un-rapport-de-Secunia/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68195/83-de-possesseurs-de-smartphones-l-utilisent-en-attendant-quelqu-un-d-apres-une-etude-de-InMobi/</id>
+    <title><![CDATA[83% de possesseurs de smartphones l'utilisent en attendant quelqu'un, d'après une étude de InMobi]]></title>
+    <updated>2014-03-01T18:24:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68195/83-de-possesseurs-de-smartphones-l-utilisent-en-attendant-quelqu-un-d-apres-une-etude-de-InMobi/"/>
+    <summary><![CDATA[<b>83% de possesseurs de smartphones l'utilisent en attendant quelqu'un   </b><br />
+<b>d'après une étude de InMobi   </b><br/><br/>La régie publicitaire InMobi présente  le rapport d'une étude effectuée à l'échelle mondiale sur les tendances et habitudes de consommation des médias sur les terminaux mobiles. 14 000 utilisateurs de terminaux mobiles issus de 14 marchés sur les 5 continents ont ainsi été interrogés via le réseau mondial de publicité mobile InMobi, ainsi que par les partenaires d'InMobi, Decision Fuel et OnDevice...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/mobile.gif" type="image/jpeg" length="2764"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68195/83-de-possesseurs-de-smartphones-l-utilisent-en-attendant-quelqu-un-d-apres-une-etude-de-InMobi/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68190/Google-Glass-une-femme-du-programme-Explorer-se-fait-agresser-ses-assaillants-n-ont-pas-supporte-d-etre-filmes/</id>
+    <title><![CDATA[Google Glass : une femme du programme Explorer se fait agresser,  ses assaillants n'ont pas supporté d'être filmés]]></title>
+    <updated>2014-03-01T14:43:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68190/Google-Glass-une-femme-du-programme-Explorer-se-fait-agresser-ses-assaillants-n-ont-pas-supporte-d-etre-filmes/"/>
+    <summary><![CDATA[<b>Les Google Glass en précommande à 1 500 $</b><br />
+<b>les lunettes de réalité augmentée seront disponibles pour les développeurs en 2013</b><br/><br/>Le Google I/O, la grande messe des développeurs pour le géant de la recherche se déroule actuellement à San Francisco.<br/><br/>Cet événement est l'occasion pour la société de présenter ses innovations majeures et les produits issus de ses laboratoires. A la suite de <a href="http://www.developpez.com/actu/45320/" target="_blank">l'annonce de Jelly Bean</a>, la prochaine version d'Android,  Google a officialisé le lancement des  Google Glass.<br/><br/>Les « Google...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/google2.gif" type="image/jpeg" length="1988"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68190/Google-Glass-une-femme-du-programme-Explorer-se-fait-agresser-ses-assaillants-n-ont-pas-supporte-d-etre-filmes/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/68184/Chrome-34-beta-met-le-cap-sur-le-responsive-design-avec-le-support-de-srcset-Google-ameliore-au-passage-son-API-Web-audio/</id>
+    <title><![CDATA[Chrome 34 bêta met le cap sur le responsive design avec le support de srcset,  Google améliore au passage son API Web audio]]></title>
+    <updated>2014-02-28T23:22:00+01:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/68184/Chrome-34-beta-met-le-cap-sur-le-responsive-design-avec-le-support-de-srcset-Google-ameliore-au-passage-son-API-Web-audio/"/>
+    <summary><![CDATA[<b>Chrome 34 bêta met le cap sur le responsive design avec le support de srcset,  </b><br />
+<b>Google améliore au passage son API Web audio    </b><br/><br/>Dans la version bêta de Chrome 34, le dispositif d'importation de profils utilisateurs se voit amélioré. La nouvelle mouture intègre également la recherche vocale Google. Pour rappel, pour avoir recours à la fonctionnalité OK Google, il fallait passer par une extension Google Voice Search Hotword pour les utilisateurs Chrome sur ordinateur de bureau. Pour l'instant, comme...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/chrome2.gif" type="image/jpeg" length="4044"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/68184/Chrome-34-beta-met-le-cap-sur-le-responsive-design-avec-le-support-de-srcset-Google-ameliore-au-passage-son-API-Web-audio/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/</id>
+    <title><![CDATA[Apprentissage de Qemu/LibVirt par l'exemple, par Nicolas Hennion]]></title>
+    <updated>2014-02-28T19:18:00+01:00</updated>
+    <link rel="alternate" href="http://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/"/>
+    <summary><![CDATA[Bonjour,<br/><br/>Voici un nouveau tutoriel de <a href="http://nicolargo.developpez.com/" target="_blank">Nicolas Hennion</a> :<br/><br/><a href="http://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/" target="_blank"><b><b>Apprentissage de Qemu/LibVirt par l'exemple</b></b></a>
+	
+		
+			<br/><br/>Cet article est conseillé pour débuter avec Qemu.<br />
+N'hésitez pas à commenter cet article !<br/><br/><br/>
+	<br />
+Merci]]></summary>
+  </entry>
+</feed>
