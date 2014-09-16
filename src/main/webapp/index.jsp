@@ -9,26 +9,13 @@
 <html ng-app="FeedReader">
     <head>
         <title>Visualisation des flux rss/atom</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/feed.css"/>
-        <script type="text/javascript" src="<%= request.getContextPath() %>/webjars/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="<%= request.getContextPath() %>/webjars/angularjs/1.2.19/angular.min.js"></script>
-        <script type="text/javascript" src="<%= request.getContextPath() %>/webjars/angularjs/1.2.19/angular-sanitize.min.js"></script>
-        <script type="text/javascript" src="<%= request.getContextPath() %>/js/feed.js"></script>
-        <script>
-            var webservicesUrl = {
-                "feed": "/feedreader/ws/feed",
-                "feedItem": "/feedreader/ws/feedItem",
-            }
-        </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <jsp:include page="/WEB-INF/head.jsp"/>
     </head>
     <body>
         <div id="feed" class="row" ng-controller="FeedController">
             <div id="feed-list">
                 <div class="loader" ng-if="!feedLoading">
-                    <jsp:include page="loader.jsp"/>
+                    <jsp:include page="/WEB-INF/loader.jsp"/>
                 </div>
                 <ul>
                     <li ng-if="feedLoading" ng-repeat="feed in feeds" class="feed">
@@ -39,7 +26,7 @@
             <div id="feed-list-toggle"></div>
             <div id="feed-items-container">
                 <div class="loader" ng-if="feedItemsLoading">
-                    <jsp:include page="loader.jsp"/>
+                    <jsp:include page="/WEB-INF/loader.jsp"/>
                 </div>
                 <div ng-if="currentFeed != null" style="text-align: center">
                     <h2>{{currentFeed.name}}</h2>
