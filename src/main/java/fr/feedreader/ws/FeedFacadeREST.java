@@ -30,7 +30,6 @@ import javax.ws.rs.core.MediaType;
  *
  * @author philippe
  */
-@Stateless
 @Path("/feed")
 @Consumes(value = MediaType.APPLICATION_JSON)
 @Produces(value = MediaType.APPLICATION_JSON)
