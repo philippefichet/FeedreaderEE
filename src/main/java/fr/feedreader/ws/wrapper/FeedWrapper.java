@@ -24,6 +24,7 @@ public class FeedWrapper {
     private String description;
     private Date lastUpdate;
     private Boolean enable = Boolean.TRUE;
+    private Long unread = 0L;
 
     public FeedWrapper() {
         
@@ -62,8 +63,12 @@ public class FeedWrapper {
         return enable;
     }
 
-    public static FeedWrapper feedToFeedWrapper(Feed feed) {
-        return new FeedWrapper(feed);
+    public Long getUnread() {
+        return unread;
+    }
+
+    public void setUnread(Long unread) {
+        this.unread = unread;
     }
     
     public Feed toFeed() {

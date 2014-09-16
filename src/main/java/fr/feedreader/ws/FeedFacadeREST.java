@@ -9,6 +9,7 @@ import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.ws.wrapper.FeedWrapper;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
@@ -39,15 +40,21 @@ public class FeedFacadeREST  {
     
     @GET
     public List<FeedWrapper> listFeed() {
-        return feedBuisness.findAll().stream().map(
-            FeedWrapper::feedToFeedWrapper
-        ).collect(Collectors.toList());
+        Map<Feed, Long> countUnread = feedBuisness.countUnread();
+        return feedBuisness.findAll().stream().map((Feed feed)-> {
+            FeedWrapper feedWrapper = new FeedWrapper(feed);
+            Long unread = countUnread.get(feed);
+            if (unread != null) {
+                feedWrapper.setUnread(unread);
+            }
+            return feedWrapper;
+        }).collect(Collectors.toList());
     }
     
     @PUT
     public FeedWrapper addFeed(FeedWrapper feedWrapper) {
         Feed feed = feedBuisness.add(feedWrapper.toFeed());
-        return FeedWrapper.feedToFeedWrapper(feed);
+        return new FeedWrapper(feed);
     }
     
     @Path("?id={id}")
