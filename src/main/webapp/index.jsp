@@ -1,11 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : Sep 10, 2014, 12:26:40 PM
-    Author     : philippe
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%><!DOCTYPE html>
 <html ng-app="FeedReader">
     <head>
         <title>Visualisation des flux rss/atom</title>
@@ -35,7 +28,7 @@
                 <div id="feed-one-paginator">
                     <button ng-class="{'btn-success': page.selected, 'btn-primary': !page.selected}" class="btn page" ng-repeat="page in feedItemPages" ng-click="loadFeedItem(feed, page.id)">{{page.label}}</button>
                 </div>
-                <div id="feed-one">
+                <div id="feed-one" class="panel-group">
                     <div class="panel panel-default" ng-repeat="feedItem in feedItems" data-readed="{{feedItem.url.toRead}}">
                         <div class="panel-heading">
                             <h4 class="panel-title" ng-class="{'bg-info': !feedItem.readed}">

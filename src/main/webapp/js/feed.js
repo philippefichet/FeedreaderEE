@@ -3,7 +3,6 @@ var FeedReader = angular.module('FeedReader', ['ngSanitize']);
 
 FeedReader.filter("feedItemData", function() {
     return function(input) {
-        console.log("feedItemData", input);
         if (input == null || input == undefined || isNaN(input)) {
             return "";
         }

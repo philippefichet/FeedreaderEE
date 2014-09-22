@@ -6,24 +6,26 @@
 package fr.feedreader.ws;
 
 import fr.feedreader.buisness.FeedBuisness;
+import fr.feedreader.buisness.FeedItemBuisness;
 import fr.feedreader.models.Feed;
+import fr.feedreader.ws.wrapper.FeedItemResponseWrapper;
+import fr.feedreader.ws.wrapper.FeedItemUrlWrapper;
+import fr.feedreader.ws.wrapper.FeedItemWrapper;
 import fr.feedreader.ws.wrapper.FeedWrapper;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -36,6 +38,12 @@ import javax.ws.rs.core.MediaType;
 public class FeedFacadeREST  {
     @Inject
     private FeedBuisness feedBuisness;
+    
+    @Inject
+    private FeedItemBuisness feedItemBuisness;
+    
+    @Context
+    private HttpServletRequest request;
     
     @GET
     public List<FeedWrapper> listFeed() {
@@ -56,10 +64,27 @@ public class FeedFacadeREST  {
         return new FeedWrapper(feed);
     }
     
-    @Path("?id={id}")
-    @POST
-    public void updateFeed(FeedWrapper feedWrapper) {
+    @GET
+    @Path("/{id}/item")
+    public FeedItemResponseWrapper updateFeed(
+            @PathParam("id") Integer id,
+            @DefaultValue("1") @QueryParam("page") Integer page
+    ) {
+        List<FeedItemWrapper> feedItemsWrapper = feedItemBuisness.findAll(id, page).stream().map((feedItem) -> {
+            
+            return new FeedItemWrapper(
+                feedItem,
+                new FeedItemUrlWrapper(
+                    request.getContextPath() + "/feedItem/" + feedItem.getId() + "/readed/true",
+                    request.getContextPath() + "/feedItem/" + feedItem.getId() + "/readed/" + (feedItem.getReaded() ? Boolean.FALSE.toString() : Boolean.TRUE.toString())
+                )
+            );
+        }).collect(Collectors.toList());
         
+        return new FeedItemResponseWrapper(
+            feedItemsWrapper,
+            feedItemBuisness.getTotalPage(id)
+        );
     }
     
 //    @PersistenceContext(unitName = "FeedReaderPU")
