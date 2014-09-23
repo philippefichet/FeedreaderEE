@@ -74,10 +74,7 @@ public class FeedFacadeREST  {
             
             return new FeedItemWrapper(
                 feedItem,
-                new FeedItemUrlWrapper(
-                    request.getContextPath() + "/feedItem/" + feedItem.getId() + "/readed/true",
-                    request.getContextPath() + "/feedItem/" + feedItem.getId() + "/readed/" + (feedItem.getReaded() ? Boolean.FALSE.toString() : Boolean.TRUE.toString())
-                )
+                new FeedItemUrlWrapper(request, feedItem)
             );
         }).collect(Collectors.toList());
         

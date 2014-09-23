@@ -119,7 +119,7 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
     $scope.setReaded = function(url, $index) {
         $http.post(url).success(function(data) {
             $scope.feedItems[$index].readed = data.readed;
-            $scope.feedItems[$index].url.reverseReaded = data.reverseReaded;
+            $scope.feedItems[$index].url.reverseReaded = data.url.reverseReaded;
         });
         return;
     }
