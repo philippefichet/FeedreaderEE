@@ -55,10 +55,14 @@ public class FeedItemBuisness {
 		return em.find(FeedItem.class, feedItemId);
 	}
 
-	public Long getTotalPage(Integer feedId) {
+	public Long getCount(Integer feedId) {
 		TypedQuery<Long> query = em.createNamedQuery(FeedItem.countByFeedId, Long.class);
 		query.setParameter("feedId", feedId);
-		return (query.getSingleResult() / itemPerPage) + 1;
+        return query.getSingleResult();
+	}
+    
+	public Long getTotalPage(Integer feedId) {
+		return (getCount(feedId) / itemPerPage) + 1;
 	}
 
 	
