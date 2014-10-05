@@ -214,57 +214,58 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
     // @TODO Remetre en fonciton les websockets
     $scope.websocketInit = function() {
 //        // Create our websocket object with the address to the websocket
-//        var ws = new WebSocket("ws://" + $window.location.hostname + ":" + $window.location.port + "/feedreader/live/feed");
-//        ws.onopen = function() {
-//            console.log("Socket has been opened!");
-//        };
-//        ws.onclose = function() {
-//            $scope.websocketInit();
-//        }
-//
-//        ws.onmessage = function(message) {
-//            var data = angular.fromJson(message.data);
-//            $scope.$apply(function() {
-//                if (data.type == "feeds") {
-//                    $scope.feeds = data.feeds;
-//                    console.log($scope.currentFeed);
-//
-//                    // Si il y a un bien un flux séléctionner
-//                    if ($scope.currentFeed !== null && $scope.currentFeed !== undefined) {
-//                        // Reséléction du flux afficher
-//                        for (var i = 0; i < $scope.feeds.length; i++) {
-//                            $scope.feeds[i].selected = ($scope.feeds[i].id == $scope.currentFeed.id);
-//                        }
-//                    }
-//
-//                    for (var i = 0; i < data.feedItems.length; i++) {
-//                        for (var j = 0; j < $scope.feedItems.length; j++) {
-//                            // Si les éléments sont trouvé
-//                            if ($scope.feedItems[j].id == data.feedItems[i].id) {
-//                                $scope.feedItems[j].enclosure = data.feedItems[i].enclosure;
-//                                $scope.feedItems[j].feedItemId = data.feedItems[i].feedItemId;
-//                                $scope.feedItems[j].link = data.feedItems[i].link;
-//                                $scope.feedItems[j].readed = data.feedItems[i].readed;
-//                                $scope.feedItems[j].summary = data.feedItems[i].summary;
-//                                $scope.feedItems[j].title = data.feedItems[i].title;
-//                                $scope.feedItems[j].url = data.feedItems[i].url;
-//                                break;
-//                            }
-//                        }
-//                    }
-//                } else if (data.type == "feedItems") {
-//                    alert("Mise à jours items");
-//                    // Notification
-////					if ($window.webkitNotifications) {
-////						if (window.webkitNotifications.checkPermission() == 0) {
-////							window.webkitNotifications.createNotification('', 'Notification', 'Activation des notifications');
-////						} else {
-////						    window.webkitNotifications.requestPermission();
-////						}
-////					}
-//                }
-//            })
-//        };
+        var ws = new WebSocket("ws://" + $window.location.hostname + ":" + $window.location.port + "/feedreader/live/feed");
+        ws.onopen = function() {
+            console.log("Socket has been opened!");
+        };
+        ws.onclose = function() {
+            $scope.websocketInit();
+        }
+
+        ws.onmessage = function(message) {
+            console.log("receive message from websocket : ");
+            console.log(message);
+            var data = angular.fromJson(message.data);
+            $scope.$apply(function() {
+                if (data.type == "feeds") {
+                    $scope.feeds = data.feeds;
+                    // Si il y a un bien un flux séléctionner
+                    if ($scope.currentFeed !== null && $scope.currentFeed !== undefined) {
+                        // Reséléction du flux afficher
+                        for (var i = 0; i < $scope.feeds.length; i++) {
+                            $scope.feeds[i].selected = ($scope.feeds[i].id == $scope.currentFeed.id);
+                        }
+                    }
+                    if (data.feedItems != undefined) {
+                        for (var i = 0; i < data.feedItems.length; i++) {
+                            for (var j = 0; j < $scope.feedItems.length; j++) {
+                                // Si les éléments sont trouvé
+                                if ($scope.feedItems[j].id == data.feedItems[i].id) {
+                                    $scope.feedItems[j].enclosure = data.feedItems[i].enclosure;
+                                    $scope.feedItems[j].feedItemId = data.feedItems[i].feedItemId;
+                                    $scope.feedItems[j].link = data.feedItems[i].link;
+                                    $scope.feedItems[j].readed = data.feedItems[i].readed;
+                                    $scope.feedItems[j].summary = data.feedItems[i].summary;
+                                    $scope.feedItems[j].title = data.feedItems[i].title;
+                                    $scope.feedItems[j].url = data.feedItems[i].url;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                } else if (data.type == "feedItems") {
+                    alert("Mise à jours items");
+                    // Notification
+//					if ($window.webkitNotifications) {
+//						if (window.webkitNotifications.checkPermission() == 0) {
+//							window.webkitNotifications.createNotification('', 'Notification', 'Activation des notifications');
+//						} else {
+//						    window.webkitNotifications.requestPermission();
+//						}
+//					}
+                }
+            })
+        };
     };
 
     $scope.websocketInit();
