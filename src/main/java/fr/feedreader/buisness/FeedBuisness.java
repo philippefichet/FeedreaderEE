@@ -172,6 +172,9 @@ public class FeedBuisness {
     }
 
     public Map<Feed, List<FeedItem>> parallelUpdateAllFeed() {
+        if (logger.isInfoEnabled()) {
+            logger.info("parallelUpdateAllFeed");
+        }
         List<Feed> feeds = findAll();
         Map<Feed, List<FeedItem>> feedsUpdated = new ConcurrentHashMap<>();
         feeds.stream().parallel().forEach((feed) -> {
@@ -205,6 +208,7 @@ public class FeedBuisness {
                     feedItem.setTitle(newFeed.getTitle());
                     feedItem.setUpdated(newFeed.getUpdated());
                     feedItemBuisness.update(feedItem);
+                    logger.info("Article existant : " + newFeed.getFeedItemId());
                 } catch(NoResultException e) {
                     logger.info("Nouvelle article : " + newFeed.getFeedItemId());
                     newFeed.setFeed(feed);
