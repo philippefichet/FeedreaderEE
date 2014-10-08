@@ -74,6 +74,10 @@ public class FeedBuisness {
     public void delete(Feed feed) {
         em.remove(feed);
     }
+    
+    public void delete(Integer feedId) {
+        em.remove(find(feedId));
+    }
 
     /**
      * Met à jour les articles du flux à partir de son url
@@ -147,13 +151,16 @@ public class FeedBuisness {
         SyndFeed build = input.build(xmlreader);
         List<SyndEntry> syndEntries = build.getEntries();
         List<FeedItem> feedItems = syndEntries.stream().map((SyndEntry syndEntry) -> {
+            String summary = syndEntry.getDescription() != null ? syndEntry.getDescription().getValue() : null;
+            String enclosures = syndEntry.getEnclosures().size() > 0 ? syndEntry.getEnclosures().get(0).getUrl() : null;
+            Date updated = syndEntry.getUpdatedDate() == null ? new Date() : syndEntry.getUpdatedDate();
             return new FeedItem(
                 syndEntry.getUri(),
                 syndEntry.getTitle(),
                 syndEntry.getLink(),
-                syndEntry.getEnclosures().size() > 0 ? syndEntry.getEnclosures().get(0).getUrl() : null,
-                syndEntry.getContents().size() > 0 ? syndEntry.getContents().get(0).getValue() : null,
-                syndEntry.getUpdatedDate()
+                enclosures,
+                summary,
+                updated
             );
         }).collect(Collectors.toList());
         long endAt = System.nanoTime();
