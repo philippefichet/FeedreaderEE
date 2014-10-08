@@ -31,18 +31,37 @@ public class FeedItemBuisness {
             logger.debug("feedItem.getEnclosure : " + feedItem.getEnclosure());
             logger.debug("feedItem.getFeedItemId : " + feedItem.getFeedItemId());
             logger.debug("feedItem.getLink : " + feedItem.getLink());
+            logger.debug("feedItem.getSummary.length : " + feedItem.getSummary().length());
             logger.debug("feedItem.getSummary : " + feedItem.getSummary());
             logger.debug("feedItem.getTitle : " + feedItem.getTitle());
             logger.debug("feedItem.getId : " + feedItem.getId());
             logger.debug("feedItem.getReaded : " + feedItem.getReaded());
             logger.debug("feedItem.getUpdated : " + feedItem.getUpdated());
             logger.debug("feedItem.getFeed : " + feedItem.getFeed());
+            throw e;
         }
 		return feedItem;
 	}
 	
 	public FeedItem update(FeedItem feedItem) {
-		return em.merge(feedItem);
+        try {
+            feedItem = em.merge(feedItem);
+        } catch (Exception e ) {
+            e.printStackTrace();
+            logger.debug("**********************");
+            logger.debug("feedItem.getEnclosure : " + feedItem.getEnclosure());
+            logger.debug("feedItem.getFeedItemId : " + feedItem.getFeedItemId());
+            logger.debug("feedItem.getLink : " + feedItem.getLink());
+            logger.debug("feedItem.getSummary.length : " + feedItem.getSummary().length());
+            logger.debug("feedItem.getSummary : " + feedItem.getSummary());
+            logger.debug("feedItem.getTitle : " + feedItem.getTitle());
+            logger.debug("feedItem.getId : " + feedItem.getId());
+            logger.debug("feedItem.getReaded : " + feedItem.getReaded());
+            logger.debug("feedItem.getUpdated : " + feedItem.getUpdated());
+            logger.debug("feedItem.getFeed : " + feedItem.getFeed());
+            throw e;
+        }
+        return feedItem;
 	}
 	
 	public FeedItem setReaded(Integer feedItemId, Boolean readed) {
