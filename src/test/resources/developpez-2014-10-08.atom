@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+  <id>http://www.developpez.com/index/atom</id>
+  <title><![CDATA[Developpez.com, le club des développeurs et IT Pro]]></title>
+  <updated>2014-10-08T10:32:48+02:00</updated>
+  <published>2014-10-08T10:32:48+02:00</published>
+  <link rel="self" href="http://www.developpez.com/index/atom" hreflang="fr-FR"/>
+  <subtitle><![CDATA[Club des développeurs et IT Pro]]></subtitle>
+  <rights>Copyright © 2000-2014 http://www.developpez.com</rights>
+  <logo>http://www.developpez.com/template/favicon.png</logo>
+  <generator>http://www.developpez.com</generator>
+  <entry>
+    <id>http://rpouiller.developpez.com/tutoriels/spring/tutoriel-tests-junit4-spring/</id>
+    <title><![CDATA[Introduction aux tests unitaires JUnit4 avec Spring, un tutoriel de Régis Pouiller]]></title>
+    <updated>2014-10-08T09:00:00+02:00</updated>
+    <link rel="alternate" href="http://rpouiller.developpez.com/tutoriels/spring/tutoriel-tests-junit4-spring/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/spring.gif" type="image/jpeg" length="1844"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76064/Shellshock-Yahoo-Et-WinZip-auraient-ete-victimes-d-attaques-par-des-pirates-Yahoo-dement/</id>
+    <title><![CDATA[Shellshock : Yahoo! Et WinZip auraient été victimes d'attaques par des pirates, Yahoo! dément]]></title>
+    <updated>2014-10-07T23:14:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76064/Shellshock-Yahoo-Et-WinZip-auraient-ete-victimes-d-attaques-par-des-pirates-Yahoo-dement/"/>
+    <summary><![CDATA[<b>Shellshock : Yahoo! Et WinZip auraient été victimes d'attaques par des pirates</b><br />
+<b> Yahoo! dément </b><br/><br/>Après Heartbleed, l'univers de la sécurité informatique a été secoué par l'apparition d'une autre menace importante qui touche  le populaire interpréteur en ligne de commande Bash, utilisé comme Shell dans plusieurs systèmes d'exploitation.<br/><br/>Cette faille, vieille de 22 ans pratiquement, est très aisée à exploiter, comme a pu le souligner Dan Guido, PDG du cabinet de sécurité Trail of Bit.<br/><br/>Un hacker éthique...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/yahoo.gif" type="image/jpeg" length="3294"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76064/Shellshock-Yahoo-Et-WinZip-auraient-ete-victimes-d-attaques-par-des-pirates-Yahoo-dement/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76060/Un-ingenieur-de-Red-Hat-s-insurge-contre-la-communaute-open-source-et-critique-vertement-les-developpeurs-du-noyau-Linux/</id>
+    <title><![CDATA[Un ingénieur de Red Hat s'insurge contre la communauté open source, et critique vertement les développeurs du noyau Linux]]></title>
+    <updated>2014-10-07T22:40:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76060/Un-ingenieur-de-Red-Hat-s-insurge-contre-la-communaute-open-source-et-critique-vertement-les-developpeurs-du-noyau-Linux/"/>
+    <summary><![CDATA[<b>Un ingénieur de Red Hat s'insurge contre la communauté open source</b><br />
+<b>et critique vertement les développeurs du noyau Linux</b><br/><br/><i>« La communauté Open Source est pleine de Trous du Cul ! »</i>. Des propos grossiers on ne peut le nier.  Ce qui est davantage surprenant est qu'ils sont d'un développeur du nom de Lennart Poettering appartenant lui aussi à cette communauté Open source. <br/><br/>Pour ce jeune ingénieur de Red Hat, les développeurs du noyau libre le plus populaire au monde &quot;<i>seraient des bêtes assoiffées...</i>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76060/Un-ingenieur-de-Red-Hat-s-insurge-contre-la-communaute-open-source-et-critique-vertement-les-developpeurs-du-noyau-Linux/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76055/Apple-confirme-le-faible-taux-d-adoption-d-iOS-8-47-pourcent-des-dispositifs-l-utilisent/</id>
+    <title><![CDATA[Apple confirme le faible taux d'adoption d'iOS 8, 47% des dispositifs l'utilisent]]></title>
+    <updated>2014-10-07T21:37:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76055/Apple-confirme-le-faible-taux-d-adoption-d-iOS-8-47-pourcent-des-dispositifs-l-utilisent/"/>
+    <summary><![CDATA[<b>Apple confirme le faible taux d'adoption d'iOS 8,  </b><br />
+<b>47% des dispositifs l'utilisent  </b><br/><br/>D'après le baromètre d'Apple, en trois semaines le pourcentage d'utilisation d'iOS 8 a gagné 1 point pour atteindre désormais les 47%. La page dédiée aux développeurs de l'entreprise montre donc que moins de la moitié des dispositifs compatibles utilisent le dernier système d'exploitation mobile de l'entreprise qui a été distribué en mi-septembre. <br/><br/>Pour rappel, cette nouvelle version majeure du système d'exploitation...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/ios8.png" type="image/jpeg" length="2178"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76055/Apple-confirme-le-faible-taux-d-adoption-d-iOS-8-47-pourcent-des-dispositifs-l-utilisent/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76053/Microsoft-publie-son-rapport-sur-la-diversite-de-ses-employes-et-affiche-une-progression-de-son-effectif-feminin/</id>
+    <title><![CDATA[Microsoft publie son rapport sur la diversité de ses employés et affiche une progression de son effectif féminin]]></title>
+    <updated>2014-10-07T17:30:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76053/Microsoft-publie-son-rapport-sur-la-diversite-de-ses-employes-et-affiche-une-progression-de-son-effectif-feminin/"/>
+    <summary><![CDATA[<b>Microsoft publie son rapport sur la diversité de ses employés  </b><br />
+<b>et affiche une progression de son effectif féminin  </b><br/><br/>Emboîtant le pas aux autres sociétés technologiques américaines, Microsoft s'est également soumis à la publication des statistiques relatives à la diversité au sein de ses équipes. Redmond avance que 29% de ses effectifs aux Etats-Unis sont des femmes. Un courriel de Lisa Brummel, Vice-Présidente des Ressources Humaines de Microsoft, indique que l'entreprise affichait 24% de femmes...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/microsoft-v2-2.gif" type="image/jpeg" length="3350"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76053/Microsoft-publie-son-rapport-sur-la-diversite-de-ses-employes-et-affiche-une-progression-de-son-effectif-feminin/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://sgbd.developpez.com/tutoriel/conception-base-donnee-solid/debuter-introduction/</id>
+    <title><![CDATA[Conception des bases de données SOLID : Introduction, par Chris Travers]]></title>
+    <updated>2014-10-07T15:00:00+02:00</updated>
+    <link rel="alternate" href="http://sgbd.developpez.com/tutoriel/conception-base-donnee-solid/debuter-introduction/"/>
+    <summary><![CDATA[Bonjour à tous,<img src="http://www.developpez.net/forums/images/smilies/icon_smile.gif" border="0" alt="" title=":)" class="inlineimg" /><br/><br/>Je vous présente cet article de Chris Travers intitulé :<br/><br/><br />
+<a href="http://sgbd.developpez.com/tutoriel/conception-base-donnee-solid/debuter-introduction/" target="_blank"><b><b>Conception des bases de données SOLID</b></b><br/><br/><b><b>Introduction</b></b></a>
+Je vous invite à le consulter pour mieux appréhender l'applicabilité des principes SOLID aux bases de données et aux applications.<br/><br/>
+	
+		
+			Cet article est le premier d'une série d'articles rédigés par Chris Travers. Il présente le modèle de conception SOLID de bases de données. L'auteur essaye de par ces articles de comparer l'application des principes SOLID aux applications...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/sgbd.gif" type="image/jpeg" length="2165"/>
+  </entry>
+  <entry>
+    <id>http://vogella.developpez.com/tutoriels/vogella/android-widget/</id>
+    <title><![CDATA[Les Widgets (d'écran d'accueil) Android, un tutoriel par Lars Vogel, traduit par Mishulyna]]></title>
+    <updated>2014-10-07T14:00:00+02:00</updated>
+    <link rel="alternate" href="http://vogella.developpez.com/tutoriels/vogella/android-widget/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/android.gif" type="image/jpeg" length="1990"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76042/Apple-pourrait-presenter-la-nouvelle-generation-d-iPad-et-d-iMac-le-16-octobre-sa-tablette-pourrait-etre-dotee-de-Touch-ID/</id>
+    <title><![CDATA[Apple pourrait présenter la nouvelle génération d'iPad et d'iMac le 16 octobre, sa tablette pourrait être dotée de Touch ID]]></title>
+    <updated>2014-10-07T11:22:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76042/Apple-pourrait-presenter-la-nouvelle-generation-d-iPad-et-d-iMac-le-16-octobre-sa-tablette-pourrait-etre-dotee-de-Touch-ID/"/>
+    <summary><![CDATA[<b>Apple pourrait présenter la nouvelle génération d'iPad et d'iMac le 16 octobre,    </b><br />
+<b>sa tablette pourrait être dotée de Touch ID   </b><br/><br/>Quelques semaines après le lancement de l'iPhone 6, Apple pourrait présenter son nouvel iPad durant une conférence à laquelle la presse est conviée le mardi 16 octobre (dans un peu moins de deux semaines) selon les sources de Re/Code. Même si Apple n'a pas confirmé, les invitations pour participer à cet évènement devront sans doute être envoyées dans les jours qui viennent....]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/apple.gif" type="image/jpeg" length="2708"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76042/Apple-pourrait-presenter-la-nouvelle-generation-d-iPad-et-d-iMac-le-16-octobre-sa-tablette-pourrait-etre-dotee-de-Touch-ID/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://cloud-computing.developpez.com/livres/index/?page=Livres-en-francais#L2100598759</id>
+    <title><![CDATA[Cloud Computing - Sécurité, stratégie d'entreprise et panorama du marché, une critique de benwit]]></title>
+    <updated>2014-10-07T08:48:00+02:00</updated>
+    <link rel="alternate" href="http://cloud-computing.developpez.com/livres/index/?page=Livres-en-francais#L2100598759"/>
+    <summary><![CDATA[<b>Cloud Computing<br />
+Sécurité, stratégie d'entreprise et panorama du marché</b><b><a href="http://cloud-computing.developpez.com/livres/index/?page=Livres-en-francais#L2100598759" target="_blank"><img src="http://images-eu.amazon.com/images/P/2100598759.08.LZZZZZZZ.jpg" /></a></b>
+	
+		
+			Cet ouvrage s'adresse à tous ceux qui souhaitent comprendre les concepts et les enjeux du cloud computing qu'ils soient informaticiens (chefs de projets, architectes, développeurs, équipes d'exploitation) ou experts métiers, responsables de maîtrise d'ouvrages...<br />
+La première partie introduit les concepts du cloud computing, des SaaS, PaaS et IaaS. Elle présente les différents modèles logiciels et situe le modèle cloud...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/livres.gif" type="image/jpeg" length="2435"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76031/Le-kernel-Linux-disponible-en-version-3-17-avec-le-support-du-controleur-XBox-One-Radeon-R9-290-et-de-nouvelles-puces-ARM/</id>
+    <title><![CDATA[Le kernel Linux disponible en version 3.17, avec le support du contrôleur XBox One, Radeon R9 290 et de nouvelles puces ARM]]></title>
+    <updated>2014-10-07T08:39:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76031/Le-kernel-Linux-disponible-en-version-3-17-avec-le-support-du-controleur-XBox-One-Radeon-R9-290-et-de-nouvelles-puces-ARM/"/>
+    <summary><![CDATA[<b>Le kernel Linux disponible en version 3.17</b><br />
+<b>avec le support du contrôleur XBox One, Radeon R9 290 et de nouvelles puces ARM</b><br/><br/>La mise à jour 3.17 du noyau Linux vient d'être publiée par Linus Torvalds. Ce dernier qui espérait pouvoir la publier la semaine dernière a déclaré hier dans sa mailinglist qu'il n'avait finalement pas pu le faire avant la date prévue.<br/><br/>Dans cette nouvelle mise à jour, on peut noter plusieurs améliorations dans le système de fichiers et des pilotes, ainsi que la correction de...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/linux.gif" type="image/jpeg" length="2159"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76031/Le-kernel-Linux-disponible-en-version-3-17-avec-le-support-du-controleur-XBox-One-Radeon-R9-290-et-de-nouvelles-puces-ARM/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://tcuvelier.developpez.com/tutoriels/jeux/modelisation-et-optimisation-decisions-dans-conception-jeux/01-introduction/</id>
+    <title><![CDATA[Modélisation et optimisation des décisions dans la conception de jeux, introduction d'une nouvelle série d'articles pour créer des jeux mieux balancés]]></title>
+    <updated>2014-10-07T08:30:00+02:00</updated>
+    <link rel="alternate" href="http://tcuvelier.developpez.com/tutoriels/jeux/modelisation-et-optimisation-decisions-dans-conception-jeux/01-introduction/"/>
+    <summary><![CDATA[Cet article est le premier d'une série sur l'application de techniques de modélisation et d'optimisation des décisions dans la conception de jeux. Il présente le parcours de la conception d'un jeu et précise les endroits où ces techniques de modélisation et d'optimisation se révèlent utiles.<br/><br/><a href="http://tcuvelier.developpez.com/tutoriels/jeux/modelisation-et-optimisation-decisions-dans-conception-jeux/01-introduction/" target="_blank"><b>Modélisation et optimisation des décisions dans la conception de jeux : introduction</b></a>]]></summary>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76028/Oracle-publie-de-nouveaux-outils-pour-les-utilisateurs-de-MySQL-dont-MySQL-Workbench-6-2-MySQL-Fabric-1-5-ainsi-qu-un-nouveau-plug-in-HTTP/</id>
+    <title><![CDATA[Oracle publie de nouveaux outils pour les utilisateurs de MySQL, dont MySQL Workbench 6.2, MySQL Fabric 1.5, ainsi qu'un nouveau plug-in HTTP]]></title>
+    <updated>2014-10-07T08:19:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76028/Oracle-publie-de-nouveaux-outils-pour-les-utilisateurs-de-MySQL-dont-MySQL-Workbench-6-2-MySQL-Fabric-1-5-ainsi-qu-un-nouveau-plug-in-HTTP/"/>
+    <summary><![CDATA[<b>Oracle publie de nouveaux outils pour les utilisateurs de MySQL</b><br />
+<b>dont MySQL Workbench 6.2, MySQL Fabric 1.5, ainsi qu'un nouveau plug-in HTTP</b><br/><br/>Oracle met à la disposition des utilisateurs de MySQL trois outils qui pourraient bien leur être utiles. Le premier est MySQL Workbench dans sa version 6.2. Cet outil visuel est destiné aux architectes de bases de données comme aux développeurs, et est disponible sous Windows, Linux et Mac OS X.<br/><br/>Il permet de faire une conception visuelle de son modèle et gérer...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/mysql.gif" type="image/jpeg" length="1910"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76028/Oracle-publie-de-nouveaux-outils-pour-les-utilisateurs-de-MySQL-dont-MySQL-Workbench-6-2-MySQL-Fabric-1-5-ainsi-qu-un-nouveau-plug-in-HTTP/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76024/HP-se-scinde-en-deux-entreprises-pour-recentrer-ses-activites-Etre-agile-et-reactif-est-l-unique-voie-vers-la-reussite-dixit-la-PDG/</id>
+    <title><![CDATA[HP se scinde en deux entreprises pour recentrer ses activités, « Etre agile et réactif est l'unique voie vers la réussite » dixit la PDG]]></title>
+    <updated>2014-10-07T00:33:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76024/HP-se-scinde-en-deux-entreprises-pour-recentrer-ses-activites-Etre-agile-et-reactif-est-l-unique-voie-vers-la-reussite-dixit-la-PDG/"/>
+    <summary><![CDATA[<b>HP se scinde en deux entreprises pour recentrer ses activités </b><br />
+<b> « Être agile et réactif est l'unique voie vers la réussite »  dixit la PDG </b><br/><br/>Après plusieurs années de suprématie sur le marché de l'ordinateur, HP réinvente le monde de l'entreprise en annonçant officiellement la scission de l'entreprise et de ses activités en deux entreprises distinctes : Hewlett-Packard Entreprise qui sera centré les technologies, les logiciels et les services dédiés aux entreprises et HP Inc qui aura pour tâche de...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/hp.gif" type="image/jpeg" length="2201"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76024/HP-se-scinde-en-deux-entreprises-pour-recentrer-ses-activites-Etre-agile-et-reactif-est-l-unique-voie-vers-la-reussite-dixit-la-PDG/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76021/Firefox-Mozilla-reprend-le-developpement-de-la-version-64-bit-elle-pourrait-etre-disponible-en-mars-2015/</id>
+    <title><![CDATA[Firefox : Mozilla reprend le développement de la version 64-bit, elle pourrait être disponible en mars 2015]]></title>
+    <updated>2014-10-06T20:31:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76021/Firefox-Mozilla-reprend-le-developpement-de-la-version-64-bit-elle-pourrait-etre-disponible-en-mars-2015/"/>
+    <summary><![CDATA[<b>Firefox : Mozilla reprend le développement de la version 64-bit</b><br />
+<b>elle pourrait être disponible en mars 2015</b> <br/><br/>Il y a presque deux ans, la fondation Mozilla <a href="http://www.developpez.com/actu/49764/" target="_blank">annonçait la fin du développement de Firefox 64-bit</a> pour les systèmes d'exploitation Windows. Cette décision faisait suite à une « source continue d'incompréhension et de frustration pour les utilisateurs de la communauté » de Firefox 64-bit, essentiellement à cause du manque d'extensions pour cette version qui serait par ailleurs truffée de bugs...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/firefox.gif" type="image/jpeg" length="2949"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76021/Firefox-Mozilla-reprend-le-developpement-de-la-version-64-bit-elle-pourrait-etre-disponible-en-mars-2015/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://deusyss.developpez.com/tutoriels/PJ/kanboard/</id>
+    <title><![CDATA[Présentation du logiciel Kanboard, par Alexandre GALODE]]></title>
+    <updated>2014-10-06T18:50:00+02:00</updated>
+    <link rel="alternate" href="http://deusyss.developpez.com/tutoriels/PJ/kanboard/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/article.gif" type="image/jpeg" length="2288"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76016/Brevets-Android-Samsung-aurait-verse-1-milliard-de-dollars-a-Microsoft-en-2013-selon-des-documents-de-justice/</id>
+    <title><![CDATA[Brevets Android : Samsung aurait versé 1 milliard de dollars à Microsoft en 2013, selon des documents de justice]]></title>
+    <updated>2014-10-06T18:03:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76016/Brevets-Android-Samsung-aurait-verse-1-milliard-de-dollars-a-Microsoft-en-2013-selon-des-documents-de-justice/"/>
+    <summary><![CDATA[<b>Brevets Android : Samsung aurait versé 1 milliard de dollars à Microsoft en 2013</b><br />
+<b>selon des documents de justice </b><br/><br/>Il y a quelques mois, Microsoft attaquait en justice Samsung pour non-respect d'un accord de licences. Le géant du logiciel américain reprochait au constructeur sud-coréen de ne pas avoir versé dans les délais accordés, les redevances pour ses brevets utilisés dans les smarphones Android.<br/><br/>Des informations rendues publiques par la justice américaine dans le cadre de cette affaire, ont levé...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/android.gif" type="image/jpeg" length="1990"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76016/Brevets-Android-Samsung-aurait-verse-1-milliard-de-dollars-a-Microsoft-en-2013-selon-des-documents-de-justice/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76011/Soirees-Plug-Work-9-entreprises-sur-10-recrutent-80-pourcent-des-entreprises-nous-renouvellent-leur-confiance-entretien-avec-Gilles-Risser-de-Moovijob/</id>
+    <title><![CDATA[Soirées Plug&Work : "9 entreprises sur 10 recrutent ! 80% des entreprises nous renouvellent leur confiance", entretien avec Gilles Risser de Moovijob]]></title>
+    <updated>2014-10-06T17:33:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76011/Soirees-Plug-Work-9-entreprises-sur-10-recrutent-80-pourcent-des-entreprises-nous-renouvellent-leur-confiance-entretien-avec-Gilles-Risser-de-Moovijob/"/>
+    <summary><![CDATA[<b>Soirées Plug&amp;Work : « 9 entreprises sur 10 recrutent ! 80% des entreprises nous renouvellent leur confiance »,  </b><br />
+<b>entretien avec Gilles Risser, Directeur Général Moovijob</b><br/><br/>Dans un contexte où l'obtention d'un emploi est de plus en plus difficile, certains secteurs sortent du lot. Les chiffres de l'Association Pour l'Emploi des Cadres (APEC) avancent des statistiques encourageantes dans le secteur de l'informatique. En effet, l'APEC s'attend à voir un volume de recrutements dans le secteur informatique...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/calendrier.gif" type="image/jpeg" length="2226"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76011/Soirees-Plug-Work-9-entreprises-sur-10-recrutent-80-pourcent-des-entreprises-nous-renouvellent-leur-confiance-entretien-avec-Gilles-Risser-de-Moovijob/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://openoffice-libreoffice.developpez.com/actu/75990/Quelle-sera-la-meilleure-suite-bureautique-libre-en-2014/</id>
+    <title><![CDATA[Quelle sera la meilleure suite bureautique libre en 2014 ? Partagez vos impressions sur la suite bureautique de votre choix]]></title>
+    <updated>2014-10-06T16:37:00+02:00</updated>
+    <link rel="alternate" href="http://openoffice-libreoffice.developpez.com/actu/75990/Quelle-sera-la-meilleure-suite-bureautique-libre-en-2014/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/lo+oo.gif" type="image/jpeg" length="3373"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://openoffice-libreoffice.developpez.com/actu/75990/Quelle-sera-la-meilleure-suite-bureautique-libre-en-2014/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/76006/Le-logiciel-libre-de-modelisation-3D-Blender-est-disponible-en-version-2-72-decouvrez-les-nouveautes-et-amelioration-de-cette-version/</id>
+    <title><![CDATA[3D Blender  : le logiciel libre de modélisation disponible en version 2.72, découvrez les nouveautés et améliorations]]></title>
+    <updated>2014-10-06T13:42:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/76006/Le-logiciel-libre-de-modelisation-3D-Blender-est-disponible-en-version-2-72-decouvrez-les-nouveautes-et-amelioration-de-cette-version/"/>
+    <summary><![CDATA[<b>Le logiciel libre de modélisation 3D Blender est disponible en version 2.72</b><br />
+<b>Améliorations de l'utilisation de la mémoire, rendu volumétrique dans Cycles, améliorations de l'interface...</b><br/><br/><img src="http://jeux.developpez.com/public/images/news/Blender-272.jpg" /><br />
+Trois mois après <a href="http://www.developpez.net/forums/d1453956/applications/developpement-2d-3d-jeux/blender-2-71-disponible-telechargement/" target="_blank">la version 2.71</a>, c'est la version 2.72 de l'outil libre et open source de modélisation débarque sur nos PC. Voici un descriptif (non exhaustif) des changements apportés par cette nouvelle version :<br/><br/><b>Rendu Cycles</b><br/><br/><b>Rendu volumétriques</b><br />
+<ul><li style="">Les options du rendu volumétrique peuvent être configurées par monde...</li></ul>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/blender-2.gif" type="image/jpeg" length="4029"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/76006/Le-logiciel-libre-de-modelisation-3D-Blender-est-disponible-en-version-2-72-decouvrez-les-nouveautes-et-amelioration-de-cette-version/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/76004/Microsoft-Research-presente-RoomAlive-un-projet-qui-apporte-la-realite-augmentee-a-votre-salon/</id>
+    <title><![CDATA[Microsoft Research présente RoomAlive, un projet qui apporte la réalité augmentée à votre salon]]></title>
+    <updated>2014-10-06T12:29:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/76004/Microsoft-Research-presente-RoomAlive-un-projet-qui-apporte-la-realite-augmentee-a-votre-salon/"/>
+    <summary><![CDATA[<b>Microsoft Research présente RoomAlive,   </b><br />
+<b>un projet qui apporte la réalité augmentée à votre salon   </b><br/><br/>Quand Microsoft a dévoilé son concept IllumiRoom début 2013 durant le CES de Las Vegas, l'entreprise a suscité une grande attention de la part des gamers autour du futur model de sa console de jeux vidéo. <br/><br/>Pour rappel, le projet de recherche IllumiRoom conçu par Brett Jones, Hrvoje Benko, Eyal Ofek et Andy Wilson de Microsoft Research, combine Kinect et un projecteur vidéo. Le capteur 3D se charge...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/microsoft2.gif" type="image/jpeg" length="2337"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/76004/Microsoft-Research-presente-RoomAlive-un-projet-qui-apporte-la-realite-augmentee-a-votre-salon/#comments</wfw:comment>
+  </entry>
+</feed>
