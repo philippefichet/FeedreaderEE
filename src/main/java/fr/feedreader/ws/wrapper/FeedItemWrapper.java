@@ -26,12 +26,19 @@ public class FeedItemWrapper {
     private FeedItemUrlWrapper url = null;
 
     public FeedItemWrapper(FeedItem feedItem, FeedItemUrlWrapper feedItemUrlWrapper) {
+        this(feedItem, feedItemUrlWrapper, false);
+    }
+    
+    public FeedItemWrapper(FeedItem feedItem, FeedItemUrlWrapper feedItemUrlWrapper, boolean summary) {
         enclosure = feedItem.getEnclosure();
         feedItemId = feedItem.getFeedItemId();
         id = feedItem.getId();
         link = feedItem.getLink();
         readed = feedItem.getReaded();
         title = feedItem.getTitle();
+        if (summary) {
+            this.summary = feedItem.getSummary();
+        }
         if (feedItem.getUpdated() != null) {
             updated = feedItem.getUpdated().getTime();
         }
