@@ -7,6 +7,7 @@ package fr.feedreader.ws;
 
 import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.buisness.FeedItemBuisness;
+import fr.feedreader.buisness.TimerBuisness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.ws.wrapper.FeedItemResponseWrapper;
 import fr.feedreader.ws.wrapper.FeedItemUrlWrapper;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
@@ -27,6 +29,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 /**
  *
@@ -42,6 +45,9 @@ public class FeedFacadeREST  {
     @Inject
     private FeedItemBuisness feedItemBuisness;
     
+    @Inject
+    private TimerBuisness timerBuisness;
+    
     @Context
     private HttpServletRequest request;
     
@@ -56,6 +62,27 @@ public class FeedFacadeREST  {
             }
             return feedWrapper;
         }).collect(Collectors.toList());
+    }
+    
+    @DELETE
+    public Response deleteFeed(@QueryParam("id") Integer feedId) {
+        try {
+            feedBuisness.delete(feedId);
+            return Response.ok().build();
+        } catch(Exception e) {
+            return Response.serverError().build();
+        }
+    }
+    
+    @GET
+    @Path("/update")
+    public Response updateAllFeed() {
+        try {
+            timerBuisness.updateFeed();
+            return Response.ok().build();
+        } catch(Exception e) {
+            return Response.serverError().build();
+        }
     }
     
     @PUT
@@ -74,7 +101,7 @@ public class FeedFacadeREST  {
             
             return new FeedItemWrapper(
                 feedItem,
-                new FeedItemUrlWrapper(request, feedItem)
+                new FeedItemUrlWrapper(request.getContextPath(), feedItem)
             );
         }).collect(Collectors.toList());
         
@@ -83,65 +110,4 @@ public class FeedFacadeREST  {
             feedItemBuisness.getTotalPage(id)
         );
     }
-    
-//    @PersistenceContext(unitName = "FeedReaderPU")
-//    private EntityManager em;
-//
-//    public FeedFacadeREST() {
-//        super(Feed.class);
-//    }
-//
-//    @POST
-//    @Override
-//    @Consumes({"application/xml", "application/json"})
-//    public void create(Feed entity) {
-//        super.create(entity);
-//    }
-//
-//    @PUT
-//    @Path("{id}")
-//    @Consumes({"application/xml", "application/json"})
-//    public void edit(@PathParam("id") Integer id, Feed entity) {
-//        super.edit(entity);
-//    }
-//
-//    @DELETE
-//    @Path("{id}")
-//    public void remove(@PathParam("id") Integer id) {
-//        super.remove(super.find(id));
-//    }
-//
-//    @GET
-//    @Path("{id}")
-//    @Produces({"application/xml", "application/json"})
-//    public Feed find(@PathParam("id") Integer id) {
-//        return super.find(id);
-//    }
-//
-//    @GET
-//    @Override
-//    @Produces({"application/xml", "application/json"})
-//    public List<Feed> findAll() {
-//        return super.findAll();
-//    }
-//
-//    @GET
-//    @Path("{from}/{to}")
-//    @Produces({"application/xml", "application/json"})
-//    public List<Feed> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
-//        return super.findRange(new int[]{from, to});
-//    }
-//
-//    @GET
-//    @Path("count")
-//    @Produces("text/plain")
-//    public String countREST() {
-//        return String.valueOf(super.count());
-//    }
-//
-//    @Override
-//    protected EntityManager getEntityManager() {
-//        return em;
-//    }
-    
 }
