@@ -23,6 +23,7 @@ import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static fr.feedreader.junit.Assert.*;
 import static org.junit.Assert.*;
 
 /**
@@ -50,6 +51,7 @@ public class FeedBuisnessTest {
         WebArchive archive = ShrinkWrap.create(WebArchive.class)
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.models")
+            .addClass(fr.feedreader.junit.Assert.class)
             .addAsLibraries(dependencies)
             .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
@@ -76,6 +78,8 @@ public class FeedBuisnessTest {
         int i = 0;
         assertNotNull(feedItems.get(i).getUpdated());
         assertEquals("Tor veut créer une messagerie instantanée anonyme, une première version bêta pour le 31 mars 2014", feedItems.get(i++).getTitle());
+        assertNotNull(feedItems.get(i).getSummary());
+        assertStartsWith("<b>Crytek met à disposition Renderdoc", feedItems.get(i).getSummary());
         assertEquals("Crytek met à disposition Renderdoc, un outil de débogage graphique intégrant un débogueur de shaders et de multiples outils d'analyse", feedItems.get(i++).getTitle());
         assertEquals("Qt 5.3 sort en version alpha, avec des améliorations de la stabilité, des performances et facilite la première utilisation du framework", feedItems.get(i++).getTitle());
         assertEquals("Windows XP gagne encore des parts à quelques semaines de la fin de son support, Windows 8.1 progresse lentement", feedItems.get(i++).getTitle());
@@ -98,12 +102,25 @@ public class FeedBuisnessTest {
     }
     
     @Test
+    public void getFeedRss() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
+        List<FeedItem> feedItems = feedBuisness.getFeedItems(new File("./src/test/resources/rss.rss").toURI());
+        int size = feedItems.size();
+        assertTrue("Total : " + size + " au lieu de 20", size == 20);
+        int i = 0;
+        assertNotNull(feedItems.get(i).getUpdated());
+        assertEquals("La notion de BOM avec Maven", feedItems.get(i).getTitle());
+        assertNotNull(feedItems.get(i).getSummary());
+        assertStartsWith("\n        <p>Maven est une solution de gestion de production de projets", feedItems.get(i).getSummary());
+    }
+    
+    @Test
     public void getFeedAtomLinuxFr() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
         List<FeedItem> feedItems = feedBuisness.getFeedItems(new File("./src/test/resources/linuxfr.atom").toURI());
         int size = feedItems.size();
         assertTrue("Total : " + size + " au lieu de 15", size == 15);
         int i = 0;
         assertNotNull(feedItems.get(i).getUpdated());
+        assertNull(feedItems.get(i).getSummary());
         assertEquals("Apache-OFBiz s'invite dans l'usine", feedItems.get(i++).getTitle());
         assertEquals("PSES2014 - proposez vos hacks", feedItems.get(i++).getTitle());
         assertEquals("L'ERP OpenConcerto disponible en version 1.3", feedItems.get(i++).getTitle());
