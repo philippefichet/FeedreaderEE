@@ -1,3 +1,9 @@
+var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+Notification.requestPermission(function (permission) {
+    
+});
+
 // AngularJS
 var FeedReader = angular.module('FeedReader', ['ngSanitize']);
 
@@ -245,6 +251,32 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
             var data = angular.fromJson(message.data);
             $scope.$apply(function() {
                 if (data.type == "feeds") {
+                    needReload = null;
+                    notificationTitle = "Nouveau(x) article(s)";
+                    notificationText = "";
+                    for(var i = 0; i < data.feeds.length; i++) {
+                        for(var j = 0; j < $scope.feeds.length; j++) {
+                            if ($scope.feeds[j].id == data.feeds[i].id) {
+                                if ($scope.feeds[j].unread < data.feeds[i].unread) {
+                                    notificationText += data.feeds[i].name + ", ";
+                                    if ($scope.feeds[j].selected) {
+                                        needReload = $scope.feeds[j];
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (notificationText.length > 0) {
+                        notificationText = notificationText.substr(0, notificationText.length - 2);
+                        var instance = new Notification(
+                            notificationTitle, {
+                                body: notificationText
+                            }
+                        );
+                    }
+                    
                     $scope.feeds = data.feeds;
                     // Si il y a un bien un flux séléctionner
                     if ($scope.currentFeed !== null && $scope.currentFeed !== undefined) {
@@ -268,6 +300,10 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
                                 }
                             }
                         }
+                    }
+                    
+                    if (needReload != null) {
+                        $scope.loadFeedItem(needReload, 1);
                     }
                 } else if (data.type == "feedItems") {
                     alert("Mise à jours items");
