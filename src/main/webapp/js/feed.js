@@ -177,6 +177,23 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
         })
     }
 
+    /**
+     * Chargement du résumé de l'article
+     * @param FeedItem feedItem Article dont le résumé doit être récupérer
+     */
+    $scope.loadSummary = function(feedItem) {
+        console.log(feedItem);
+        if (feedItem.summary == undefined || feedItem.summary == null || feedItem.summary.length == 0) {
+            $http.get($window.webservicesUrl["feedItemId"].replace("{{feedItem.id}}", feedItem.id)).success(function(feedItem) {
+                for(var i = 0; i < $scope.feedItems.length; i++) {
+                    if($scope.feedItems[i].id == feedItem.id) {
+                        $scope.feedItems[i].summary = feedItem.summary;
+                    }
+                }
+            });
+        }
+    }
+
     $http.get($window.webservicesUrl["feed"]).success(function(feeds) {
         $scope.feeds = feeds;
         for (var i = 0; i < $scope.feeds.length; i++) {
@@ -245,7 +262,6 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
                                     $scope.feedItems[j].feedItemId = data.feedItems[i].feedItemId;
                                     $scope.feedItems[j].link = data.feedItems[i].link;
                                     $scope.feedItems[j].readed = data.feedItems[i].readed;
-                                    $scope.feedItems[j].summary = data.feedItems[i].summary;
                                     $scope.feedItems[j].title = data.feedItems[i].title;
                                     $scope.feedItems[j].url = data.feedItems[i].url;
                                     break;

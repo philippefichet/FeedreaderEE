@@ -31,7 +31,7 @@
                 <div id="feed-one" class="panel-group">
                     <div class="panel panel-default" ng-repeat="feedItem in feedItems" data-readed="{{feedItem.url.toRead}}">
                         <div class="panel-heading">
-                            <h4 class="panel-title" ng-class="{'bg-info': !feedItem.readed}">
+                            <h4 class="panel-title" ng-class="{'bg-info': !feedItem.readed}" ng-click="loadSummary(feedItem)">
                                 <span class="readed" ng-click="setReaded(feedItem.url.reverseReaded, $index)">
                                     <span ng-if="feedItem.readed" class="glyphicon glyphicon-star"></span>
                                     <span ng-if="!feedItem.readed" class="glyphicon glyphicon-star-empty"></span>
