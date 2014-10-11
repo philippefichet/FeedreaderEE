@@ -7,13 +7,14 @@
         
         <script type="text/javascript" src="<%= request.getContextPath() %>/webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<%= request.getContextPath() %>/webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/webjars/bootswatch/3.1.1%2B1/lumen/bootstrap.min.css"/>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bootstrap.lumen.min.css"/>
         
         <script type="text/javascript" src="<%= request.getContextPath() %>/js/feed.js"></script>
         <link rel="stylesheet" href="<%= request.getContextPath() %>/css/feed.css"/>
         <script>
             var webservicesUrl = {
                 "feed": "<%= request.getContextPath() %>/ws/feed",
+                "feedItemId": "<%= request.getContextPath() %>/ws/feedItem/{{feedItem.id}}",
                 "feedItem": "<%= request.getContextPath() %>/ws/feed/{{feed.id}}/item?page={{page}}",
             }
         </script>
