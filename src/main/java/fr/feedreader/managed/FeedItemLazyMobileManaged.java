@@ -13,8 +13,10 @@ import fr.feedreader.models.FeedItem;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 /**
@@ -42,10 +44,51 @@ public class FeedItemLazyMobileManaged {
     
     private Map<Feed, Long> feedsUnReadCounter;
     
+    /**
+     * La récupération du titre permet de déclanger le init()
+     * @return Titre de la page
+     */
+    public String getTitle() {
+        return "Visualisation des flux rss/atom";
+    }
+    
+    @PostConstruct
+    public void init() {
+        Map<String, String> requestParameterMap = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+        String feedIdRequest = requestParameterMap.get("feedId");
+        if (feedIdRequest == null) {
+            String feedItemIdRequest = requestParameterMap.get("feedItem");
+            try {
+                feedItem = feedItemBuisness.find(Integer.parseInt(feedItemIdRequest));
+                feed = feedItem.getFeed();
+            } catch (NumberFormatException e) {
+                
+            }
+        } else {
+            try {
+                feed = feedBuisness.find(Integer.parseInt(feedIdRequest));
+            } catch(NumberFormatException e) {
+                
+            }
+        }
+        
+        String pageRequest = requestParameterMap.get("page");
+        if (pageRequest != null) {
+            page = Integer.parseInt(pageRequest);
+            if (page > getTotalPage()) {
+                page = getTotalPage().intValue();
+            }
+            if (page < 1) {
+                page = 1;
+            }
+        }
+    }
+    
     public List<Feed> getFeeds() {
         if (feeds == null) {
             feeds = feedBuisness.findAll();
         }
+        System.out.println("getFeeds");
         return feeds;
     }
     

@@ -5,7 +5,7 @@
       xmlns:pm="http://primefaces.org/mobile"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-    <f:view renderKitId="PRIMEFACES_MOBILE" />
+    <f:view renderKitId="PRIMEFACES_MOBILE"/>
     <h:head>
         <style>
             .badge {
@@ -48,15 +48,35 @@
                 background-color: rgba(171, 207, 255, 1);
             }
         </style>
+        <script type="text/javascript">
+            var pushStateHome = function(feedId) {
+                window.history.pushState({}, "", "#{request.requestURI}#feed" );
+            };
+            var pushStateFeedId = function(feedId, page) {
+                if (page === undefined) {
+                    window.history.pushState({"feedId": feedId}, "", "#{request.requestURI}?feedId=" + feedId + "#feedItem");
+                } else {
+                    window.history.pushState({"feedId": feedId, "page": page}, "", "#{request.requestURI}?feedId=" + feedId + "&amp;page=" + page + "#feedItem");
+                }
+            };
+            var pushStateFeedItemId = function(feedItemId, page) {
+                window.history.pushState({"feedItemId": feedItemId, "page": page}, "", "#{request.requestURI}?feedItem=" + feedItemId + "&amp;page=" + page + "#feedItemAction");
+            };
+            
+            $(document).ready(function() {
+                PrimeFaces.Mobile.navigate(document.location.hash, {});
+            });
+        </script>
     </h:head>
     <h:body>
+        
         <!-- Lecture des flux -->
         <pm:page id="feed">
-            <pm:header title="Visualisation des flux rss/atom"></pm:header>
+            <pm:header title="#{feedItemLazyMobileManaged.title}"></pm:header>
             <pm:content>
-                <h:form>
+                <h:form id="feedForm">
                     <p:dataList value="#{feedItemLazyMobileManaged.feeds}" var="feed">
-                        <p:commandButton icon="ui-icon-carat-r" iconPos="right" escape="false" value="#{feed.name} #{htmlManaged.badge(feedItemLazyMobileManaged.feedsUnReadCounter[feed])}" action="#{feedItemLazyMobileManaged.setFeed(feed)}" update=":feedItem"/>
+                        <p:commandButton onsuccess="pushStateFeedId(#{feed.id});" icon="ui-icon-carat-r" iconPos="right" escape="false" value="#{feed.name} #{htmlManaged.badge(feedItemLazyMobileManaged.feedsUnReadCounter[feed])}" action="#{feedItemLazyMobileManaged.setFeed(feed)}" update=":feedItem"/>
                     </p:dataList>
                 </h:form>
             </pm:content>
@@ -64,36 +84,36 @@
         
         <!-- Lecture des articles -->
         <pm:page id="feedItem" lazy="true">
-            <pm:header fixed="true">
-                <f:facet name="left">
-                    <p:commandButton action="pm:feed" value="Retour" style="width: auto;" icon="ui-icon-back" update=":feed"/>
-                </f:facet>
-                <f:facet name="right">
-                    <h1 class="ui-title" role="heading" aria-level="1"><h:outputText escape="false" value="#{feedItemLazyMobileManaged.feed.name} #{htmlManaged.badge(feedItemLazyMobileManaged.feedsUnReadCounter[feedItemLazyMobileManaged.feed])}"/></h1>
-                </f:facet>
-            </pm:header>
-            <pm:content>
-                <h:form id="feedItemForm">
-                    <h:panelGroup id="feedItemList" rendered="#{feedItemLazyMobileManaged.feed != null}">
-                        <div style="text-align: center; margin: 0.5em;">
-                            <p:commandButton icon="ui-icon-arrow-l" value="Précédent" action="#{feedItemLazyMobileManaged.previousPage()}" update="feedItemForm:feedItemList" style="float: left; width: auto;"/>
-                            <p:commandButton icon="ui-icon-arrow-r"  iconPos="right" value="Suivant" action="#{feedItemLazyMobileManaged.nextPage()}" update="feedItemForm:feedItemList" style="float: right; width: auto;"/>
-                            <div style="padding: 0.7em 1em;">#{feedItemLazyMobileManaged.page} / #{feedItemLazyMobileManaged.totalPage}</div>
-                        </div>
-                        <div style="clear: both"/>
-                        <p:dataList value="#{feedItemLazyMobileManaged.feedItems}" paginator="true" rows="20" var="feedItem">
-                            <p:commandButton styleClass="readed-#{feedItem.readed}" icon="ui-icon-carat-r" iconPos="right" value="#{feedItem.title}" action="#{feedItemLazyMobileManaged.setFeedItem(feedItem)}" update=":feedItemAction"/>
-                        </p:dataList>
-                    </h:panelGroup>
-                </h:form>
-            </pm:content>
+            <h:form id="feedItemForm">
+                <pm:header fixed="true">
+                    <f:facet name="left">
+                        <p:commandButton onsuccess="pushStateHome();" action="pm:feed" value="Retour" style="width: auto;" icon="ui-icon-back" update=":feed"/>
+                    </f:facet>
+                    <f:facet name="right">
+                        <h1 class="ui-title" role="heading" aria-level="1"><h:outputText escape="false" value="#{feedItemLazyMobileManaged.feed.name} #{htmlManaged.badge(feedItemLazyMobileManaged.feedsUnReadCounter[feedItemLazyMobileManaged.feed])}"/></h1>
+                    </f:facet>
+                </pm:header>
+                <pm:content>
+                        <h:panelGroup id="feedItemList" rendered="#{feedItemLazyMobileManaged.feed != null}">
+                            <div style="text-align: center; margin: 0.5em;">
+                                <p:commandButton onsuccess="pushStateFeedId(#{feedItemLazyMobileManaged.feed.id}, #{feedItemLazyMobileManaged.page - 1})" icon="ui-icon-arrow-l" value="Précédent" action="#{feedItemLazyMobileManaged.previousPage()}" update="feedItemForm:feedItemList" style="float: left; width: auto;"/>
+                                <p:commandButton onsuccess="pushStateFeedId(#{feedItemLazyMobileManaged.feed.id}, #{feedItemLazyMobileManaged.page + 1})" icon="ui-icon-arrow-r"  iconPos="right" value="Suivant" action="#{feedItemLazyMobileManaged.nextPage()}" update="feedItemForm:feedItemList" style="float: right; width: auto;"/>
+                                <div style="padding: 0.7em 1em;">#{feedItemLazyMobileManaged.page} / #{feedItemLazyMobileManaged.totalPage}</div>
+                            </div>
+                            <div style="clear: both"/>
+                            <p:dataList value="#{feedItemLazyMobileManaged.feedItems}" paginator="true" rows="20" var="feedItem">
+                                <p:commandButton onsuccess="pushStateFeedItemId(#{feedItem.id}, #{feedItemLazyMobileManaged.page})" styleClass="readed-#{feedItem.readed}" icon="ui-icon-carat-r" iconPos="right" value="#{feedItem.title}" action="#{feedItemLazyMobileManaged.setFeedItem(feedItem)}" update=":feedItemAction"/>
+                            </p:dataList>
+                        </h:panelGroup>
+                </pm:content>
+            </h:form>
         </pm:page>
         
         <!-- Affichage d'un article -->
         <pm:page id="feedItemAction" lazy="true">
             <pm:header fixed="true">
                 <f:facet name="left">
-                    <p:commandButton action="pm:feedItem" value="Retour" style="width: auto;" icon="ui-icon-back" update=":feedItem"/>
+                    <p:commandButton onsuccess="pushStateFeedId(#{feedItemLazyMobileManaged.feed.id}, #{feedItemLazyMobileManaged.page})" action="pm:feedItem" value="Retour" style="width: auto;" icon="ui-icon-back" update=":feedItem"/>
                 </f:facet>
                 <f:facet name="right">
                     <h1 class="ui-title" role="heading" aria-level="1"><h:outputText escape="false" value="#{feedItemLazyMobileManaged.feed.name} #{htmlManaged.badge(feedItemLazyMobileManaged.feedsUnReadCounter[feedItemLazyMobileManaged.feed])}"/></h1>
