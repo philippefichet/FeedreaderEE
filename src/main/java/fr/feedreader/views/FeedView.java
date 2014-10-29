@@ -63,7 +63,7 @@ public class FeedView extends VerticalLayout implements View {
                 b.addStyleName(ValoTheme.BUTTON_ICON_ALIGN_RIGHT);
                 b.addStyleName("multiline");
                 if (countUnreadFeed != null && countUnreadFeed > 0) {
-                    b.addStyleName(ValoTheme.BUTTON_FRIENDLY);
+                    b.addStyleName(ValoTheme.BUTTON_PRIMARY);
                 }
                 b.addClickListener((clickEvent) -> {
                     getUI().getNavigator().navigateTo("feedItem/" + feed.getId() + "/1");

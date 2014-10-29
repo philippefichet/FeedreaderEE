@@ -85,8 +85,8 @@ public class FeedItemView extends VerticalLayout implements View {
             
             HorizontalLayout titleLayout = new HorizontalLayout();
             titleLayout.setWidth(100, Unit.PERCENTAGE);
-            
-            Label title = new Label(feed.getName() + " <span class=\"badge\">" + countUnread.get(feed) + "</span>");
+            Long countUnreadFeed = countUnread.get(feed);
+            Label title = new Label(feed.getName() + (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : ""));
             title.setContentMode(ContentMode.HTML);
             title.setWidthUndefined();
             
