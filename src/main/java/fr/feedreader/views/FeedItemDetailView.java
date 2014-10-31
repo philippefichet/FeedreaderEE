@@ -17,8 +17,10 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
+import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.themes.ValoTheme;
 import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.buisness.FeedItemBuisness;
 import fr.feedreader.models.Feed;
@@ -39,6 +41,12 @@ public class FeedItemDetailView extends VerticalLayout implements View {
     
     private Map<Feed, Long> countUnread = null;
     
+    private Label title = null;
+    
+    private FeedItem feedItem = null;
+    
+    private Button switchReaded = null;
+    
     @Inject
     private FeedBuisness feedBuisness;
     
@@ -52,9 +60,9 @@ public class FeedItemDetailView extends VerticalLayout implements View {
         } else {
             removeAllComponents();
             String[] parameter = event.getParameters().split("/");
-            FeedItem feedItem = feedItemBuisness.find(Integer.parseInt(parameter[0]));
+            feedItem = feedItemBuisness.find(Integer.parseInt(parameter[0]));
             if (!feedItem.getReaded()) {
-                feedItemBuisness.setReaded(feedItem.getId(), Boolean.TRUE);
+                feedItem = feedItemBuisness.setReaded(feedItem.getId(), Boolean.TRUE);
             }
             if (parameter.length > 1) {
                 try {
@@ -71,22 +79,21 @@ public class FeedItemDetailView extends VerticalLayout implements View {
             HorizontalLayout titleLayout = new HorizontalLayout();
             titleLayout.setWidth(100, Unit.PERCENTAGE);
             Long countUnreadFeed = countUnread.get(feedItem.getFeed());
-            Label title = new Label(feedItem.getFeed().getName() + (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : ""));
+            title = new Label(feedItem.getFeed().getName() + (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : ""));
             title.setContentMode(ContentMode.HTML);
             title.setWidthUndefined();
             
             Button back = new Button("Retour");
+            back.setData(feedItem.getFeed().getId());
             back.setIcon(FontAwesome.ARROW_CIRCLE_LEFT);
             back.addClickListener((eventClick) -> {
-                getUI().getNavigator().navigateTo("feedItem/" + feedItem.getFeed().getId() + "/" + page);
+                getUI().getNavigator().navigateTo("feedItem/" + eventClick.getButton().getData() + "/" + page);
             });
             
-//            titleLayout.addComponent(back);
             titleLayout.addComponent(title);
             titleLayout.addStyleName("title");
             titleLayout.setComponentAlignment(title, Alignment.MIDDLE_CENTER);
             titleLayout.setHeight("4em");
-//            titleLayout.setExpandRatio(title, 100);
             
             HorizontalLayout backLayout = new HorizontalLayout();
             backLayout.addComponent(back);
@@ -100,34 +107,10 @@ public class FeedItemDetailView extends VerticalLayout implements View {
             absoluteLayout.setHeight("4em");
             absoluteLayout.addComponent(titleLayout, "left: 0");
             absoluteLayout.addComponent(backLayout, "left: 0");
-
-
-            
-            
-//            addComponent(titleLayout);
             addComponent(absoluteLayout);
-            
-            
-//            HorizontalLayout titleLayout = new HorizontalLayout();
-//            titleLayout.setWidth(100, Unit.PERCENTAGE);
-//            
-//            Label title = new Label(feedItem.getFeed().getName() + " <span class=\"valo-menu-badge\">" + countUnread.get(feedItem.getFeed()) + "</span>");
-//            title.setContentMode(ContentMode.HTML);
-//            title.setWidthUndefined();
-//            
-//            Button back = new Button("Retour");
-//            back.addClickListener((eventClick) -> {
-//                getUI().getNavigator().navigateTo("feedItem/" + feedItem.getFeed().getId() + "/" + page);
-//            });
-//            
-//            titleLayout.addComponent(back);
-//            titleLayout.addComponent(title);
-//            titleLayout.setComponentAlignment(title, Alignment.MIDDLE_CENTER);
-//            titleLayout.setExpandRatio(back, 0);
-//            titleLayout.setExpandRatio(title, 100);
-//
-//            addComponent(titleLayout);
-            
+
+            HorizontalLayout actionLayout = new HorizontalLayout();
+            actionLayout.setHeight("4em");
             Panel feedItemPanel = new Panel(feedItem.getTitle());
             Label summary = new Label(feedItem.getSummary());
             summary.setContentMode(ContentMode.HTML);
@@ -137,7 +120,33 @@ public class FeedItemDetailView extends VerticalLayout implements View {
             feedItemDetailLayout.addComponent(link);
             feedItemPanel.setContent(feedItemDetailLayout);
             
+            switchReaded = new Button(FontAwesome.STAR);
+            switchReaded.addClickListener((eventClick) -> {
+                switchReaded();
+                updateReaded();
+            });
+            actionLayout.addComponent(switchReaded);
+            actionLayout.setComponentAlignment(switchReaded, Alignment.MIDDLE_LEFT);
+            addComponent(actionLayout);
             addComponent(feedItemPanel);
+        }
+    }
+    
+    protected void switchReaded() {
+        feedItem = feedItemBuisness.setReaded(feedItem.getId(), !feedItem.getReaded());
+    }
+    
+    protected void updateReaded() {
+        countUnread = feedBuisness.countUnread();
+        Long countUnreadFeed = countUnread.get(feedItem.getFeed());
+        title.setValue(
+                feedItem.getFeed().getName() + 
+                (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : "")
+        );
+        if (feedItem.getReaded()) {
+             switchReaded.setIcon(FontAwesome.STAR);
+        } else {
+            switchReaded.setIcon(FontAwesome.STAR_O);
         }
     }
 }
