@@ -1,6 +1,4 @@
-// Modify the base color of the theme
-/*$v-background-color: hsl(225, 100%, 10%);*/
-/*$v-background-color: #777;*/
+$v-app-loading-text: "Feedreader";
 
 @import "../valo/valo";
 
@@ -38,7 +36,7 @@
     
     .badge {
         border-radius: 40px;
-        padding: 0 0.5em;
+        padding: 0.25em 0.5em;
         margin-left: 0.5em;
         
         backgroud-color: valo-font-color($v-background-color);
