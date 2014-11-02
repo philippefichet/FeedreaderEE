@@ -1485,6 +1485,17 @@ div.v-layout.v-horizontal.v-widget {
 	border-radius: 4px;
 }
 
+.v-app-loading:after {
+	position: fixed;
+	z-index: 100;
+	top: 45%;
+	padding-top: 47px;
+	text-align: center;
+	left: 0;
+	right: 0;
+	content: "Feedreader";
+}
+
 .v-loading-indicator {
 	position: fixed !important;
 	z-index: 99999;
@@ -12059,7 +12070,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .badge {
 	border-radius: 40px;
-	padding: 0 0.5em;
+	padding: 0.25em 0.5em;
 	margin-left: 0.5em;
 	backgroud-color: #464646;
 	color: #fafafa;
