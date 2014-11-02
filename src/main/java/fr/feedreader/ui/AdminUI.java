@@ -5,46 +5,45 @@
  */
 package fr.feedreader.ui;
 
-import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.cdi.CDIViewProvider;
-import com.vaadin.cdi.UIScoped;
 import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinService;
-import com.vaadin.ui.Button;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
-import fr.feedreader.buisness.FeedBuisness;
-import fr.feedreader.views.FeedItemDetailView;
-import fr.feedreader.views.FeedItemView;
-import fr.feedreader.views.FeedView;
+import fr.feedreader.views.admin.FeedAdminView;
+import javax.enterprise.inject.spi.Bean;
+import javax.enterprise.inject.spi.BeanManager;
+import javax.enterprise.inject.spi.CDI;
 import javax.inject.Inject;
 
 /**
  *
  * @author philippe
  */
-@CDIUI(value = "/v")
+@CDIUI(value = "/admin/v")
 @Theme(value = "feedreader-dark")
-public class MainUI  extends UI {
+public class AdminUI  extends UI {
     
     @Inject
     private CDIViewProvider viewProvider;
     
     @Override
     public void init(VaadinRequest request) {
-        System.out.println("viewProvider = " + viewProvider);
+        System.out.println("adminViewProvider = " + viewProvider);
         if (getSession().getAttribute("MobileBoostrapListener") == null) {
             getSession().addBootstrapListener(new MobileBoostrapListener());
             getSession().setAttribute("MobileBoostrapListener", true);
         }
         
         Navigator navigator = new Navigator(this, this);
-        navigator.addProvider(viewProvider);
-        navigator.addView("", FeedView.class);
-        navigator.addView("feedItem", FeedItemView.class);
-        navigator.addView("feedItemDetail", FeedItemDetailView.class);
+        navigator.addView("", getView(FeedAdminView.class));
+    }
+    
+    private View getView(Class clazz) {
+        BeanManager beanManager = CDI.current().getBeanManager();
+        Bean<View> bean = (Bean<View>)beanManager.resolve(beanManager.getBeans(clazz));
+        return (View) beanManager.getReference(bean, bean.getBeanClass(), beanManager.createCreationalContext(bean));
     }
 }

@@ -13,7 +13,7 @@ import com.vaadin.server.BootstrapPageResponse;
  *
  * @author philippefichet
  */
-public class MainBootstrapListener implements com.vaadin.server.BootstrapListener {
+public class MobileBoostrapListener implements com.vaadin.server.BootstrapListener {
 
     @Override
     public void modifyBootstrapFragment(BootstrapFragmentResponse response) {

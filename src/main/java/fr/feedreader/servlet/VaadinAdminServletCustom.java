@@ -14,10 +14,10 @@ import javax.servlet.annotation.WebServlet;
  *
  * @author philippe
  */
-@WebServlet(urlPatterns = {"/v/*", "/VAADIN/*"}, initParams = {
+@WebServlet(urlPatterns = {"/admin/v/*"}, initParams = {
     @WebInitParam(name = "UIProvider", value = "com.vaadin.cdi.CDIUIProvider")
 })
-@VaadinServletConfiguration(ui = fr.feedreader.ui.MainUI.class, productionMode = true)
-public class VaadinServletCustom extends VaadinServlet {
+@VaadinServletConfiguration(ui = fr.feedreader.ui.AdminUI.class, productionMode = true)
+public class VaadinAdminServletCustom extends VaadinServlet {
     
 }
