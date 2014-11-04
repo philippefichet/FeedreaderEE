@@ -181,7 +181,7 @@
                     </pool>
                 </datasource>
                 <datasource jndi-name="java:jboss/datasources/feedreader" pool-name="feedreader" enabled="true">
-                    <connection-url>jdbc:hsqldb:file:~/.feedreader/hsqldb</connection-url>
+                    <connection-url>jdbc:hsqldb:file:~/app-root/data/.feedreader/hsqldb</connection-url>
                     <driver>hsqldb</driver>
                     <security>
                         <user-name>feedreader</user-name>
