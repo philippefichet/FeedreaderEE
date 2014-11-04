@@ -180,6 +180,14 @@
                         <flush-strategy>IdleConnections</flush-strategy>
                     </pool>
                 </datasource>
+                <datasource jndi-name="java:jboss/datasources/feedreader" pool-name="feedreader" enabled="true">
+                    <connection-url>jdbc:hsqldb:file:~/.feedreader/hsqldb</connection-url>
+                    <driver>hsqldb</driver>
+                    <security>
+                        <user-name>feedreader</user-name>
+                        <password>a5tY6d4u7</password>
+                    </security>
+                </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
@@ -189,6 +197,9 @@
                     </driver>
                     <driver name="postgresql" module="org.postgresql.jdbc">
                         <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+                    </driver>
+                    <driver name="hsqldb" module="org.hsqldb">
+                        <driver-class>org.hsqldb.jdbc.JDBCDriver</driver-class>
                     </driver>
                 </drivers>
             </datasources>
