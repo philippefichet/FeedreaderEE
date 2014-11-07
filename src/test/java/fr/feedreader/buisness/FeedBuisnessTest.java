@@ -205,4 +205,25 @@ public class FeedBuisnessTest {
         assertNotNull(developpez.getFeedItems());
         assertTrue(developpez.getFeedItems().size() == (20+13));
     }
+    
+        
+    @Test
+    public void getCountUnReadFeed() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
+        
+        
+        // Vérification du fichier de test
+        File developpezFile = new File("./src/test/resources/developpez.atom");
+        assertTrue(developpezFile.exists());
+        assertTrue(developpezFile.isFile());
+        
+        // Création du flux de test basé sur un fichier de test
+        Feed developpez = new Feed();
+        developpez.setDescription("Developpez");
+        developpez.setUrl(developpezFile.toURI().toString());
+        developpez = feedBuisness.add(developpez);
+        feedBuisness.refreshFeedItems(developpez.getId());
+        Long count = feedBuisness.countUnread(developpez.getId());
+        assertTrue(count + " au lieu de 20", count == 20L);
+    }
+    
 }

@@ -125,7 +125,6 @@ public class FeedBuisness {
                     logger.error(e.getLocalizedMessage());
                     logFeedItem(existing);
                     logFeedItem(feedItem);
-                    
                 }
             }
             // Mise à jour de la date de récupération du flux
@@ -178,6 +177,13 @@ public class FeedBuisness {
         return counter;
     }
 
+    public Long countUnread(Integer feedId) {
+        Map<Feed, Long> counter = new HashMap<>();
+        TypedQuery<Long> query = em.createQuery("SELECT count(*) FROM FeedItem fi WHERE (fi.readed = FALSE OR fi.readed IS NULL) AND fi.feed.id = :feedId", Long.class);
+        query.setParameter("feedId", feedId);
+        return query.getSingleResult();
+    }
+    
     public Map<Feed, List<FeedItem>> parallelUpdateAllFeed() {
         if (logger.isInfoEnabled()) {
             logger.info("parallelUpdateAllFeed");
