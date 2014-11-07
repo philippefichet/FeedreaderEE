@@ -129,11 +129,10 @@ public class FeedItemDetailView extends VerticalLayout implements View {
     }
     
     protected void updateReaded() {
-        countUnread = feedBuisness.countUnread();
-        Long countUnreadFeed = countUnread.get(feedItem.getFeed());
+        Long countUnreadFeed = feedBuisness.countUnread(feedItem.getFeed().getId());
         title.setValue(
                 feedItem.getFeed().getName() + 
-                (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : "")
+                (countUnreadFeed > 0 ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : "")
         );
         if (feedItem.getReaded()) {
              switchReaded.setIcon(FontAwesome.STAR);
