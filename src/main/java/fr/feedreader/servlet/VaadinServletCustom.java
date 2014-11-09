@@ -17,7 +17,7 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(urlPatterns = {"/v/*", "/VAADIN/*"}, initParams = {
     @WebInitParam(name = "UIProvider", value = "com.vaadin.cdi.CDIUIProvider")
 })
-@VaadinServletConfiguration(ui = fr.feedreader.ui.MainUI.class, productionMode = true)
+@VaadinServletConfiguration(ui = fr.feedreader.ui.MainUI.class, productionMode = true, heartbeatInterval = 240)
 public class VaadinServletCustom extends VaadinServlet {
     
 }
