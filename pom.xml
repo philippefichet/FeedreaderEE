@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <vaadin.version>7.3.3</vaadin.version>
+        <vaadin.version>7.3.4</vaadin.version>
     </properties>
     
     <dependencies>
@@ -201,6 +201,9 @@
         </profile>
         <profile>
             <id>philippefichet</id>
+        </profile>
+        <profile>
+            <id>philippefichet-windows</id>
         </profile>
     </profiles>
     
