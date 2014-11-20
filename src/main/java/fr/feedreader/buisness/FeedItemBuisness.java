@@ -95,4 +95,13 @@ public class FeedItemBuisness {
         return feed.getFeedItems();
     }
 
+    /**
+     * Supprime les articles
+     * @param id Identifiant du flux dont les articles doivent être supprimer
+     * @return Nombre d'article supprimer
+     */
+    public int clean(Integer id) {
+        return em.createNamedQuery(FeedItem.deleteFromFeedId).setParameter("feedId", id).executeUpdate();
+    }
+
 }
