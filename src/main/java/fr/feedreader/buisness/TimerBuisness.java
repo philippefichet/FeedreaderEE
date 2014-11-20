@@ -7,6 +7,7 @@ package fr.feedreader.buisness;
 
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
+import fr.feedreader.ui.MainUI;
 import fr.feedreader.websocket.UpdateFeed;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,9 @@ public class TimerBuisness {
     @Schedule(hour = "*", minute = "*/15", persistent = false)
     public void updateFeed() {
         Map<Feed, List<FeedItem>> newFeedItem = feedBuisness.parallelUpdateAllFeed();
-        UpdateFeed.notifyUpdateFeed(newFeedItem, feedBuisness.countUnread());
+        Map<Feed, Long> countUnread = feedBuisness.countUnread();
+        UpdateFeed.notifyUpdateFeed(newFeedItem, countUnread);
+        MainUI.notifyUpdateFeed(newFeedItem, countUnread);
     }
 
 }
