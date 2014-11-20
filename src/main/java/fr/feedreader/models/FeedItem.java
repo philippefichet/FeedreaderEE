@@ -15,6 +15,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @NamedQueries({
+    @NamedQuery(name = FeedItem.deleteFromFeedId, query = "DELETE FROM FeedItem fi WHERE fi.feed.id = :feedId"),
     @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId = :feedItemId"),
     @NamedQuery(name = FeedItem.findAllByFeedId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.id DESC"),
     @NamedQuery(name = FeedItem.countByFeedId, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId")
@@ -29,6 +30,7 @@ public class FeedItem {
     public final static String searchByFeedIdAndFeedItemId = "fr.feedreader.models.FeedItem.searchByFeedIdAndFeedItemId";
     public final static String findAllByFeedId = "fr.feedreader.models.FeedItem.findAllByFeedId";
     public final static String countByFeedId = "fr.feedreader.models.FeedItem.count";
+    public final static String deleteFromFeedId = "fr.feedreader.models.FeedItem.deleteFromFeedId";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
