@@ -9,6 +9,7 @@ import com.vaadin.cdi.CDIView;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FontAwesome;
+import com.vaadin.server.Page;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
@@ -20,6 +21,8 @@ import fr.feedreader.models.Feed;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.inject.Inject;
 
 /**
@@ -33,6 +36,10 @@ public class FeedView extends VerticalLayout implements View {
     
     private List<Button> feedButtons = new ArrayList<>();
     
+    private VerticalLayout feedLayout = new VerticalLayout();
+    
+    private Map<Feed, Long> countUnread = null;
+    
     @Inject
     private FeedBuisness feedBuisness;
     
@@ -44,7 +51,6 @@ public class FeedView extends VerticalLayout implements View {
         } else {
             removeAllComponents();
             addStyleName("feed");
-            Map<Feed, Long> countUnread = feedBuisness.countUnread();
             HorizontalLayout titleLayout = new HorizontalLayout();
             Label title = new Label("Visualisation des flux rss/atom");
             title.setWidthUndefined();
@@ -54,23 +60,42 @@ public class FeedView extends VerticalLayout implements View {
             titleLayout.setWidth("100%");
             titleLayout.setSpacing(true);
             addComponent(titleLayout);
-            feedBuisness.findAll().stream().forEach((feed) -> {
-                Long countUnreadFeed = countUnread.get(feed);
-                Button b = new Button(feed.getName() + (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : ""));
-                b.setHtmlContentAllowed(true);
-                b.setIcon(FontAwesome.ARROW_CIRCLE_RIGHT);
-                b.addStyleName(ValoTheme.BUTTON_ICON_ALIGN_RIGHT);
-                b.addStyleName("multiline");
-                if (countUnreadFeed != null && countUnreadFeed > 0) {
-                    b.addStyleName(ValoTheme.BUTTON_PRIMARY);
-                }
-                b.addClickListener((clickEvent) -> {
-                    getUI().getNavigator().navigateTo("feedItem/" + feed.getId() + "/1");
-                });
-                b.setWidth(100, Unit.PERCENTAGE);
-                addComponent(b);
-            });
+            addComponent(feedLayout);
+            initFeedLayout();
+           
         }
+    }
+    
+    public Map<Feed, Long> getCountUnread() {
+        if (countUnread == null) {
+            countUnread = feedBuisness.countUnread();
+        }
+        return countUnread;
+    }
+
+    public void setCountUnread(Map<Feed, Long> countUnread) {
+        this.countUnread = countUnread;
+    }
+    
+    public void initFeedLayout() {
+        feedLayout.removeAllComponents();
+        
+        feedBuisness.findAll().stream().forEach((feed) -> {
+            Long countUnreadFeed = getCountUnread().get(feed);
+            Button b = new Button(feed.getName() + (countUnreadFeed != null ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : ""));
+            b.setHtmlContentAllowed(true);
+            b.setIcon(FontAwesome.ARROW_CIRCLE_RIGHT);
+            b.addStyleName(ValoTheme.BUTTON_ICON_ALIGN_RIGHT);
+            b.addStyleName("multiline");
+            if (countUnreadFeed != null && countUnreadFeed > 0) {
+                b.addStyleName(ValoTheme.BUTTON_PRIMARY);
+            }
+            b.addClickListener((clickEvent) -> {
+                getUI().getNavigator().navigateTo("feedItem/" + feed.getId() + "/1");
+            });
+            b.setWidth(100, Unit.PERCENTAGE);
+            feedLayout.addComponent(b);
+        });
     }
     
 }
