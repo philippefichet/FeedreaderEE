@@ -95,10 +95,12 @@ public class MainUI  extends UI {
             while (i.hasNext()) {
                 Feed feed = i.next();
                 int count = newFeedItem.get(feed).size();
-                sb.append(feed.getName() + " (" + count + "), ");
-                sum += count;
+                if (count > 0) {
+                    sb.append(feed.getName() + " (" + count + "), ");
+                    sum += count;
+                }
             }
-            if (newFeedItem.size() > 0) {
+            if (sb.length() > 2) {
                 sb.delete(sb.length()-2, sb.length());
             }
             // Notification html
