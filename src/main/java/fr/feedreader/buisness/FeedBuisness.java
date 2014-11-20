@@ -206,6 +206,7 @@ public class FeedBuisness {
         
         Map<Feed, List<FeedItem>> feedForUpdate = new HashMap<>();
         feedsUpdated.forEach((feed, newFeeds) -> {
+            logger.info("Comparaison avec les articles déjà présant pour \"" + feed.getName() + "\" avec \"" + newFeeds.size() + "\" article(s) trouvés.");
             feedForUpdate.put(feed, new ArrayList<>());
 
             newFeeds.stream().forEach((newFeed) -> {
