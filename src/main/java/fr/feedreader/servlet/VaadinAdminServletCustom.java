@@ -6,6 +6,7 @@
 package fr.feedreader.servlet;
 
 import com.vaadin.annotations.VaadinServletConfiguration;
+import com.vaadin.cdi.server.VaadinCDIServlet;
 import com.vaadin.server.VaadinServlet;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +15,8 @@ import javax.servlet.annotation.WebServlet;
  *
  * @author philippe
  */
-@WebServlet(urlPatterns = {"/admin/v/*"}, initParams = {
-    @WebInitParam(name = "UIProvider", value = "com.vaadin.cdi.CDIUIProvider")
-})
+@WebServlet(urlPatterns = {"/admin/v/*"}, asyncSupported = true, loadOnStartup = 1)
 @VaadinServletConfiguration(ui = fr.feedreader.ui.AdminUI.class, productionMode = true)
-public class VaadinAdminServletCustom extends VaadinServlet {
+public class VaadinAdminServletCustom extends VaadinCDIServlet {
     
 }

@@ -22,7 +22,7 @@ import javax.inject.Inject;
  *
  * @author philippe
  */
-@CDIUI(value = "/admin/v")
+@CDIUI(value = "admin/v")
 @Theme(value = "feedreader-dark")
 public class AdminUI  extends UI {
     

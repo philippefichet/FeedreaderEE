@@ -32,7 +32,7 @@ import org.apache.logging.log4j.LogManager;
  *
  * @author philippe
  */
-@CDIUI(value = "/v")
+@CDIUI(value = "v")
 @Theme(value = "feedreader-dark")
 @Push(transport = Transport.STREAMING)
 public class MainUI  extends UI {

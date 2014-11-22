@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <vaadin.version>7.3.4</vaadin.version>
+        <vaadin.version>7.3.5</vaadin.version>
     </properties>
     
     <dependencies>
@@ -177,7 +177,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
-            <version>1.0.0.alpha2</version>
+            <version>1.0.0.rc1</version>
         </dependency>
         
     </dependencies>
@@ -226,6 +226,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>vaadin-addons</id>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
