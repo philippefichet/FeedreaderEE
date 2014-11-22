@@ -26,7 +26,7 @@ import javax.inject.Inject;
  *
  * @author glopinous
  */
-@CDIView
+@CDIView("")
 public class FeedView extends VerticalLayout implements View {
 
     private boolean init = false;
