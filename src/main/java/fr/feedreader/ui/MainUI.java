@@ -34,7 +34,7 @@ import org.apache.logging.log4j.LogManager;
  */
 @CDIUI(value = "v")
 @Theme(value = "feedreader-dark")
-@Push(transport = Transport.STREAMING)
+@Push(transport = Transport.LONG_POLLING)
 public class MainUI  extends UI {
     
     // Concervation des session pour communication avec plusieur utilisateur (broadcast)
@@ -103,6 +103,12 @@ public class MainUI  extends UI {
             if (sb.length() > 2) {
                 sb.delete(sb.length()-2, sb.length());
             }
+            
+            // Si aucun nouvel article fin de notification de mise à jour
+            if (sum == 0) {
+                return;
+            }
+            
             // Notification html
             javaScript.execute("new Notification(\"" + sum + " Nouveau(x) article(s)\", {\"body\": \"" + sb.toString() + "\", \"icon\": \"/feedreader/images/feed.png\"});");
             
