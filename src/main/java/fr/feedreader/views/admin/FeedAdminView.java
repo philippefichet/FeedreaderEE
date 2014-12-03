@@ -18,6 +18,7 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 import fr.feedreader.buisness.FeedBuisness;
+import fr.feedreader.buisness.FeedItemBuisness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import java.util.List;
@@ -44,6 +45,9 @@ public class FeedAdminView extends VerticalLayout implements View {
     
     @Inject
     private FeedBuisness feedBuisness;
+    
+    @Inject
+    private FeedItemBuisness feedItemBuisness;
     
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
@@ -135,20 +139,36 @@ public class FeedAdminView extends VerticalLayout implements View {
 
         Button update = new Button(FontAwesome.ROTATE_RIGHT);
         Button save = new Button(FontAwesome.SAVE);
-        Button delete = new Button(FontAwesome.ERASER);
-        HorizontalLayout action = new HorizontalLayout(update, save, delete);
+        Button clean = new Button(FontAwesome.ERASER);
+        Button delete = new Button(FontAwesome.TRASH_O);
+        update.setDescription("Récupération des articles");
+        save.setDescription("Sauvegarde du flux");
+        clean.setDescription("Supprimer tous les articles");
+        delete.setDescription("Supprimer le flux");
+        HorizontalLayout action = new HorizontalLayout(update, save, clean, delete);
         action.setWidth("100%");
-        action.setComponentAlignment(update, Alignment.MIDDLE_RIGHT);
+        action.setComponentAlignment(update, Alignment.MIDDLE_CENTER);
         action.setComponentAlignment(save, Alignment.MIDDLE_CENTER);
-        action.setComponentAlignment(delete, Alignment.MIDDLE_LEFT);
+        action.setComponentAlignment(clean, Alignment.MIDDLE_CENTER);
+        action.setComponentAlignment(delete, Alignment.MIDDLE_CENTER);
         
         update.addClickListener((eventClick) -> {
             try {
                 List<FeedItem> refreshFeedItems = feedBuisness.refreshFeedItems(feed.getId());
-                showSuccessNotification("Récupération des nouveaux article réussi pour le flux \"" + feed.getName() + "\"");
+                showSuccessNotification("Récupération de " + refreshFeedItems.size() + " nouveaux article réussi pour le flux \"" + feed.getName() + "\"");
             } catch(Exception e) {
                 showErrorNotification("Récupération des nouveaux article en échec pour le flux \"" + feed.getName() + "\"", e.getLocalizedMessage());
             }
+        });
+        
+        clean.addClickListener((eventClick) -> {
+            try {
+                int deleteFeedItems = feedItemBuisness.clean(feed.getId());
+                showSuccessNotification("Suppression des articles du flux \"" + feed.getName() + "\" réussi de " + deleteFeedItems + " élément(s)");
+            } catch(Exception e) {
+                showErrorNotification("Suppression des articles du flux \"" + feed.getName() + "\" échéc", e.getLocalizedMessage());
+            }
+            
         });
         
         save.addClickListener((eventClick) -> {
