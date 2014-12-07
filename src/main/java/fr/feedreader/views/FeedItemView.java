@@ -52,6 +52,10 @@ public class FeedItemView extends VerticalLayout implements View {
     
     private Label pageLabel = null;
     
+    private Label title = null;
+    
+    private Long countUnreadFeed = null;
+    
     @Inject
     private FeedBuisness feedBuisness;
     
@@ -81,11 +85,12 @@ public class FeedItemView extends VerticalLayout implements View {
             initFeedItemLayout(feed, page);
             totalPage = feedItemBuisness.getTotalPage(feed.getId());
             
-            Long countUnreadFeed = feedBuisness.countUnread(feed.getId());
+            countUnreadFeed = feedBuisness.countUnread(feed.getId());
             
             HorizontalLayout titleLayout = new HorizontalLayout();
             titleLayout.setWidth(100, Unit.PERCENTAGE);
-            Label title = new Label(feed.getName() + (countUnreadFeed > 0 ? " <span class=\"badge\">" + countUnreadFeed + "</span>" : ""));
+            title = new Label();
+            setCounterTitle(countUnreadFeed);
             title.setContentMode(ContentMode.HTML);
             title.setWidthUndefined();
             
@@ -176,6 +181,7 @@ public class FeedItemView extends VerticalLayout implements View {
     }
     
     protected Component createFeedItemComponent(FeedItem feedItem) {
+        HorizontalLayout feedItemLayout = new HorizontalLayout();
         Button b = new Button(feedItem.getTitle());
         b.setWidth(100, Unit.PERCENTAGE);
         b.setIcon(FontAwesome.ARROW_CIRCLE_RIGHT);
@@ -187,6 +193,35 @@ public class FeedItemView extends VerticalLayout implements View {
         b.addClickListener((eventClick) -> {
             getUI().getNavigator().navigateTo("feedItemDetail/" + feedItem.getId() + "/" + page);
         });
-        return b;
+        
+        if (getUI().getPage().getBrowserWindowWidth() > 600) {
+            Button switchReaded = new Button(feedItem.getReaded() ? FontAwesome.STAR_O : FontAwesome.STAR);
+            switchReaded.addClickListener((clickEvent) -> {
+                if (feedItem.getReaded()) {
+                    feedItem.setReaded(feedItemBuisness.setReaded(feedItem.getId(), Boolean.FALSE).getReaded());
+                    switchReaded.setIcon(FontAwesome.STAR);
+                    b.addStyleName(ValoTheme.BUTTON_FRIENDLY);
+                    countUnreadFeed++;
+                    setCounterTitle(countUnreadFeed);
+                } else {
+                    feedItem.setReaded(feedItemBuisness.setReaded(feedItem.getId(), Boolean.TRUE).getReaded());
+                    switchReaded.setIcon(FontAwesome.STAR_O);
+                    b.removeStyleName(ValoTheme.BUTTON_FRIENDLY);
+                    countUnreadFeed--;
+                }
+                setCounterTitle(countUnreadFeed);
+            });
+            feedItemLayout.addComponent(switchReaded);
+            switchReaded.setHeight("100%");
+        }
+        
+        feedItemLayout.addComponent(b);
+        feedItemLayout.setExpandRatio(b, 100);
+        feedItemLayout.setWidth("100%");
+        return feedItemLayout;
+    }
+    
+    public void setCounterTitle(Long counter) {
+        title.setValue(feed.getName() + (counter > 0 ? " <span class=\"badge\">" + counter + "</span>" : ""));
     }
 }
