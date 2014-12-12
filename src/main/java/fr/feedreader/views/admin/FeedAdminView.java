@@ -139,16 +139,18 @@ public class FeedAdminView extends VerticalLayout implements View {
 
         Button update = new Button(FontAwesome.ROTATE_RIGHT);
         Button save = new Button(FontAwesome.SAVE);
+        Button markToRead = new Button(FontAwesome.STAR);
         Button clean = new Button(FontAwesome.ERASER);
         Button delete = new Button(FontAwesome.TRASH_O);
         update.setDescription("Récupération des articles");
         save.setDescription("Sauvegarde du flux");
         clean.setDescription("Supprimer tous les articles");
         delete.setDescription("Supprimer le flux");
-        HorizontalLayout action = new HorizontalLayout(update, save, clean, delete);
+        HorizontalLayout action = new HorizontalLayout(update, save, markToRead, clean, delete);
         action.setWidth("100%");
         action.setComponentAlignment(update, Alignment.MIDDLE_CENTER);
         action.setComponentAlignment(save, Alignment.MIDDLE_CENTER);
+        action.setComponentAlignment(markToRead, Alignment.MIDDLE_CENTER);
         action.setComponentAlignment(clean, Alignment.MIDDLE_CENTER);
         action.setComponentAlignment(delete, Alignment.MIDDLE_CENTER);
         
@@ -169,6 +171,15 @@ public class FeedAdminView extends VerticalLayout implements View {
                 showErrorNotification("Suppression des articles du flux \"" + feed.getName() + "\" échéc", e.getLocalizedMessage());
             }
             
+        });
+        
+        markToRead.addClickListener((eventClient) -> {
+            try {
+                int markToReadCount = feedItemBuisness.maskAllFeedItemToRead(feed.getId());
+                showSuccessNotification("Marqué les flux comme lu pour \"" + feed.getName() + "\" réussi pour " + markToReadCount + " élément(s)");
+            } catch(Exception e) {
+                showErrorNotification("Marqué les flux comme lu pour \"" + feed.getName() + "\" échéc", e.getLocalizedMessage());
+            }
         });
         
         save.addClickListener((eventClick) -> {

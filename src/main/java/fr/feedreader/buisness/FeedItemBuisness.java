@@ -104,4 +104,8 @@ public class FeedItemBuisness {
         return em.createNamedQuery(FeedItem.deleteFromFeedId).setParameter("feedId", id).executeUpdate();
     }
 
+    public int maskAllFeedItemToRead(Integer feedId) {
+        return em.createNamedQuery(FeedItem.markToRead).setParameter("feedId", feedId).executeUpdate();
+    }
+
 }

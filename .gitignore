@@ -1,2 +1,5 @@
 /target/
 /trash/
+/src/main/resources/rest/
+.docker
+nbactions*
