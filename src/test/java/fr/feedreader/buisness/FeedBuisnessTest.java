@@ -6,6 +6,7 @@
 package fr.feedreader.buisness;
 
 import com.rometools.rome.io.FeedException;
+import fr.feedreader.Witness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import java.io.File;
@@ -24,6 +25,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static fr.feedreader.junit.Assert.*;
+import fr.feedreader.junit.Utils;
+import javax.inject.Named;
 import static org.junit.Assert.*;
 
 /**
@@ -32,6 +35,9 @@ import static org.junit.Assert.*;
  */
 @RunWith(Arquillian.class)
 public class FeedBuisnessTest {
+    
+    @Inject
+    private Utils utils;
     
     @Inject
     private FeedBuisness feedBuisness;
@@ -49,12 +55,13 @@ public class FeedBuisnessTest {
                 .withTransitivity()
                 .asFile();
         WebArchive archive = ShrinkWrap.create(WebArchive.class)
+            .addPackage("fr.feedreader.junit")
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.models")
-            .addClass(fr.feedreader.junit.Assert.class)
+            .addClass(Witness.class)
             .addAsLibraries(dependencies)
             .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
-            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
         
         return archive;
     }
@@ -209,21 +216,11 @@ public class FeedBuisnessTest {
         
     @Test
     public void getCountUnReadFeed() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
-        
-        
-        // Vérification du fichier de test
-        File developpezFile = new File("./src/test/resources/developpez.atom");
-        assertTrue(developpezFile.exists());
-        assertTrue(developpezFile.isFile());
-        
-        // Création du flux de test basé sur un fichier de test
-        Feed developpez = new Feed();
-        developpez.setDescription("Developpez");
-        developpez.setUrl(developpezFile.toURI().toString());
-        developpez = feedBuisness.add(developpez);
+        Feed developpez = utils.loadDeveloppez();
         feedBuisness.refreshFeedItems(developpez.getId());
         Long count = feedBuisness.countUnread(developpez.getId());
         assertTrue(count + " au lieu de 20", count == 20L);
+        System.out.println(utils);
     }
     
 }
