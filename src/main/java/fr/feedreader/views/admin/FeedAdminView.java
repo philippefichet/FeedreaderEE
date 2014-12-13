@@ -144,6 +144,7 @@ public class FeedAdminView extends VerticalLayout implements View {
         Button delete = new Button(FontAwesome.TRASH_O);
         update.setDescription("Récupération des articles");
         save.setDescription("Sauvegarde du flux");
+        markToRead.setDescription("Marqué les articles comme lu");
         clean.setDescription("Supprimer tous les articles");
         delete.setDescription("Supprimer le flux");
         HorizontalLayout action = new HorizontalLayout(update, save, markToRead, clean, delete);
