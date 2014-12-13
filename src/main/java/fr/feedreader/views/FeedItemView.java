@@ -94,7 +94,7 @@ public class FeedItemView extends VerticalLayout implements View {
             title.setContentMode(ContentMode.HTML);
             title.setWidthUndefined();
             
-            Button back = new Button("Retour");
+            Button back = new Button();
             back.setIcon(FontAwesome.ARROW_CIRCLE_LEFT);
             back.addClickListener((eventClick) -> {
                 getUI().getNavigator().navigateTo("");
@@ -129,11 +129,10 @@ public class FeedItemView extends VerticalLayout implements View {
             
             
             HorizontalLayout paginator = new HorizontalLayout();
-            Button previous = new Button("Précédent");
+            Button previous = new Button();
             previous.setIcon(FontAwesome.ARROW_CIRCLE_O_LEFT);
-            Button next = new Button("Suivant");
+            Button next = new Button();
             next.setIcon(FontAwesome.ARROW_CIRCLE_O_RIGHT);
-            next.addStyleName(ValoTheme.BUTTON_ICON_ALIGN_RIGHT);
             pageLabel = new Label(page + " / " + totalPage);
             pageLabel.setWidthUndefined();
             paginator.addComponent(previous);
@@ -163,6 +162,13 @@ public class FeedItemView extends VerticalLayout implements View {
                     update();
                 }
             });
+            
+            if(Utils.isSmall(getUI()) == false) {
+                back.setCaption("Retour");
+                previous.setCaption("Précédent");
+                next.setCaption("Suivant");
+                next.addStyleName(ValoTheme.BUTTON_ICON_ALIGN_RIGHT);
+            }
         }
     }
     
@@ -194,7 +200,7 @@ public class FeedItemView extends VerticalLayout implements View {
             getUI().getNavigator().navigateTo("feedItemDetail/" + feedItem.getId() + "/" + page);
         });
         
-        if (getUI().getPage().getBrowserWindowWidth() > 600) {
+        if (Utils.isSmall(getUI()) == false) {
             Button switchReaded = new Button(feedItem.getReaded() ? FontAwesome.STAR_O : FontAwesome.STAR);
             switchReaded.addClickListener((clickEvent) -> {
                 if (feedItem.getReaded()) {

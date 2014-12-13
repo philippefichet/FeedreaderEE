@@ -19,6 +19,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.themes.ValoTheme;
 import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.buisness.FeedItemBuisness;
 import fr.feedreader.models.Feed;
@@ -76,12 +77,15 @@ public class FeedItemDetailView extends VerticalLayout implements View {
         title.setContentMode(ContentMode.HTML);
         title.setWidthUndefined();
 
-        Button back = new Button("Retour");
+        Button back = new Button();
         back.setData(feedItem.getFeed().getId());
         back.setIcon(FontAwesome.ARROW_CIRCLE_LEFT);
         back.addClickListener((eventClick) -> {
             getUI().getNavigator().navigateTo("feedItem/" + eventClick.getButton().getData() + "/" + page);
         });
+        if(Utils.isSmall(getUI()) == false) {
+            back.setCaption("Retour");
+        }
 
         titleLayout.addComponent(title);
         titleLayout.addStyleName("title");
