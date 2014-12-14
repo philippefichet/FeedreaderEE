@@ -13,6 +13,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <vaadin.version>7.3.6</vaadin.version>
+        <shiroConfigurationLocations>/WEB-INF/shiro.ini</shiroConfigurationLocations>
     </properties>
     
     <dependencies>
@@ -189,6 +190,17 @@
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                             <outputDirectory>deployments</outputDirectory>
                             <warName>ROOT</warName>
+                            <webResources>
+                                <resource>
+                                    <filtering>true</filtering>
+                                    <directory>src/main/webapp</directory>
+                                    <includes>
+                                        <include>**/web.xml</include>
+                                    </includes>
+                                </resource>
+                            </webResources>
+                            <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                            <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -196,6 +208,7 @@
             <properties>
                 <maven.compiler.executable>${env.OPENSHIFT_WILDFLY_DIR}usr/lib/jvm/jdk1.8.0_05/bin/javac</maven.compiler.executable>
                 <maven.compiler.fork>true</maven.compiler.fork>
+                <shiroConfigurationLocations>file:~/app-root/data/.feedreader/shiro.ini</shiroConfigurationLocations>
             </properties>
         </profile>
         <profile>
@@ -208,6 +221,24 @@
     
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <filtering>true</filtering>
+                            <directory>src/main/webapp</directory>
+                            <includes>
+                                <include>**/web.xml</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
