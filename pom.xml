@@ -212,10 +212,10 @@
             </properties>
         </profile>
         <profile>
-            <id>philippefichet</id>
+            <id>linux</id>
         </profile>
         <profile>
-            <id>philippefichet-windows</id>
+            <id>windows</id>
         </profile>
     </profiles>
     
