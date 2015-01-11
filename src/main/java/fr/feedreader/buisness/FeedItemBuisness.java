@@ -79,13 +79,46 @@ public class FeedItemBuisness {
         return query.getSingleResult();
     }
 
+    public Long getCount(Integer feedId, boolean noReadedOnly) {
+        TypedQuery<Long> query = em.createNamedQuery(FeedItem.countByFeedIdReaded, Long.class);
+        query.setParameter("feedId", feedId);
+        query.setParameter("readed", noReadedOnly);
+        return query.getSingleResult();
+    }
+
     public Long getTotalPage(Integer feedId) {
         return (getCount(feedId) / itemPerPage) + 1;
     }
 
+    public Long getTotalPage(Integer feedId, boolean noReadedOnly) {
+        return (getCount(feedId, noReadedOnly) / itemPerPage) + 1;
+    }
+
+    /**
+     * Récupére tous les article d'un flux pour une page donnée
+     * @param feedId Identifiant du flux
+     * @param page Page demander
+     * @return Liste des articles pour la page demander
+     */
     public List<FeedItem> findAll(Integer feedId, Integer page) {
         TypedQuery<FeedItem> query = em.createNamedQuery(FeedItem.findAllByFeedId, FeedItem.class);
         query.setParameter("feedId", feedId);
+        query.setMaxResults(itemPerPage);
+        query.setFirstResult((page - 1) * itemPerPage);
+        return query.getResultList();
+    }
+
+    /**
+     * Récupére tous les article lu ou non lu d'un flux pour une page donnée
+     * @param feedId Identifiant du flux
+     * @param page Page demander
+     * @param noReadedOnly récupération des article non lu ou lu
+     * @return Liste des articles pour la page demander
+     */
+    public List<FeedItem> findAll(Integer feedId, Integer page, boolean noReadedOnly) {
+        TypedQuery<FeedItem> query = em.createNamedQuery(FeedItem.findAllByFeedIdReaded, FeedItem.class);
+        query.setParameter("feedId", feedId);
+        query.setParameter("readed", noReadedOnly);
         query.setMaxResults(itemPerPage);
         query.setFirstResult((page - 1) * itemPerPage);
         return query.getResultList();

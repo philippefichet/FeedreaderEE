@@ -56,6 +56,10 @@ public class FeedItemView extends VerticalLayout implements View {
     
     private Long countUnreadFeed = null;
     
+    public Boolean noReadedOnly = false;
+    
+    public Button noReadedOnlyButton = null;
+    
     @Inject
     private FeedBuisness feedBuisness;
     
@@ -65,10 +69,12 @@ public class FeedItemView extends VerticalLayout implements View {
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
         System.out.println("init = " + init);
+        System.out.println("noReadedOnly = " + noReadedOnly);
         if(init) {
             
         } else {
             removeAllComponents();
+            noReadedOnly = getSession().getAttribute("noReadedOnly") == null ? Boolean.FALSE : (Boolean)getSession().getAttribute("noReadedOnly");
             feedItemLayout.addStyleName("feedItem");
             String[] parameter = event.getParameters().split("/");
             feed = feedBuisness.find(Integer.parseInt(parameter[0]));
@@ -82,9 +88,16 @@ public class FeedItemView extends VerticalLayout implements View {
                 page = 1;
             }
 
-            initFeedItemLayout(feed, page);
-            totalPage = feedItemBuisness.getTotalPage(feed.getId());
+            noReadedOnlyButton = new Button(FontAwesome.STAR);
+            noReadedOnlyButton.addClickListener((clickEvent) -> {
+                noReadedOnly = !noReadedOnly;
+                getSession().setAttribute("noReadedOnly", noReadedOnly);
+                updateTotalPage();
+                update();
+            });
             
+            initFeedItemLayout(feed, page);
+            updateTotalPage();
             countUnreadFeed = feedBuisness.countUnread(feed.getId());
             
             HorizontalLayout titleLayout = new HorizontalLayout();
@@ -113,16 +126,21 @@ public class FeedItemView extends VerticalLayout implements View {
             backLayout.setWidthUndefined();
             backLayout.setHeight("4em");
             
+            HorizontalLayout noReadLayout = new HorizontalLayout();
+            noReadLayout.addComponent(noReadedOnlyButton);
+            noReadLayout.setComponentAlignment(noReadedOnlyButton, Alignment.MIDDLE_RIGHT);
+            noReadLayout.setWidthUndefined();
+            noReadLayout.setHeight("4em");
+            
+            
             // Test AbsoluteLayout absoluteLayout;
             AbsoluteLayout absoluteLayout = new AbsoluteLayout();
             absoluteLayout.setWidth("100%");
             absoluteLayout.setHeight("3.5em");
             absoluteLayout.addComponent(titleLayout, "left: 0");
             absoluteLayout.addComponent(backLayout, "left: 0");
+            absoluteLayout.addComponent(noReadLayout, "right: 0");
 
-
-            
-            
 //            addComponent(titleLayout);
             addComponent(absoluteLayout);
             
@@ -172,6 +190,14 @@ public class FeedItemView extends VerticalLayout implements View {
         }
     }
     
+    protected void updateTotalPage() {
+        if (noReadedOnly) {
+            totalPage = feedItemBuisness.getTotalPage(feed.getId(), false);
+        } else {
+            totalPage = feedItemBuisness.getTotalPage(feed.getId());
+        }
+    }
+    
     protected void update() {
         initFeedItemLayout(feed, page);
         pageLabel.setValue(page + " / " + totalPage);
@@ -179,7 +205,19 @@ public class FeedItemView extends VerticalLayout implements View {
     
     protected void initFeedItemLayout(Feed feed, Integer page) {
         feedItemLayout.removeAllComponents();
-        List<FeedItem> findAll = feedItemBuisness.findAll(feed.getId(), page);
+        
+        if (noReadedOnly) {
+            noReadedOnlyButton.addStyleName(ValoTheme.BUTTON_FRIENDLY);
+        } else {
+            noReadedOnlyButton.removeStyleName(ValoTheme.BUTTON_FRIENDLY);
+        }
+
+        List<FeedItem> findAll = null;
+        if (noReadedOnly) {
+            findAll = feedItemBuisness.findAll(feed.getId(), page, false);
+        } else {
+            findAll = feedItemBuisness.findAll(feed.getId(), page);
+        }
         findAll.stream().forEach((feedItem) -> {
             Component c = createFeedItemComponent(feedItem);
             feedItemLayout.addComponent(c);

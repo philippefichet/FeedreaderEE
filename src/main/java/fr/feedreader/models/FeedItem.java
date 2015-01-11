@@ -19,7 +19,9 @@ import javax.persistence.TemporalType;
     @NamedQuery(name = FeedItem.deleteFromFeedId, query = "DELETE FROM FeedItem fi WHERE fi.feed.id = :feedId"),
     @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId = :feedItemId"),
     @NamedQuery(name = FeedItem.findAllByFeedId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.id DESC"),
-    @NamedQuery(name = FeedItem.countByFeedId, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId")
+    @NamedQuery(name = FeedItem.findAllByFeedIdReaded, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.readed = :readed ORDER BY fi.id DESC"),
+    @NamedQuery(name = FeedItem.countByFeedId, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId"),
+    @NamedQuery(name = FeedItem.countByFeedIdReaded, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.readed = :readed")
 })
 public class FeedItem {
 
@@ -30,7 +32,9 @@ public class FeedItem {
      */
     public final static String searchByFeedIdAndFeedItemId = "fr.feedreader.models.FeedItem.searchByFeedIdAndFeedItemId";
     public final static String findAllByFeedId = "fr.feedreader.models.FeedItem.findAllByFeedId";
+    public final static String findAllByFeedIdReaded = "fr.feedreader.models.FeedItem.findAllByFeedIdReaded";
     public final static String countByFeedId = "fr.feedreader.models.FeedItem.count";
+    public final static String countByFeedIdReaded = "fr.feedreader.models.FeedItem.countReaded";
     public final static String deleteFromFeedId = "fr.feedreader.models.FeedItem.deleteFromFeedId";
     public final static String markToRead = "fr.feedreader.models.FeedItem.markToRead";
 
