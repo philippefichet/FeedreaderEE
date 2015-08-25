@@ -4,19 +4,22 @@
 
     <groupId>feedreader</groupId>
     <artifactId>feedreader</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <version>1.0</version>
     <name>feedreader</name>
-  
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <vaadin.version>7.3.6</vaadin.version>
+        <vaadin.version>7.5.3</vaadin.version>
         <stagemonitor.active>false</stagemonitor.active>
         <shiroConfigurationLocations>/WEB-INF/shiro.ini</shiroConfigurationLocations>
+        <!--<version.wildfly-swarm>1.0.0.Alpha4</version.wildfly-swarm>-->
+        <version.wildfly-swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly-swarm>
+        <hsqldb.version>2.3.2</hsqldb.version>
     </properties>
-    
+
     <dependencies>
         <!-- webjar -->
         <dependency>
@@ -34,7 +37,7 @@
             <artifactId>bootstrap</artifactId>
             <version>3.2.0</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-web</artifactId>
@@ -65,7 +68,7 @@
             <artifactId>log4j-core</artifactId>
             <version>2.0.2</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.stagemonitor</groupId>
             <artifactId>stagemonitor-web</artifactId>
             <version>0.14.1</version>
@@ -74,30 +77,35 @@
             <groupId>org.stagemonitor</groupId>
             <artifactId>stagemonitor-os</artifactId>
             <version>0.14.1</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
         </dependency>
         <!-- Provided -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>2.4.1</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.4.1</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.4.1</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -113,38 +121,35 @@
             <scope>test</scope>
         </dependency>
         <!-- Arquillian -->
-        <dependency>
-            <groupId>org.jboss.arquillian.junit</groupId>
-            <artifactId>arquillian-junit-container</artifactId>
-            <version>1.1.5.Final</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
+        <!-- Désactiver au cause d'un conflit avec wildfly-swarm -->
+<!--        <dependency>
             <groupId>org.wildfly</groupId>
             <artifactId>wildfly-arquillian-container-managed</artifactId>
             <version>8.2.0.Final</version>
+            <scope>test</scope>
+        </dependency>-->
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-depchain</artifactId>
-            <version>2.1.1</version>
             <scope>test</scope>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
-            <version>2.1.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-api-maven</artifactId>
-            <version>2.1.1</version>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- Vaadin -->
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -172,14 +177,55 @@
             <version>${vaadin.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atmosphere</groupId>
-            <artifactId>atmosphere-annotations</artifactId>
-            <version>2.2.3</version>
-        </dependency>
-        <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
             <version>1.0.0.rc1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin.external.atmosphere</groupId>
+            <artifactId>atmosphere-runtime</artifactId>
+            <version>2.2.7.vaadin1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atmosphere</groupId>
+            <artifactId>atmosphere-runtime</artifactId>
+            <version>2.3.4</version>
+        </dependency>
+        <!-- Wildfly Swarm -->
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-undertow</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-weld</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-ejb</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-datasources</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-jpa</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-jaxrs</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-runtime-weld-jaxrs</artifactId>
+            <version>1.0.0.Alpha3</version>
         </dependency>
     </dependencies>
 
@@ -229,14 +275,29 @@
             <id>windows</id>
         </profile>
     </profiles>
-    
+
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.5</version>
                 <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>fr.feedreader.Main</mainClass>
+                        </manifest>
+                    </archive>
                     <webResources>
                         <resource>
                             <filtering>true</filtering>
@@ -262,6 +323,27 @@
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
                 <version>${vaadin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.wildfly.swarm</groupId>
+                <artifactId>wildfly-swarm-plugin</artifactId>
+                <version>${version.wildfly-swarm}</version>
+                <!--<version>1.0.0.Alpha5-SNAPSHOT</version>-->
+                <configuration>
+                    <mainClass>fr.feedreader.Main</mainClass>
+                    <!--                    <modules>
+                        <module>modules/org/hsqldb/main/module.xml</module>
+                        <module>modules</module>
+                    </modules>-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
