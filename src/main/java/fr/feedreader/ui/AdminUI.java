@@ -31,7 +31,6 @@ public class AdminUI  extends UI {
     
     @Override
     public void init(VaadinRequest request) {
-        System.out.println("adminViewProvider = " + viewProvider);
         if (getSession().getAttribute("MobileBoostrapListener") == null) {
             getSession().addBootstrapListener(new MobileBoostrapListener());
             getSession().setAttribute("MobileBoostrapListener", true);

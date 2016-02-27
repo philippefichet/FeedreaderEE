@@ -7,8 +7,6 @@ package fr.feedreader.servlet;
 
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.cdi.server.VaadinCDIServlet;
-import com.vaadin.server.VaadinServlet;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 
 /**

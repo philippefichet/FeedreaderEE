@@ -68,7 +68,5 @@ public class UpdateFeed {
     @OnClose
     public void onClose(Session session, CloseReason reason) {
         availableSession.remove(session);
-        System.out.println("websocket " + session.getId() + " close = " + reason.getReasonPhrase());
-        
     }
 }

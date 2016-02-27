@@ -47,7 +47,6 @@ public class MainUI  extends UI {
     
     @Override
     public void init(VaadinRequest request) {
-        System.out.println("viewProvider = " + viewProvider);
         if (getSession().getAttribute("MobileBoostrapListener") == null) {
             getSession().addBootstrapListener(new MobileBoostrapListener());
             getSession().setAttribute("MobileBoostrapListener", true);
@@ -137,8 +136,6 @@ public class MainUI  extends UI {
      */
     public static void notifyUpdateFeed(Map<Feed, List<FeedItem>> newFeedItem, Map<Feed, Long> countUnread) {
         LogManager.getLogger().info("notification de mise à jour de flux vaadin");
-        System.out.println("newFeedItem = " + newFeedItem);
-        System.out.println("countUnread = " + countUnread);
         for (Iterator<MainUI> it = availableUI.iterator(); it.hasNext();) {
             MainUI ui = it.next();
             if(ui.isAttached()) {
