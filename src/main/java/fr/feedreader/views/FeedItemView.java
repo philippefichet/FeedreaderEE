@@ -68,8 +68,6 @@ public class FeedItemView extends VerticalLayout implements View {
     
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
-        System.out.println("init = " + init);
-        System.out.println("noReadedOnly = " + noReadedOnly);
         if(init) {
             
         } else {

@@ -6,6 +6,7 @@
 package fr.feedreader.buisness;
 
 import com.rometools.rome.io.FeedException;
+import fr.feedreader.Bootstrap;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import java.io.File;
@@ -45,22 +46,24 @@ public class FeedBuisnessItemTest {
     
     @Deployment
     public static WebArchive createDeployment() {
-        File[] dependencies = Maven.configureResolver()
-                .workOffline()
-                .loadPomFromFile("pom.xml")
-                .importCompileAndRuntimeDependencies()
-                .resolve()
-                .withTransitivity()
-                .asFile();
-        WebArchive archive = ShrinkWrap.create(WebArchive.class)
+        WebArchive war = ShrinkWrap.create(WebArchive.class)
             .addPackage("fr.feedreader.junit")
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.models")
-            .addAsLibraries(dependencies)
             .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
         
-        return archive;
+        war.addAsResource(new File("./src/test/resources/atom.atom"), "fr/feedreader/junit/atom.atom");
+        war.addAsResource(new File("./src/test/resources/developpez.atom"), "fr/feedreader/junit/developpez.atom");
+        war.addAsResource(new File("./src/test/resources/developpez-update.atom"), "fr/feedreader/junit/developpez-update.atom");
+        war.addAsResource(new File("./src/test/resources/linuxfr.atom"), "fr/feedreader/junit/linuxfr.atom");
+        war.addAsResource(new File("./src/test/resources/rss.rss"), "fr/feedreader/junit/rss.rss");
+        
+        try {
+            return Bootstrap.addAsLibrary(war);
+        } catch(Exception e) {
+            return war;
+        }
     }
     
     @Test

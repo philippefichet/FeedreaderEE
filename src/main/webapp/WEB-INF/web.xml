@@ -9,7 +9,7 @@
     </session-config>
     <context-param>
         <param-name>shiroConfigLocations</param-name>
-        <param-value>${shiroConfigurationLocations}</param-value>
+        <param-value>@shiroConfigurationLocations@</param-value>
     </context-param>
     <listener>
         <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>

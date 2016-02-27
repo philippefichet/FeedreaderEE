@@ -3,3 +3,10 @@
 /src/main/resources/rest/
 .docker
 nbactions*
+/.syncany/
+/.gradle/
+/.nb-gradle-properties
+/.syignore
+/gradle.properties
+/nb-configuration.xml
+/private/

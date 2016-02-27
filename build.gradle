@@ -1,0 +1,126 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'war'
+apply plugin: 'com.bmuschko.cargo'
+
+group = 'feedreader'
+version = '1.0'
+
+description = """feedreader"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+import org.apache.tools.ant.filters.*
+
+war {
+    filter ReplaceTokens, tokens: [
+        "shiroConfigurationLocations": project.property("shiroConfigurationLocations"),
+        "stagemonitor.active": project.property("stagemonitor.active")
+    ]
+}
+
+processResources {
+    filter ReplaceTokens, tokens: [
+        "shiroConfigurationLocations": project.property("shiroConfigurationLocations"),
+        "stagemonitor.active": project.property("stagemonitor.active")
+    ]
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {url "http://repo.gradle.org/gradle/libs-releases-local"}
+    maven {url "https://repository.jboss.org/nexus/content/groups/public/"}
+    maven { url "http://maven.vaadin.com/vaadin-addons" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    
+    dependencies {
+        classpath 'com.bmuschko:gradle-cargo-plugin:2.2.2'
+    }
+}
+
+dependencies {
+    compile group: 'org.webjars', name: 'angularjs', version:'1.2.19'
+    compile group: 'org.webjars', name: 'jquery', version:'1.11.1'
+    compile group: 'org.webjars', name: 'bootstrap', version:'3.2.0'
+    compile group: 'org.apache.shiro', name: 'shiro-web', version:'1.2.3'
+    compile group: 'com.rometools', name: 'rome', version:'1.5.0'
+    compile group: 'com.google.guava', name: 'guava', version:'18.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.3.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version:'2.0.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.0.2'
+    //compile group: 'org.stagemonitor', name: 'stagemonitor-web', version:'0.20.0'
+    //compile group: 'org.stagemonitor', name: 'stagemonitor-os', version:'0.20.0'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version:'1.7.7'
+    def vaadinVersion = "7.6.2"
+    compile group: 'com.vaadin', name: 'vaadin-server', version: vaadinVersion
+    compile group: 'com.vaadin', name: 'vaadin-client-compiled', version: vaadinVersion
+    compile group: 'com.vaadin', name: 'vaadin-client', version: vaadinVersion
+    compile group: 'com.vaadin', name: 'vaadin-themes', version: vaadinVersion
+    compile group: 'com.vaadin', name: 'vaadin-push', version: vaadinVersion
+    //compile group: 'org.atmosphere', name: 'atmosphere-annotations', version:'2.2.3'
+    compile group: 'com.vaadin', name: 'vaadin-cdi', version:'1.0.0.rc1'
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    
+    // Arquillian
+    def arquillianVersion = "1.1.5.Final"
+    testCompile group: 'org.jboss.arquillian', name: 'arquillian-bom', version: arquillianVersion
+    testCompile group: 'org.jboss.arquillian.junit', name: 'arquillian-junit-container', version: arquillianVersion
+    testCompile group: 'org.jboss.arquillian.extension', name: 'arquillian-jacoco', version: "1.0.0.Alpha8"
+    testCompile group: 'org.wildfly', name: 'wildfly-arquillian-container-remote', version:'8.2.1.Final'
+    
+    def arquillianGradleDepchainVersion = "2.2.0-beta-1"
+    testCompile group: 'org.jboss.shrinkwrap.resolver', name: 'shrinkwrap-resolver-depchain', version:arquillianGradleDepchainVersion
+    testCompile group: 'org.jboss.shrinkwrap.resolver', name: 'shrinkwrap-resolver-spi', version:arquillianGradleDepchainVersion
+    testCompile group: 'org.jboss.shrinkwrap.resolver', name: 'shrinkwrap-resolver-api', version:arquillianGradleDepchainVersion
+    testCompile group: 'org.jboss.shrinkwrap.resolver', name: 'shrinkwrap-resolver-gradle-depchain', version: arquillianGradleDepchainVersion
+    testCompile group: 'org.jboss.shrinkwrap.resolver', name: 'shrinkwrap-resolver-api-gradle-embedded-archive', version: arquillianGradleDepchainVersion
+    testCompile group: 'org.jboss.shrinkwrap.resolver', name: 'shrinkwrap-resolver-impl-gradle-embedded-archive', version: arquillianGradleDepchainVersion
+    
+    def jacksonVersion = "2.4.1"
+    providedCompile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion
+    providedCompile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+    providedCompile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+    providedCompile group: 'javax', name: 'javaee-api', version:'7.0'
+    
+    def cargoVersion = '1.4.18'
+    cargo "org.codehaus.cargo:cargo-core-uberjar:$cargoVersion",
+          "org.codehaus.cargo:cargo-ant:$cargoVersion",
+          "org.wildfly:wildfly-controller-client:8.2.1.Final"
+}
+
+if(hasProperty("wildflyHostname") && hasProperty("wildflyUsername") && hasProperty("wildflyPassword")) {
+    cargo {
+        containerId = "wildfly10x"
+        port = 8080
+        remote {
+            hostname = wildflyHostname
+            username = wildflyUsername
+            password = wildflyPassword
+        }
+    }
+
+    test {
+        /** 
+         * Arquillian configuration to wildfly
+         */
+        systemProperty 'wildfly.host', wildflyHostname
+        systemProperty 'wildfly.username', wildflyUsername
+        systemProperty 'wildfly.password', wildflyPassword
+        systemProperty 'wildfly.admin.port', wildflyAdminPort
+        systemProperty 'wildfly.port', wildflyPort
+    }
+}
+
+// shortcut deployment
+cargoRedeployRemote.dependsOn war
+cargoDeployRemote.dependsOn war

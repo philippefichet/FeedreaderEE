@@ -6,6 +6,7 @@
 package fr.feedreader.buisness;
 
 import com.rometools.rome.io.FeedException;
+import fr.feedreader.Bootstrap;
 import fr.feedreader.Witness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
@@ -20,13 +21,12 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static fr.feedreader.junit.Assert.*;
 import fr.feedreader.junit.Utils;
-import javax.inject.Named;
+import java.net.URL;
 import static org.junit.Assert.*;
 
 /**
@@ -47,23 +47,25 @@ public class FeedBuisnessTest {
     
     @Deployment
     public static WebArchive createDeployment() {
-        File[] dependencies = Maven.configureResolver()
-                .workOffline()
-                .loadPomFromFile("pom.xml")
-                .importCompileAndRuntimeDependencies()
-                .resolve()
-                .withTransitivity()
-                .asFile();
-        WebArchive archive = ShrinkWrap.create(WebArchive.class)
+        WebArchive war = ShrinkWrap.create(WebArchive.class)
             .addPackage("fr.feedreader.junit")
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.models")
             .addClass(Witness.class)
-            .addAsLibraries(dependencies)
             .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
+
+        war.addAsResource(new File("./src/test/resources/atom.atom"), "fr/feedreader/junit/atom.atom");
+        war.addAsResource(new File("./src/test/resources/developpez.atom"), "fr/feedreader/junit/developpez.atom");
+        war.addAsResource(new File("./src/test/resources/developpez-update.atom"), "fr/feedreader/junit/developpez-update.atom");
+        war.addAsResource(new File("./src/test/resources/linuxfr.atom"), "fr/feedreader/junit/linuxfr.atom");
+        war.addAsResource(new File("./src/test/resources/rss.rss"), "fr/feedreader/junit/rss.rss");
         
-        return archive;
+        try {
+            return Bootstrap.addAsLibrary(war);
+        } catch(Exception e) {
+            return war;
+        }
     }
     
     @Test
@@ -79,7 +81,8 @@ public class FeedBuisnessTest {
     
     @Test
     public void getFeedAtom() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
-        List<FeedItem> feedItems = feedBuisness.getFeedItems(new File("./src/test/resources/atom.atom").toURI());
+        URL url = getClass().getResource("/fr/feedreader/junit/atom.atom");
+        List<FeedItem> feedItems = feedBuisness.getFeedItems(url.toString());
         int size = feedItems.size();
         assertTrue("Total : " + size + " au lieu de 20", size == 20);
         int i = 0;
@@ -110,7 +113,8 @@ public class FeedBuisnessTest {
     
     @Test
     public void getFeedRss() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
-        List<FeedItem> feedItems = feedBuisness.getFeedItems(new File("./src/test/resources/rss.rss").toURI());
+        URL url = getClass().getResource("/fr/feedreader/junit/rss.rss");
+        List<FeedItem> feedItems = feedBuisness.getFeedItems(url.toString());
         int size = feedItems.size();
         assertTrue("Total : " + size + " au lieu de 20", size == 20);
         int i = 0;
@@ -122,7 +126,8 @@ public class FeedBuisnessTest {
     
     @Test
     public void getFeedAtomLinuxFr() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
-        List<FeedItem> feedItems = feedBuisness.getFeedItems(new File("./src/test/resources/linuxfr.atom").toURI());
+        URL url = getClass().getResource("/fr/feedreader/junit/linuxfr.atom");
+        List<FeedItem> feedItems = feedBuisness.getFeedItems(url.toString());
         int size = feedItems.size();
         assertTrue("Total : " + size + " au lieu de 15", size == 15);
         int i = 0;
@@ -159,19 +164,14 @@ public class FeedBuisnessTest {
     @Test
     public void refreshResult() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
         
-        // Vérification du fichier de test
-        File developpezFile = new File("./src/test/resources/developpez.atom");
-        assertTrue(developpezFile.exists());
-        assertTrue(developpezFile.isFile());
-        
-        File developpezUpdateFile = new File("./src/test/resources/developpez-update.atom");
-        assertTrue(developpezFile.exists());
-        assertTrue(developpezFile.isFile());
+        URL developpezUrl = getClass().getResource("/fr/feedreader/junit/developpez.atom");
+        URL developpezUpdateUrl = getClass().getResource("/fr/feedreader/junit/developpez-update.atom");
+
         
         // Création du flux de test basé sur un fichier de test
         Feed developpez = new Feed();
         developpez.setDescription("Developpez");
-        developpez.setUrl(developpezFile.toURI().toString());
+        developpez.setUrl(developpezUrl.toString());
         feedBuisness.add(developpez);
         assertNotNull(developpez.toString(), developpez.getId());
 
@@ -189,7 +189,7 @@ public class FeedBuisnessTest {
         });
 
         // Changement de l'url pour simulation de mise à jour
-        developpez.setUrl(developpezUpdateFile.toURI().toString());
+        developpez.setUrl(developpezUpdateUrl.toString());
         feedBuisness.update(developpez);
 
         // Vérification de la mise à jour en parallele
