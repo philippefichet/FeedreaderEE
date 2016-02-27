@@ -51,7 +51,6 @@ public class FeedAdminView extends VerticalLayout implements View {
     
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
-        System.out.println("init = " + init);
         if(init) {
             
         } else {
@@ -100,7 +99,6 @@ public class FeedAdminView extends VerticalLayout implements View {
             
             List<Feed> findAll = feedBuisness.findAll();
             findAll.stream().forEach((feed) -> {
-                System.out.println("feed = " + feed);
                 feeds.addItem(feedToTableRow(feed), feed.getId());
             });
             
