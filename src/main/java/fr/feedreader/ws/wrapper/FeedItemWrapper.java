@@ -24,6 +24,7 @@ public class FeedItemWrapper {
     private Long feedId;
     private Boolean readed = null;
     private FeedItemUrlWrapper url = null;
+    private FeedWrapper feed = null;
 
     public FeedItemWrapper(FeedItem feedItem, FeedItemUrlWrapper feedItemUrlWrapper) {
         this(feedItem, feedItemUrlWrapper, false);
@@ -83,5 +84,13 @@ public class FeedItemWrapper {
 
     public FeedItemUrlWrapper getUrl() {
         return url;
+    }
+
+    public FeedWrapper getFeed() {
+        return feed;
+    }
+
+    public void setFeed(FeedWrapper feed) {
+        this.feed = feed;
     }
 }

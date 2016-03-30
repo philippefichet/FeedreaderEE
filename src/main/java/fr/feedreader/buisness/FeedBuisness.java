@@ -121,8 +121,7 @@ public class FeedBuisness {
                     FeedItem feedItemCreate = feedItemBuisness.create(feedItem);
                     updatedFeedItem.add(feedItemCreate);
                 } catch (Exception e) {
-                    logger.error("Erreur dans la récupération d'un flux " + id + ", \"" + feedItem.getFeedItemId() + "\"");
-                    logger.error(e.getLocalizedMessage());
+                    logger.error("Erreur dans la récupération d'un flux " + id + ", \"" + feedItem.getFeedItemId() + "\"", e);
                     logFeedItem(existing);
                     logFeedItem(feedItem);
                 }
@@ -194,13 +193,13 @@ public class FeedBuisness {
             try {
                 feedsUpdated.put(feed, getFeedItems(feed.getUrl()));
             } catch (IOException ex) {
-                logger.fatal(ex);
+                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
             } catch (IllegalArgumentException ex) {
-                logger.fatal(ex);
+                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
             } catch (FeedException ex) {
-                logger.fatal(ex);
+                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
             } catch (URISyntaxException ex) {
-                logger.fatal(ex);
+                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
             }
         });
         
@@ -264,14 +263,12 @@ public class FeedBuisness {
                     List<FeedItem> feedItems = refreshFeedItems(feed.getId());
                     feedsUpdated.put(feed, feedItems);
                 } catch (Exception e1) {
-                    logger.error("Erreur lors de la récumération du premier flux pour \"" + feed.getName() + "\"");
-                    logger.error(e1.getLocalizedMessage());
+                    logger.error("Erreur lors de la récumération du premier flux pour \"" + feed.getName() + "\"", e1);
                     logFeed(feed);
                     logFeedItem(feedItem);
                 }
             } catch (Exception e) {
-                logger.error("Erreur lors de la mise à jour du flux : \"" + feed.getName() + "\"");
-                logger.error(e.getLocalizedMessage());
+                logger.error("Erreur lors de la mise à jour du flux : \"" + feed.getName() + "\"", e);
                 logFeed(feed);
                 logFeedItem(feedItem);
             }

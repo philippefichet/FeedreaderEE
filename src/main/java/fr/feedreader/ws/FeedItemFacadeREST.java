@@ -12,6 +12,7 @@ import fr.feedreader.models.FeedItem;
 import fr.feedreader.websocket.UpdateFeed;
 import fr.feedreader.ws.wrapper.FeedItemUrlWrapper;
 import fr.feedreader.ws.wrapper.FeedItemWrapper;
+import fr.feedreader.ws.wrapper.FeedWrapper;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -50,7 +51,11 @@ public class FeedItemFacadeREST {
     @Path("{id}")
     public FeedItemWrapper getFeedItem(@PathParam("id") Integer feedItemId) {
         FeedItem feedItem = feedItemBuisness.find(feedItemId);
-        return new FeedItemWrapper(feedItem, new FeedItemUrlWrapper(request.getContextPath(), feedItem), true);
+        FeedWrapper feedWrapper = new FeedWrapper(feedItem.getFeed());
+        feedWrapper.setUnread(feedBuisness.countUnread(feedItem.getFeed().getId()));
+        FeedItemWrapper feedItemWrapper = new FeedItemWrapper(feedItem, new FeedItemUrlWrapper(request.getContextPath(), feedItem), true);
+        feedItemWrapper.setFeed(feedWrapper);
+        return feedItemWrapper;
     }
     
     @POST
@@ -60,6 +65,7 @@ public class FeedItemFacadeREST {
         feedItem.setReaded(readed);
         feedItem = feedItemBuisness.update(feedItem);
         
+        // TODO faire ceci en @Async
         // Envoi des flux avec leur compteurs via WebSocket
         Map<Feed, Long> countUnread = feedBuisness.countUnread();
         Map<Feed, List<FeedItem>> update = new HashMap<>();
@@ -70,9 +76,17 @@ public class FeedItemFacadeREST {
         UpdateFeed.notifyUpdateFeed(update, countUnread);
         
         // Retour du webservice
-        return new FeedItemWrapper(
+        FeedItemWrapper feedItemWrapper = new FeedItemWrapper(
             feedItem,
-            new FeedItemUrlWrapper(request.getContextPath(), feedItem)
+            new FeedItemUrlWrapper(request.getContextPath(), feedItem),
+            true
         );
+        
+        // Nombre de nouvelles non lues
+        FeedWrapper feedWrapper = new FeedWrapper(feedItem.getFeed());
+        feedWrapper.setUnread(feedBuisness.countUnread(feedItem.getFeed().getId()));
+
+        feedItemWrapper.setFeed(feedWrapper);
+        return feedItemWrapper;
     }
 }

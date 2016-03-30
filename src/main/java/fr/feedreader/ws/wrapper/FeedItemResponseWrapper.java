@@ -15,11 +15,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class FeedItemResponseWrapper {
     private List<FeedItemWrapper> feedItems;
+    private FeedWrapper feed;
     private Long pages;
 
-    public FeedItemResponseWrapper(List<FeedItemWrapper> feedItems, Long pages) {
+    public FeedItemResponseWrapper(List<FeedItemWrapper> feedItems, Long pages, FeedWrapper feedWrapper) {
         this.feedItems = feedItems;
         this.pages = pages;
+        this.feed = feedWrapper;
     }
 
     public List<FeedItemWrapper> getFeedItems() {
@@ -28,5 +30,9 @@ public class FeedItemResponseWrapper {
 
     public Long getPages() {
         return pages;
+    }
+
+    public FeedWrapper getFeed() {
+        return feed;
     }
 }

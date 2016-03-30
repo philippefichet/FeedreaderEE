@@ -9,6 +9,6 @@
     <Root level="info">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="fr.feedreader.buisness" level="debug"/>
+    <Logger name="fr.feedreader.buisness" level="warn"/>
   </Loggers>
 </Configuration>

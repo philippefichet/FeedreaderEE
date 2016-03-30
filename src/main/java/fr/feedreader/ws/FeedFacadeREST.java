@@ -22,6 +22,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -85,6 +86,12 @@ public class FeedFacadeREST  {
         }
     }
     
+    @POST
+    public FeedWrapper updateFeed(FeedWrapper feedWrapper) {
+        Feed feed = feedBuisness.update(feedWrapper.toFeed());
+        return new FeedWrapper(feed);
+    }
+    
     @PUT
     public FeedWrapper addFeed(FeedWrapper feedWrapper) {
         Feed feed = feedBuisness.add(feedWrapper.toFeed());
@@ -97,17 +104,19 @@ public class FeedFacadeREST  {
             @PathParam("id") Integer id,
             @DefaultValue("1") @QueryParam("page") Integer page
     ) {
+        Feed feed = feedBuisness.find(id);
         List<FeedItemWrapper> feedItemsWrapper = feedItemBuisness.findAll(id, page).stream().map((feedItem) -> {
-            
             return new FeedItemWrapper(
                 feedItem,
                 new FeedItemUrlWrapper(request.getContextPath(), feedItem)
             );
         }).collect(Collectors.toList());
-        
+        FeedWrapper feedWrapper = new FeedWrapper(feed);
+        feedWrapper.setUnread(feedBuisness.countUnread(feed.getId()));
         return new FeedItemResponseWrapper(
             feedItemsWrapper,
-            feedItemBuisness.getTotalPage(id)
+            feedItemBuisness.getTotalPage(id),
+            feedWrapper
         );
     }
 }

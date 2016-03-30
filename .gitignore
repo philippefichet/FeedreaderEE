@@ -10,3 +10,6 @@ nbactions*
 /gradle.properties
 /nb-configuration.xml
 /private/
+/build/
+/.nb-gradle/
+/node_modules/*
