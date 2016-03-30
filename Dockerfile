@@ -47,8 +47,8 @@ RUN moduleXmlFile=$( echo "$WILDFLY_HOME/modules/system/layers/base/org/hsqldb/m
 
 RUN $WILDFLY_HOME/bin/standalone.sh --admin-only & \
     sleep 10 \
-    && $WILDFLY_HOME/bin/jboss-cli.sh -u=admin -p=megapassword --connect --commands='/subsystem=datasources/jdbc-driver=hsqldb:add(driver-name="hsqldb",driver-class-name="org.hsqldb.jdbc.JDBCDriver",driver-module-name="org.hsqldb")' \
-    && $WILDFLY_HOME/bin/jboss-cli.sh --connect --commands='/subsystem=datasources/data-source=feedreader:add(driver-name="hsqldb",connection-url="jdbc:hsqldb:file:~/.feedreader/hsqldb",user-name="feedreader",password="a5tY6d4u7",jndi-name="java:jboss/datasources/feedreader")'
+    && $WILDFLY_HOME/bin/jboss-cli.sh -u=$WILDFLY_ADMIN_USER -p=$WILDFLY_ADMIN_PASSWORD --connect --commands='/subsystem=datasources/jdbc-driver=hsqldb:add(driver-name="hsqldb",driver-class-name="org.hsqldb.jdbc.JDBCDriver",driver-module-name="org.hsqldb")' \
+    && $WILDFLY_HOME/bin/jboss-cli.sh -u=$WILDFLY_ADMIN_USER -p=$WILDFLY_ADMIN_PASSWORD --connect --commands='/subsystem=datasources/data-source=feedreader:add(driver-name="hsqldb",connection-url="jdbc:hsqldb:file:~/.feedreader/hsqldb",user-name="feedreader",password="a5tY6d4u7",jndi-name="java:jboss/datasources/feedreader")'
 
 RUN rm -rfv $WILDFLY_HOME/standalone/configuration/standalone_xml_history/*
 
