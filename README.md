@@ -22,20 +22,12 @@ Le login, mot de passe et l'emplacement de la base de données peuvent être cha
 
 ### Construction de l'application
 
-L'application est construite avec [Maven](http://maven.apache.org/) et s'intègre facilement dans les IDE supportant Maven
+L'application est construite avec [Gradle](http://gradle.org) et s'intègre facilement dans les IDE supportant Gradle
 
-"`mvn install`" suffit pour compiler l'application en .war (`target/feedreader-1.0.war`) qu'il faut déployer dans le serveur d'application choisit.
+"`./gradlew war`" suffit pour compiler l'application en .war (`build/lib//feedreader-1.0.war`) qu'il faut déployer dans le serveur d'application choisit.
 
 ## Configration
 
 "`WEB-INF/shiro.ini`" est le fichier de gestion de la sécurité ( voir [Apache Shiro](http://shiro.apache.org/configuration.html))
 
 L'emplacment peut-être changer lors de la construction de l'application via la propriété "`shiroConfigurationLocations`"
-
-## OpenShift
-
-L'application est compatible avec [OpenShift](https://www.openshift.com/). Il suffit alors de créer (ou copier) le fichier "`WEB-INF/shiro.ini`" vers "`~/app-root/data/.feedreader/shiro.ini`" et de le modifier selon vos préférences (utilisateur, mot de passe, ...)
-
-
-
-
