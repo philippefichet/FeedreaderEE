@@ -8,6 +8,9 @@ Le nom JNDI du datasource est "`java:jboss/datasources/feedreader`" qui peut êt
 ### Serveur d'application
 
 #### Wildfly
+
+##### À la main
+
 Téléchargement de [Wildfly](http://wildfly.org/downloads/)
 
 Téléchargement et installation de hsqldb (Base de données par défaut).
@@ -19,6 +22,22 @@ Pour les utilisateurs de windows voir [Babun](https://github.com/babun/babun) po
 Dans le répertoire "`bin`" se trouve un script facilitant l'installation de la datasource.
 
 Le login, mot de passe et l'emplacement de la base de données peuvent être changés.
+
+##### Avec Docker
+
+###### Contruire l'image docker 
+
+`sudo docker build -t "feedreader:10" .`
+
+###### Lancer l'image docker 
+
+`sudo docker run -p 8080:8080 -p 9990:9990 -t "feedreader:10"`
+
+###### Volume
+
+Pour persisté les données : 
+
+`sudo docker run -p 8080:8080 -p 9990:9990 -v /home/feedreader/:/opt/wildfly/.feedreader -t "feedreader:10"`
 
 ### Construction de l'application
 
