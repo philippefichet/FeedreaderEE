@@ -43,7 +43,7 @@ Pour persisté les données :
 
 L'application est construite avec [Gradle](http://gradle.org) et s'intègre facilement dans les IDE supportant Gradle
 
-"`./gradlew war`" suffit pour compiler l'application en .war (`build/lib//feedreader-1.0.war`) qu'il faut déployer dans le serveur d'application choisit.
+"`./gradlew installGulpDependencies war`" suffit pour compiler l'application en .war (`build/lib//feedreader-1.0.war`) qu'il faut déployer dans le serveur d'application choisit.
 
 ## Configration
 
