@@ -37,6 +37,14 @@ targetCompatibility = 1.8
 import org.apache.tools.ant.filters.*
 import de.undercouch.gradle.tasks.download.Download
 
+if (!hasProperty("shiroConfigurationLocations")) {
+  ext.shiroConfigurationLocations = "/WEB-INF/shiro.ini";
+}
+
+if (!hasProperty("stagemonitor.active")) {
+  ext["stagemonitor.active"] = "false";
+}
+
 war {
     filter ReplaceTokens, tokens: [
         "shiroConfigurationLocations": project.property("shiroConfigurationLocations"),
