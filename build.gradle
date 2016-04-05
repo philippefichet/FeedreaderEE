@@ -45,6 +45,27 @@ if (!hasProperty("stagemonitor.active")) {
   ext["stagemonitor.active"] = "false";
 }
 
+if (!hasProperty("wildflyHostname")) {
+  ext.wildflyHostname = "localhost";
+}
+
+if (!hasProperty("wildflyUsername")) {
+  ext.wildflyUsername = "admin";
+}
+
+if (!hasProperty("wildflyPassword")) {
+  ext.wildflyPassword = "megapassword";
+}
+
+if (!hasProperty("wildflyAdminPort")) {
+  ext.wildflyAdminPort = "9990";
+}
+
+if (!hasProperty("wildflyPort")) {
+  ext.wildflyPort = "8080";
+}
+
+
 war {
     filter ReplaceTokens, tokens: [
         "shiroConfigurationLocations": project.property("shiroConfigurationLocations"),
