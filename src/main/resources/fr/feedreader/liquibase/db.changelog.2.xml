@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="2" author="philippefichet">
+        <createTable tableName="FEEDITEM">
+            <column name="ID" type="INTEGER" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="FEEDITEMID" type="VARCHAR(512)"/>
+            <column name="ENCLOSURE" type="VARCHAR(512)"/>
+            <column name="LINK" type="VARCHAR(512)"/>
+            <column name="READED" type="BOOLEAN"/>
+            <column name="SUMMARY" type="VARCHAR(1048578)"/>
+            <column name="TITLE" type="VARCHAR(255)"/>
+            <column name="UPDATED" type="TIMESTAMP"/>
+            <column name="FEED_ID" type="INTEGER"/>
+            <column name="CONTENT" type="VARCHAR(131072)"/>
+        </createTable>
+        <addForeignKeyConstraint
+            baseTableName="FEEDITEM" baseColumnNames="FEED_ID"
+            constraintName="FEEDITEM_TO_FEED"
+            referencedTableName="FEED" referencedColumnNames="ID"/>
+        <rollback>
+            <dropTable tableName="FEEDITEM"/>
+            <dropForeignKeyConstraint baseTableName="FEEDITEM_TO_FEED"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
