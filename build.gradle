@@ -42,7 +42,7 @@ apply from: "defaults.gradle"
 war {
     filter ReplaceTokens, tokens: [
         "shiroConfigurationLocations": project.property("shiroConfigurationLocations"),
-        "shiro_user.username": project.property("shiro.user.username"),
+        "shiro.user.username": project.property("shiro.user.username"),
         "shiro.user.password": project.property("shiro.user.password"),
         "shiro.admin.username": project.property("shiro.admin.username"),
         "shiro.admin.password": project.property("shiro.admin.password"),
