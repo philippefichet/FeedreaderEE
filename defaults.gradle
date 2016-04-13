@@ -25,3 +25,19 @@ if (!hasProperty("wildflyAdminPort")) {
 if (!hasProperty("wildflyPort")) {
   ext.wildflyPort = "8080";
 }
+
+if (!hasProperty("shiro.user.username")) {
+  ext["shiro.user.username"] = "user";
+}
+
+if (!hasProperty("shiro.user.password")) {
+  ext["shiro.user.password"] = "user";
+}
+
+if (!hasProperty("shiro.admin.username")) {
+  ext["shiro.admin.username"] = "admin";
+}
+
+if (!hasProperty("shiro.admin.password")) {
+  ext["shiro.admin.password"] = "admin";
+}
