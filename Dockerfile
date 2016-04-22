@@ -39,16 +39,32 @@ RUN moduleXmlFile=$( echo "$WILDFLY_HOME/modules/system/layers/base/org/hsqldb/m
     echo '    <dependencies>' >> $moduleXmlFile && \
     echo '        <module name="javax.api"/>' >> $moduleXmlFile && \
     echo '        <module name="javax.transaction.api"/>' >> $moduleXmlFile && \
-    echo '        <module name="javax.servlet.api" optional="true"/>' >> $moduleXmlFile && \
     echo '    </dependencies>' >> $moduleXmlFile && \
     echo '</module>' >> $moduleXmlFile
 
-# $WILDFLY_HOME/bin/jboss-cli.sh --connect --commands='/subsystem=datasources/jdbc-driver=hsqldb:add(driver-name="hsqldb",driver-class-name="org.hsqldb.jdbc.JDBCDriver",driver-module-name="org.hsqldb")'
+ENV P6SPY_VERSION 2.2.0
+RUN wget -c "https://repo1.maven.org/maven2/p6spy/p6spy/$P6SPY_VERSION/p6spy-$P6SPY_VERSION.jar" -O /tmp/p6spy-$P6SPY_VERSION.jar
+RUN mkdir -p $WILDFLY_HOME/modules/system/layers/base/com/p6spy/main && \
+    cp /tmp/p6spy-$P6SPY_VERSION.jar $WILDFLY_HOME/modules/system/layers/base/com/p6spy/main/p6spy-$P6SPY_VERSION.jar && \
+    cp /tmp/hsqldb-$HSQLDB_VERSION.jar $WILDFLY_HOME/modules/system/layers/base/com/p6spy/main/hsqldb-$HSQLDB_VERSION.jar && \
+    moduleXmlFile=$( echo "$WILDFLY_HOME/modules/system/layers/base/com/p6spy/main/module.xml" ) && \
+    echo '<?xml version="1.0" encoding="UTF-8"?>' > $moduleXmlFile && \
+    echo '<module xmlns="urn:jboss:module:1.3" name="com.p6spy">' >> $moduleXmlFile && \
+    echo '    <resources>' >> $moduleXmlFile && \
+    echo "        <resource-root path=\"p6spy-$P6SPY_VERSION.jar\"/>" >> $moduleXmlFile && \
+    echo "        <resource-root path=\"hsqldb-$HSQLDB_VERSION.jar\"/>" >> $moduleXmlFile && \
+    echo '    </resources>' >> $moduleXmlFile && \
+    echo '    <dependencies>' >> $moduleXmlFile && \
+    echo '        <module name="javax.api"/>' >> $moduleXmlFile && \
+    echo '        <module name="javax.transaction.api"/>' >> $moduleXmlFile && \
+    echo '    </dependencies>' >> $moduleXmlFile && \
+    echo '</module>' >> $moduleXmlFile
 
 RUN $WILDFLY_HOME/bin/standalone.sh --admin-only & \
     sleep 10 \
+    && $WILDFLY_HOME/bin/jboss-cli.sh -u=$WILDFLY_ADMIN_USER -p=$WILDFLY_ADMIN_PASSWORD --connect --commands='/subsystem=datasources/jdbc-driver=p6spy:add(driver-name="p6spy",driver-class-name="com.p6spy.engine.spy.P6SpyDriver",driver-module-name="com.p6spy")' \
     && $WILDFLY_HOME/bin/jboss-cli.sh -u=$WILDFLY_ADMIN_USER -p=$WILDFLY_ADMIN_PASSWORD --connect --commands='/subsystem=datasources/jdbc-driver=hsqldb:add(driver-name="hsqldb",driver-class-name="org.hsqldb.jdbc.JDBCDriver",driver-module-name="org.hsqldb")' \
-    && $WILDFLY_HOME/bin/jboss-cli.sh -u=$WILDFLY_ADMIN_USER -p=$WILDFLY_ADMIN_PASSWORD --connect --commands='/subsystem=datasources/data-source=feedreader:add(driver-name="hsqldb",connection-url="jdbc:hsqldb:file:~/.feedreader/hsqldb",user-name="feedreader",password="a5tY6d4u7",jndi-name="java:jboss/datasources/feedreader")'
+    && $WILDFLY_HOME/bin/jboss-cli.sh -u=$WILDFLY_ADMIN_USER -p=$WILDFLY_ADMIN_PASSWORD --connect --commands='/subsystem=datasources/data-source=feedreader:add(driver-name="p6spy",connection-url="jdbc:p6spy:hsqldb:file:~/.feedreader/hsqldb",user-name="feedreader",password="a5tY6d4u7",jndi-name="java:jboss/datasources/feedreader")'
 
 RUN rm -rfv $WILDFLY_HOME/standalone/configuration/standalone_xml_history/*
 
@@ -59,4 +75,4 @@ ENV JAVA_OPTS="-server -Xms512m -Xmx1024m -XX:MetaspaceSize=128M -XX:MaxMetaspac
 
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
-CMD ["/opt/wildfly/wildfly-10.0.0.Final/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+CMD ["/opt/wildfly/wildfly-10.0.0.Final/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0", "-Dp6spy.config.driverlist=org.hsqldb.jdbc.JDBCDriver", "-Dp6spy.config.appender=com.p6spy.engine.spy.appender.StdoutLogger"]
