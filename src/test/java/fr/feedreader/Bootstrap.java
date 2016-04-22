@@ -13,6 +13,7 @@ import org.gradle.tooling.GradleConnector;
 import org.gradle.tooling.ModelBuilder;
 import org.gradle.tooling.ProjectConnection;
 import org.gradle.tooling.model.idea.IdeaDependency;
+import org.gradle.tooling.model.idea.IdeaDependencyScope;
 import org.gradle.tooling.model.idea.IdeaModule;
 import org.gradle.tooling.model.idea.IdeaProject;
 import org.gradle.tooling.model.idea.IdeaSingleEntryLibraryDependency;
@@ -31,7 +32,7 @@ public class Bootstrap {
         File build = new File("./build.gradle");
         File buildCache = new File("./build/.dependencies-" + build.lastModified());
         long startDependency = System.currentTimeMillis();
-        if (buildCache.exists()) {
+        if (buildCache.exists() && false) {
             System.out.println("Load dependency from file \"" + buildCache.getAbsolutePath() + "\"");
             List<String> files = Files.readAllLines(buildCache.toPath());
             for (String file : files) {
@@ -42,14 +43,16 @@ public class Bootstrap {
         } else {
             StringBuilder sb = new StringBuilder();
             File project = new File(".");
-            System.out.println("Load dependency from project \"" + project.getAbsolutePath() + "\"");
+            System.out.println("Load dependency from proqzject \"" + project.getAbsolutePath() + "\"");
             GradleConnector newConnector = org.gradle.tooling.GradleConnector.newConnector();
             ProjectConnection connect = newConnector.forProjectDirectory(project).connect();
             ModelBuilder<IdeaProject> model = connect.model(IdeaProject.class);
             for (IdeaModule module : model.get().getModules()) {
                 for (IdeaDependency dependency : module.getDependencies()) {
-                    sb.append(((IdeaSingleEntryLibraryDependency)dependency).getFile().getAbsolutePath()).append("\n");
-                    war.addAsLibraries(((IdeaSingleEntryLibraryDependency)dependency).getFile());
+                    if (dependency.getScope().getScope().equals("COMPILE")) {
+                        sb.append(((IdeaSingleEntryLibraryDependency)dependency).getFile().getAbsolutePath()).append("\n");
+                        war.addAsLibraries(((IdeaSingleEntryLibraryDependency)dependency).getFile());
+                    }
                 }
             }
             Files.write(buildCache.toPath(), sb.toString().getBytes());
