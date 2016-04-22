@@ -8,4 +8,5 @@
 
     <include file="fr/feedreader/liquibase/db.changelog.1.xml"/>
     <include file="fr/feedreader/liquibase/db.changelog.2.xml"/>
+    <include file="fr/feedreader/liquibase/db.changelog.3.xml"/>
 </databaseChangeLog>

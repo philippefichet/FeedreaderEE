@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="3" author="philippefichet">
+        <createTable tableName="FEED_HAS_ERROR">
+            <column name="FEED_ID" type="INTEGER">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ERROR" type="VARCHAR(1048578)"/>
+        </createTable>
+        <addForeignKeyConstraint
+            baseTableName="FEED_HAS_ERROR" baseColumnNames="FEED_ID"
+            constraintName="FEED_HAS_ERROR_TO_FEED"
+            referencedTableName="FEED" referencedColumnNames="ID"/>
+        <rollback>
+            <dropForeignKeyConstraint baseTableName="FEED_HAS_ERROR_TO_FEED"/>
+            <dropTable tableName="FEED_HAS_ERROR"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
