@@ -157,6 +157,33 @@ body {
     background-color: #2e7d32;
 }
 
+
+.feed-list a.btn.btn-raised.btn-danger,
+.btn.btn-fab.btn-danger {
+    /* 900 */
+    background-color: #B71C1C;
+    /* 800 */
+    border: 1px solid  #C62828;
+    /* 300 */
+    color: #E57373;
+}
+.feed-list a.btn.btn-raised.btn-danger .badge {
+    color: #000;
+    /* 300 */
+    background-color: #E57373;
+    /* 600 */
+    border-color: #E53935;
+    border-style: solid;
+    border-width: 2px
+}
+
+.feed-list a.btn.btn-raised.btn-danger:hover,
+.feed-list a.btn.btn-raised.btn-danger:focus,
+.btn.btn-fab.btn-danger:hover,
+.btn.btn-fab.btn-danger:focus {
+    background-color: #C62828;
+}
+
 .btn-fab .fa {
     position: absolute;
     top: 50%;
