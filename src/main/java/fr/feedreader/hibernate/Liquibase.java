@@ -22,7 +22,7 @@ import liquibase.resource.ClassLoaderResourceAccessor;
 
 /**
  *
- * @author glopinous
+ * @author philippefichet
  */
 public class Liquibase implements Integrator {
     private static Logger logger = LogManager.getLogger();

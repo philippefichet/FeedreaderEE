@@ -22,7 +22,7 @@ import org.apache.logging.log4j.LogManager;
 
 /**
  *
- * @author glopinous
+ * @author philippefichet
  */
 @WebServlet(name = "MigrationServlet", urlPatterns = {"/migration"})
 public class MigrationServlet extends HttpServlet {

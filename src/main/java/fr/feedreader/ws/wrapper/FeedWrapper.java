@@ -25,6 +25,7 @@ public class FeedWrapper {
     private Date lastUpdate;
     private Boolean enable = Boolean.TRUE;
     private Long unread = 0L;
+    private String error = "";
 
     public FeedWrapper() {
         
@@ -37,6 +38,9 @@ public class FeedWrapper {
         lastUpdate = feed.getLastUpdate();
         name = feed.getName();
         url = feed.getUrl();
+        if (feed.getError() != null) {
+            error = feed.getError().getError();
+        }
     }
 
     public Integer getId() {
@@ -69,6 +73,14 @@ public class FeedWrapper {
 
     public void setUnread(Long unread) {
         this.unread = unread;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
     
     public Feed toFeed() {

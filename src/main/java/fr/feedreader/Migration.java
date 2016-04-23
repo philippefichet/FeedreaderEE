@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  *
- * @author glopinous
+ * @author philippefichet
  */
 
 

@@ -105,7 +105,8 @@ define(["exports", "jquery", "react", "reactDOM", "BS3/Badge"], function (export
                         _react2.default.createElement(
                             "a",
                             { href: window.baseUrl + "/feed/" + feed.id,
-                                className: "btn btn-raised" + (feed.unread > 0 ? " btn-success" : "")
+                                className: "btn btn-raised" + (feed.error.length > 0 ? " btn-danger" : feed.unread > 0 ? " btn-success" : ""),
+                                title: feed.error
                             },
                             feed.name,
                             " ",

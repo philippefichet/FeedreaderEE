@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.OrderBy;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -38,6 +39,9 @@ public class Feed {
     private Date lastUpdate;
 
     private Boolean enable = Boolean.TRUE;
+    
+    @OneToOne(mappedBy = "feed")
+    private FeedHasError error;
 
     public Integer getId() {
         return id;
@@ -131,5 +135,13 @@ public class Feed {
     @Override
     public String toString() {
         return "Feed{" + "id=" + id + ", name=" + name + ", url=" + url + ", description=" + description + ", lastUpdate=" + lastUpdate + ", enable=" + enable + '}';
+    }
+
+    public FeedHasError getError() {
+        return error;
+    }
+
+    public void setError(FeedHasError error) {
+        this.error = error;
     }
 }

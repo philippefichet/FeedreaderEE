@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author glopinous
+ * @author philippefichet
  */
 @WebServlet(name = "SingleWebPageServlet", urlPatterns = {
     "/feed/*",

@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author glopinous
+ * @author philippefichet
  */
 @XmlRootElement
 public class FeedUpdateWrapper {

@@ -20,11 +20,14 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 import fr.feedreader.models.Feed;
+import fr.feedreader.models.FeedHasError;
 import fr.feedreader.models.FeedItem;
 import fr.feedreader.models.FeedUnreadCounter;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Collections;
 import java.util.Date;
+import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
@@ -42,6 +45,9 @@ public class FeedBuisness {
     
     @Inject
     private FeedItemBuisness feedItemBuisness;
+    
+    @Inject
+    private FeedHasErrorBuisness feedHasErrorBuisness;
     
     private static Logger logger = LogManager.getLogger(FeedBuisness.class);
     
@@ -189,20 +195,18 @@ public class FeedBuisness {
         }
         List<Feed> feeds = findAll();
         Map<Feed, List<FeedItem>> feedsUpdated = new ConcurrentHashMap<>();
+        List<FeedHasError> feedOnError = Collections.synchronizedList(new ArrayList<>());
         feeds.stream().parallel().forEach((feed) -> {
             try {
                 feedsUpdated.put(feed, getFeedItems(feed.getUrl()));
-            } catch (IOException ex) {
+            } catch (Exception ex) {
                 logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
-            } catch (IllegalArgumentException ex) {
-                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
-            } catch (FeedException ex) {
-                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
-            } catch (URISyntaxException ex) {
-                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
+                feedOnError.add(new FeedHasError(feed.getId(), ex.getLocalizedMessage()));
             }
         });
         
+        feedHasErrorBuisness.updateErrorOnAllFeeds(feedOnError);
+
         Map<Feed, List<FeedItem>> feedForUpdate = new HashMap<>();
         feedsUpdated.forEach((feed, newFeeds) -> {
             logger.info("Comparaison avec les articles déjà présant pour \"" + feed.getName() + "\" avec \"" + newFeeds.size() + "\" article(s) trouvés.");

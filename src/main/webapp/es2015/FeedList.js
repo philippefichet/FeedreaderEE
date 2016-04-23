@@ -26,7 +26,8 @@ export class FeedList extends React.Component {
             return (
                 <div key={feed.id}>
                     <a href={window.baseUrl + "/feed/" + feed.id}
-                        className={"btn btn-raised" + (feed.unread > 0 ? " btn-success" : "")}
+                        className={"btn btn-raised" + (feed.error.length > 0 ? " btn-danger" : (feed.unread > 0 ? " btn-success" : ""))}
+                        title={feed.error}
                     >
                         {feed.name} <Badge counter={feed.unread}/>
                     </a>
