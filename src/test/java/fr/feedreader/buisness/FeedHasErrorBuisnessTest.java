@@ -38,6 +38,7 @@ public class FeedHasErrorBuisnessTest {
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.hibernate")
             .addPackage("fr.feedreader.models")
+            .deleteClass("fr.feedreader.buisness.TimerBuisness")
             .addAsResource("META-INF/persistence-arquillian.xml", "META-INF/persistence.xml")
             .addAsResource("fr/feedreader/liquibase/", "fr/feedreader/liquibase/")
             .addAsResource("META-INF/services/org.hibernate.integrator.spi.Integrator", "META-INF/services/org.hibernate.integrator.spi.Integrator")

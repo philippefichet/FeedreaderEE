@@ -52,6 +52,7 @@ public class FeedBuisnessTest {
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.hibernate")
             .addPackage("fr.feedreader.models")
+            .deleteClass("fr.feedreader.buisness.TimerBuisness")
             .addClass(Witness.class)
             .addAsResource("META-INF/persistence-arquillian.xml", "META-INF/persistence.xml")
             .addAsResource("fr/feedreader/liquibase/", "fr/feedreader/liquibase/")
@@ -173,7 +174,7 @@ public class FeedBuisnessTest {
         Feed developpez = new Feed();
         developpez.setDescription("Developpez");
         developpez.setUrl(developpezUrl.toString());
-        feedBuisness.add(developpez);
+        developpez = feedBuisness.add(developpez);
         assertNotNull(developpez.toString(), developpez.getId());
 
         // Test de mise à jour
@@ -186,7 +187,8 @@ public class FeedBuisnessTest {
         Map<Feed, List<FeedItem>> feedUpdates = feedBuisness.parallelUpdateAllFeed();
         feedUpdates.forEach((Feed feed, List<FeedItem> itemsUpdate) -> {
             assertNotNull(itemsUpdate);
-            assertTrue(itemsUpdate.toString(), itemsUpdate.size() == 0);
+            assertNull(feed.getError());
+            assertTrue(itemsUpdate.size() + " au lieu de 20 pour le flux : " + feed.toString(), itemsUpdate.size() == 20);
         });
 
         // Changement de l'url pour simulation de mise à jour
