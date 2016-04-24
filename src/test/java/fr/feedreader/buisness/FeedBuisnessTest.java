@@ -50,9 +50,12 @@ public class FeedBuisnessTest {
         WebArchive war = ShrinkWrap.create(WebArchive.class)
             .addPackage("fr.feedreader.junit")
             .addPackage("fr.feedreader.buisness")
+            .addPackage("fr.feedreader.hibernate")
             .addPackage("fr.feedreader.models")
             .addClass(Witness.class)
-            .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
+            .addAsResource("META-INF/persistence-arquillian.xml", "META-INF/persistence.xml")
+            .addAsResource("fr/feedreader/liquibase/", "fr/feedreader/liquibase/")
+            .addAsResource("META-INF/services/org.hibernate.integrator.spi.Integrator", "META-INF/services/org.hibernate.integrator.spi.Integrator")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
 
         war.addAsResource(new File("./src/test/resources/atom.atom"), "fr/feedreader/junit/atom.atom");
@@ -163,10 +166,8 @@ public class FeedBuisnessTest {
     
     @Test
     public void refreshResult() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
-        
         URL developpezUrl = getClass().getResource("/fr/feedreader/junit/developpez.atom");
         URL developpezUpdateUrl = getClass().getResource("/fr/feedreader/junit/developpez-update.atom");
-
         
         // Création du flux de test basé sur un fichier de test
         Feed developpez = new Feed();
