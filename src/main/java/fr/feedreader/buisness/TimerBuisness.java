@@ -27,8 +27,8 @@ public class TimerBuisness {
     @Schedule(hour = "*", minute = "*/15", persistent = false)
     public void updateFeed() {
         Map<Feed, List<FeedItem>> newFeedItem = feedBuisness.parallelUpdateAllFeed();
-        Map<Feed, Long> countUnread = feedBuisness.countUnread();
-        UpdateFeed.notifyUpdateFeed(newFeedItem, countUnread);
+//        Map<Feed, Long> countUnread = feedBuisness.countUnread();
+//        UpdateFeed.notifyUpdateFeed(newFeedItem, countUnread);
     }
 
 }
