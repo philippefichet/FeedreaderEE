@@ -8,6 +8,8 @@ import javax.persistence.TypedQuery;
 
 import fr.feedreader.models.FeedItem;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.persistence.PersistenceContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -69,16 +71,19 @@ public class FeedItemBuisness {
         return update(feedItem);
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public FeedItem find(Integer feedItemId) {
         return em.find(FeedItem.class, feedItemId);
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Long getCount(Integer feedId) {
         TypedQuery<Long> query = em.createNamedQuery(FeedItem.countByFeedId, Long.class);
         query.setParameter("feedId", feedId);
         return query.getSingleResult();
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Long getCount(Integer feedId, boolean noReadedOnly) {
         TypedQuery<Long> query = em.createNamedQuery(FeedItem.countByFeedIdReaded, Long.class);
         query.setParameter("feedId", feedId);
@@ -86,10 +91,12 @@ public class FeedItemBuisness {
         return query.getSingleResult();
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Long getTotalPage(Integer feedId) {
         return (getCount(feedId) / itemPerPage) + 1;
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Long getTotalPage(Integer feedId, boolean noReadedOnly) {
         return (getCount(feedId, noReadedOnly) / itemPerPage) + 1;
     }
@@ -100,6 +107,7 @@ public class FeedItemBuisness {
      * @param page Page demander
      * @return Liste des articles pour la page demander
      */
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<FeedItem> findAll(Integer feedId, Integer page) {
         TypedQuery<FeedItem> query = em.createNamedQuery(FeedItem.findAllByFeedId, FeedItem.class);
         query.setParameter("feedId", feedId);
@@ -115,6 +123,7 @@ public class FeedItemBuisness {
      * @param noReadedOnly récupération des article non lu ou lu
      * @return Liste des articles pour la page demander
      */
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<FeedItem> findAll(Integer feedId, Integer page, boolean noReadedOnly) {
         TypedQuery<FeedItem> query = em.createNamedQuery(FeedItem.findAllByFeedIdReaded, FeedItem.class);
         query.setParameter("feedId", feedId);
@@ -124,6 +133,7 @@ public class FeedItemBuisness {
         return query.getResultList();
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<FeedItem> findAll(Feed feed) {
         return feed.getFeedItems();
     }

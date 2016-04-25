@@ -1,20 +1,18 @@
 package fr.feedreader.models;
 
-import javax.persistence.Entity;
-
 public class FeedUnreadCounter {
 
-    private Feed feed;
+    private Integer feedId;
     private Long counter;
 
-    public FeedUnreadCounter(Feed feed, Long counter) {
+    public FeedUnreadCounter(Integer feedId, Long counter) {
         super();
-        this.feed = feed;
+        this.feedId = feedId;
         this.counter = counter;
     }
 
-    public Feed getFeed() {
-        return feed;
+    public Integer getFeedId() {
+        return feedId;
     }
 
     public Long getCounter() {

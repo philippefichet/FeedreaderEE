@@ -67,13 +67,13 @@ public class FeedItemFacadeREST {
         
         // TODO faire ceci en @Async
         // Envoi des flux avec leur compteurs via WebSocket
-        Map<Feed, Long> countUnread = feedBuisness.countUnread();
+//        Map<Integer, Long> countUnread = feedBuisness.countUnread();
         Map<Feed, List<FeedItem>> update = new HashMap<>();
         feedBuisness.findAll().stream().forEach((feed) -> {
             update.put(feed, new ArrayList<>());
         });
         update.put(feedItem.getFeed(), Arrays.asList(feedItem));
-        UpdateFeed.notifyUpdateFeed(update, countUnread);
+//        UpdateFeed.notifyUpdateFeed(update, countUnread);
         
         // Retour du webservice
         FeedItemWrapper feedItemWrapper = new FeedItemWrapper(

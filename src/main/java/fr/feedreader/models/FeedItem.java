@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -55,7 +56,7 @@ public class FeedItem {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updated;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Feed feed;
 
     private Boolean readed = null;
@@ -152,7 +153,7 @@ public class FeedItem {
         if (obj instanceof FeedItem) {
             return ((FeedItem) obj).getFeedItemId().equals(getFeedItemId());
         }
-        return false;
-    }
+            return false;
+        }
 
 }

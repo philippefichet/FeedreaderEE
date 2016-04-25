@@ -31,7 +31,10 @@ import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
+import javax.persistence.EntityGraph;
 import javax.persistence.PersistenceContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -61,16 +64,22 @@ public class FeedBuisness {
         return feed;
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Feed find(Integer id) {
-        return em.find(Feed.class, id);
+        Map<String, Object> hints = new HashMap<>();
+        EntityGraph<?> entityGraph = em.getEntityGraph(Feed.entityGraphError);
+        hints.put("javax.persistence.fetchgraph", entityGraph);
+        return em.find(Feed.class, id, hints);
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Feed find(Integer id, boolean getFeedItems) {
-        Feed feed = find(id);
+        Map<String, Object> hints = new HashMap<>();
         if (getFeedItems) {
-            feed.getFeedItems().size();
+            EntityGraph<?> entityGraph = em.getEntityGraph(Feed.entityGraphError);
+            hints.put("javax.persistence.fetchgraph", entityGraph);
         }
-        return feed;
+        return em.find(Feed.class, id, hints);
     }
 
     public Feed update(Feed feed) {
@@ -139,14 +148,18 @@ public class FeedBuisness {
         return updatedFeedItem;
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<FeedItem> getFeedItems(Integer id) throws ParserConfigurationException, SAXException, IOException {
         Feed feed = find(id);
         return feed.getFeedItems();
     }
+    
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<FeedItem> getFeedItems(URI uri) throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
         return getFeedItems(uri.toURL().toString());
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<FeedItem> getFeedItems(String uri) throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
         logger.info("Récupération du flux \"" + uri + "\" ...");
         long startAt = System.nanoTime();
@@ -172,16 +185,18 @@ public class FeedBuisness {
         return feedItems;
     }
 
-    public Map<Feed, Long> countUnread() {
-        Map<Feed, Long> counter = new HashMap<>();
-        Query query = em.createQuery("SELECT NEW fr.feedreader.models.FeedUnreadCounter(fi.feed, count(fi)) FROM FeedItem fi WHERE (fi.readed = FALSE OR fi.readed IS NULL) GROUP BY fi.feed.id");
+    @TransactionAttribute(TransactionAttributeType.NEVER)
+    public Map<Integer, Long> countUnread() {
+        Map<Integer, Long> counter = new HashMap<>();
+        Query query = em.createNamedQuery(Feed.getUnread);
         List<FeedUnreadCounter> counters = query.getResultList();
         for (FeedUnreadCounter feedUnreadCounter : counters) {
-            counter.put(feedUnreadCounter.getFeed(), feedUnreadCounter.getCounter());
+            counter.put(feedUnreadCounter.getFeedId(), feedUnreadCounter.getCounter());
         }
         return counter;
     }
 
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Long countUnread(Integer feedId) {
         Map<Feed, Long> counter = new HashMap<>();
         TypedQuery<Long> query = em.createQuery("SELECT count(*) FROM FeedItem fi WHERE (fi.readed = FALSE OR fi.readed IS NULL) AND fi.feed.id = :feedId", Long.class);

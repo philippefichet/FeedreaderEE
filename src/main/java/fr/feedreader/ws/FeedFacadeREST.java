@@ -13,6 +13,7 @@ import fr.feedreader.ws.wrapper.FeedItemResponseWrapper;
 import fr.feedreader.ws.wrapper.FeedItemUrlWrapper;
 import fr.feedreader.ws.wrapper.FeedItemWrapper;
 import fr.feedreader.ws.wrapper.FeedWrapper;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -54,10 +55,10 @@ public class FeedFacadeREST  {
     
     @GET
     public List<FeedWrapper> listFeed() {
-        Map<Feed, Long> countUnread = feedBuisness.countUnread();
+        Map<Integer, Long> countUnread = feedBuisness.countUnread();
         return feedBuisness.findAll().stream().map((Feed feed)-> {
             FeedWrapper feedWrapper = new FeedWrapper(feed);
-            Long unread = countUnread.get(feed);
+            Long unread = countUnread.get(feed.getId());
             if (unread != null) {
                 feedWrapper.setUnread(unread);
             }

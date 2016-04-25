@@ -5,9 +5,13 @@ import java.util.List;
 import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
+import javax.persistence.NamedEntityGraphs;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -17,12 +21,20 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
+@NamedEntityGraphs({
+    @NamedEntityGraph(name = Feed.entityGraphError, attributeNodes = {@NamedAttributeNode("error")}),
+    @NamedEntityGraph(name = Feed.entityGraphFeedItems, attributeNodes = {@NamedAttributeNode("feedItems")})
+})
 @NamedQueries({
-    @NamedQuery(name = Feed.findAll, query = "SELECT f FROM Feed f")
+    @NamedQuery(name = Feed.findAll, query = "SELECT f FROM Feed f LEFT JOIN FETCH f.error"),
+    @NamedQuery(name = Feed.getUnread, query = "SELECT NEW fr.feedreader.models.FeedUnreadCounter(fi.feed.id, count(fi)) FROM FeedItem fi WHERE (fi.readed = FALSE OR fi.readed IS NULL) GROUP BY fi.feed.id")
 })
 public class Feed {
 
     public static final String findAll = "fr.feedreader.models.Feed.findAll";
+    public static final String getUnread = "fr.feedreader.models.Feed.getUnread";
+    public static final String entityGraphError = "fr.feedreader.models.Feed.entityGraphError";
+    public static final String entityGraphFeedItems = "fr.feedreader.models.Feed.entityGraphFeedItems";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +52,7 @@ public class Feed {
 
     private Boolean enable = Boolean.TRUE;
     
-    @OneToOne(mappedBy = "feed")
+    @OneToOne(mappedBy = "feed", fetch = FetchType.LAZY)
     private FeedHasError error;
 
     public Integer getId() {
