@@ -9,7 +9,6 @@ import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.buisness.FeedItemBuisness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
-import fr.feedreader.websocket.UpdateFeed;
 import fr.feedreader.ws.wrapper.FeedItemUrlWrapper;
 import fr.feedreader.ws.wrapper.FeedItemWrapper;
 import fr.feedreader.ws.wrapper.FeedWrapper;
@@ -62,17 +61,18 @@ public class FeedItemFacadeREST {
     @Path("{id}/readed/{readed}")
     public FeedItemWrapper setReadedFeedItem(@PathParam("id") Integer feedItemId, @PathParam("readed") Boolean readed) {
         FeedItem feedItem = feedItemBuisness.find(feedItemId);
+        Feed feedFromFeedItem = feedItem.getFeed();
         feedItem.setReaded(readed);
         feedItem = feedItemBuisness.update(feedItem);
         
         // TODO faire ceci en @Async
         // Envoi des flux avec leur compteurs via WebSocket
 //        Map<Integer, Long> countUnread = feedBuisness.countUnread();
-        Map<Feed, List<FeedItem>> update = new HashMap<>();
-        feedBuisness.findAll().stream().forEach((feed) -> {
-            update.put(feed, new ArrayList<>());
-        });
-        update.put(feedItem.getFeed(), Arrays.asList(feedItem));
+//        Map<Feed, List<FeedItem>> update = new HashMap<>();
+//        feedBuisness.findAll().stream().forEach((feed) -> {
+//            update.put(feed, new ArrayList<>());
+//        });
+//        update.put(feedItem.getFeed(), Arrays.asList(feedItem));
 //        UpdateFeed.notifyUpdateFeed(update, countUnread);
         
         // Retour du webservice
@@ -83,8 +83,8 @@ public class FeedItemFacadeREST {
         );
         
         // Nombre de nouvelles non lues
-        FeedWrapper feedWrapper = new FeedWrapper(feedItem.getFeed());
-        feedWrapper.setUnread(feedBuisness.countUnread(feedItem.getFeed().getId()));
+        FeedWrapper feedWrapper = new FeedWrapper(feedFromFeedItem);
+        feedWrapper.setUnread(feedBuisness.countUnread(feedFromFeedItem.getId()));
 
         feedItemWrapper.setFeed(feedWrapper);
         return feedItemWrapper;
