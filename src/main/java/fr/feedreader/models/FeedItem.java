@@ -9,12 +9,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
+import javax.persistence.NamedEntityGraphs;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
+@NamedEntityGraphs({
+    @NamedEntityGraph(name = FeedItem.entityGraphFeed, attributeNodes = {@NamedAttributeNode("feed")})
+})
 @NamedQueries({
     @NamedQuery(name = FeedItem.markToRead, query = "UPDATE FROM FeedItem fi SET fi.readed = true WHERE fi.feed.id = :feedId AND (fi.readed = false OR fi.readed = NULL)"),
     @NamedQuery(name = FeedItem.deleteFromFeedId, query = "DELETE FROM FeedItem fi WHERE fi.feed.id = :feedId"),
@@ -38,6 +44,7 @@ public class FeedItem {
     public final static String countByFeedIdReaded = "fr.feedreader.models.FeedItem.countReaded";
     public final static String deleteFromFeedId = "fr.feedreader.models.FeedItem.deleteFromFeedId";
     public final static String markToRead = "fr.feedreader.models.FeedItem.markToRead";
+    public final static String entityGraphFeed = "fr.feedreader.models.FeedItem.entityGraphFeed";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

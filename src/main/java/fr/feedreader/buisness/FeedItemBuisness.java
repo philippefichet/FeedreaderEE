@@ -7,9 +7,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import fr.feedreader.models.FeedItem;
+import java.util.HashMap;
+import java.util.Map;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityGraph;
 import javax.persistence.PersistenceContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -73,7 +76,10 @@ public class FeedItemBuisness {
 
     @TransactionAttribute(TransactionAttributeType.NEVER)
     public FeedItem find(Integer feedItemId) {
-        return em.find(FeedItem.class, feedItemId);
+        Map<String, Object> hints = new HashMap<>();
+        EntityGraph<?> entityGraph = em.getEntityGraph(FeedItem.entityGraphFeed);
+        hints.put("javax.persistence.fetchgraph", entityGraph);
+        return em.find(FeedItem.class, feedItemId, hints);
     }
 
     @TransactionAttribute(TransactionAttributeType.NEVER)
