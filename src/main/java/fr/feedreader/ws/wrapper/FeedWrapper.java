@@ -85,6 +85,7 @@ public class FeedWrapper {
     
     public Feed toFeed() {
         Feed feed = new Feed();
+        feed.setId(getId());
         feed.setDescription(getDescription());
         feed.setEnable(getEnable());
         feed.setLastUpdate(getLastUpdate());

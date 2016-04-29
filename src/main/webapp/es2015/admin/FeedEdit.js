@@ -33,6 +33,35 @@ export class FeedEdit extends React.Component {
             console.error(arguments);
         });
     }
+    saveFeed(feed) {
+        return () => {
+            let domElement = ReactDOM.findDOMNode(this);
+            let url = domElement
+                .getElementsByClassName("feed-" + feed.id)[0]
+                .getElementsByClassName("feed-url")[0].value;
+            feed.url = url;
+            console.log(feed);
+            $.ajax({
+                url: this.props.url,
+                method: "POST",
+                contentType: "application/json",
+                dataType:"json",
+                data: JSON.stringify(feed)
+            }).success((feedUpdated) => {
+                this.setState({
+                    feeds: this.state.feeds.map((f) => {
+                        if (f.id !== feedUpdated.id) {
+                            return f;
+                        } else {
+                            return feedUpdated;
+                        }
+                    })
+                });
+            }).error(() => {
+                console.error(arguments);
+            });
+        }
+    }
     removeFeed(feed) {
         return () => {
             $.ajax({
@@ -62,11 +91,18 @@ export class FeedEdit extends React.Component {
     render() {
         let feeds = this.state.feeds.map((feed) => {
             return (
-                <tr key={feed.id}>
+                <tr key={feed.id} id={"feed-" + feed.id} className={"feed-" + feed.id}>
                     <td><a href={window.baseUrl + "/feed/" + feed.id}>{feed.name}</a></td>
-                    <td>{feed.url}</td>
+                    <td><input type="text" className="feed-url form-control" defaultValue={feed.url}/></td>
                     <td>{feed.description}</td>
-                    <td><button type="button" className="btn btn-raised btn-danger" onClick={this.removeFeed(feed).bind(this)}>Supprimer</button></td>
+                    <td>
+                        <button type="button" className="btn btn-raised btn-info" onClick={this.saveFeed(feed).bind(this)}>
+                            <i className="material-icons">edit</i>
+                        </button>
+                        <button type="button" className="btn btn-raised btn-danger" onClick={this.removeFeed(feed).bind(this)}>
+                            <i className="material-icons">delete_forever</i>
+                        </button>
+                    </td>
                 </tr>
             );
         });
