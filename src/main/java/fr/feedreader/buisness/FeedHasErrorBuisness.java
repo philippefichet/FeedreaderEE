@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -29,11 +30,13 @@ public class FeedHasErrorBuisness {
         TypedQuery<FeedHasError> feedsOnError = em.createNamedQuery(FeedHasError.findAll, FeedHasError.class);
         feedsOnError.getResultList().forEach((fe) -> {
             if (!feedOnError.contains(fe)) {
+                LogManager.getLogger(getClass()).debug("Suppression de l'erreur du flux " + fe.getId() + " qui était en erreur \"" + fe.getError() + "\"");
                 em.remove(fe);
             }
         });
         
         feedOnError.forEach((fe) -> {
+            LogManager.getLogger(getClass()).debug("Ajout de l'erreur du flux " + fe.getId() + " qui était en erreur \"" + fe.getError() + "\"");
             em.merge(fe);
         });
     }

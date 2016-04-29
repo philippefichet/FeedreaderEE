@@ -87,7 +87,7 @@ public class FeedBuisness {
     }
 
     public void delete(Feed feed) {
-        em.remove(feed);
+        em.remove(em.contains(feed) ? feed : em.merge(feed));
     }
     
     public void delete(Integer feedId) {
@@ -214,20 +214,22 @@ public class FeedBuisness {
         feeds.stream().parallel().forEach((feed) -> {
             try {
                 feedsUpdated.put(feed, getFeedItems(feed.getUrl()));
+                feed.setError(null);
             } catch (Exception ex) {
-                logger.fatal("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
+                logger.error("Erreur sur le flux \"" + feed.getUrl() + "\"", ex);
                 feedOnError.add(new FeedHasError(feed.getId(), ex.getLocalizedMessage()));
             }
         });
         
         feedHasErrorBuisness.updateErrorOnAllFeeds(feedOnError);
-
+        
         Map<Feed, List<FeedItem>> feedForUpdate = new HashMap<>();
         feedsUpdated.forEach((feed, newFeeds) -> {
             logger.info("Comparaison avec les articles déjà présant pour \"" + feed.getName() + "\" avec \"" + newFeeds.size() + "\" article(s) trouvés.");
             feedForUpdate.put(feed, new ArrayList<>());
 
             newFeeds.stream().forEach((newFeed) -> {
+//                logger.debug(feed.getId() + " => " + newFeed.getFeedItemId());
                 TypedQuery<FeedItem> createNamedQuery = em.createNamedQuery(FeedItem.searchByFeedIdAndFeedItemId, FeedItem.class);
                 createNamedQuery.setParameter("feedId", feed.getId());
                 createNamedQuery.setParameter("feedItemId", newFeed.getFeedItemId());

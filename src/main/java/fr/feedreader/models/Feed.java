@@ -52,7 +52,7 @@ public class Feed {
 
     private Boolean enable = Boolean.TRUE;
     
-    @OneToOne(mappedBy = "feed", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "feed", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private FeedHasError error;
 
     public Integer getId() {
