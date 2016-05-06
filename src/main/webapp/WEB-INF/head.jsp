@@ -14,7 +14,7 @@
         <script type="text/javascript" src="<%= request.getContextPath() %>/webjars/bootstrap-material-design/0.5.8/dist/js/ripples.min.js"></script>
         <!-- Material Design fonts -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-<!--        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">-->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
 
         <link rel="stylesheet" href="<%= request.getContextPath() %>/webjars/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="<%= request.getContextPath() %>/css/main.css"/>
