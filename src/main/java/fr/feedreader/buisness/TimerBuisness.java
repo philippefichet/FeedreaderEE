@@ -7,12 +7,15 @@ package fr.feedreader.buisness;
 
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
-import fr.feedreader.websocket.UpdateFeed;
 import java.util.List;
 import java.util.Map;
 import javax.ejb.Schedule;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
+import javax.transaction.NotSupportedException;
+import javax.transaction.SystemException;
 
 /**
  *
@@ -25,7 +28,8 @@ public class TimerBuisness {
     protected FeedBuisness feedBuisness;
     
     @Schedule(hour = "*", minute = "*/15", persistent = false)
-    public void updateFeed() {
+    @TransactionAttribute(TransactionAttributeType.NEVER)
+    public void updateFeed() throws NotSupportedException, SystemException {
         Map<Feed, List<FeedItem>> newFeedItem = feedBuisness.parallelUpdateAllFeed();
 //        Map<Feed, Long> countUnread = feedBuisness.countUnread();
 //        UpdateFeed.notifyUpdateFeed(newFeedItem, countUnread);

@@ -25,6 +25,7 @@ import fr.feedreader.models.FeedItem;
 import fr.feedreader.models.FeedUnreadCounter;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URLConnection;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Vector;
@@ -33,6 +34,8 @@ import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.persistence.EntityGraph;
 import javax.persistence.PersistenceContext;
@@ -54,6 +57,7 @@ public class FeedBuisness {
     
     private static Logger logger = LogManager.getLogger(FeedBuisness.class);
     
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public List<Feed> findAll() {
         TypedQuery<Feed> query = em.createNamedQuery(Feed.findAll, Feed.class);
         return query.getResultList();
@@ -204,6 +208,7 @@ public class FeedBuisness {
         return query.getSingleResult();
     }
     
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Map<Feed, List<FeedItem>> parallelUpdateAllFeed() {
         if (logger.isInfoEnabled()) {
             logger.info("parallelUpdateAllFeed");
