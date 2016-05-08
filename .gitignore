@@ -13,3 +13,8 @@ nbactions*
 /build/
 /.nb-gradle/
 /node_modules/*
+/src/main/webapp/js/admin/FeedEdit.js
+/src/main/webapp/js/bs3/Badge.js
+/src/main/webapp/js/FeedItemList.js
+/src/main/webapp/js/FeedList.js
+/src/main/webapp/js/FeedItem.js
