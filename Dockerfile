@@ -71,7 +71,7 @@ RUN rm -rfv $WILDFLY_HOME/standalone/configuration/standalone_xml_history/*
 # Expose the ports we're interested in
 EXPOSE 8080 9990
 
-ENV JAVA_OPTS="-server -Xms512m -Xmx1024m -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -XX:+UseG1GC"
+ENV JAVA_OPTS="-server -Xms512m -Xmx1024m -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -XX:+UseG1GC -Djavamelody.datasources=java:jboss/datasources/feedreader"
 
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
