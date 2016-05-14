@@ -28,6 +28,7 @@ import static fr.feedreader.junit.Assert.*;
 import fr.feedreader.junit.Utils;
 import java.net.URL;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -47,7 +48,7 @@ public class FeedBuisnessTest {
     
     @Deployment
     public static WebArchive createDeployment() {
-        WebArchive war = ShrinkWrap.create(WebArchive.class)
+        WebArchive war = ShrinkWrap.create(WebArchive.class, "FeedBuisnessTest.war")
             .addPackage("fr.feedreader.junit")
             .addPackage("fr.feedreader.buisness")
             .addPackage("fr.feedreader.hibernate")
@@ -57,7 +58,8 @@ public class FeedBuisnessTest {
             .addAsResource("META-INF/persistence-arquillian.xml", "META-INF/persistence.xml")
             .addAsResource("fr/feedreader/liquibase/", "fr/feedreader/liquibase/")
             .addAsResource("META-INF/services/org.hibernate.integrator.spi.Integrator", "META-INF/services/org.hibernate.integrator.spi.Integrator")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
+            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+            .addAsWebInfResource("log4j2.xml", "log4j2.xml");
 
         war.addAsResource(new File("./src/test/resources/atom.atom"), "fr/feedreader/junit/atom.atom");
         war.addAsResource(new File("./src/test/resources/developpez.atom"), "fr/feedreader/junit/developpez.atom");
@@ -70,6 +72,13 @@ public class FeedBuisnessTest {
         } catch(Exception e) {
             return war;
         }
+    }
+    
+    @Before
+    public void before() {
+        for (Feed feed : feedBuisness.findAll()) {
+            feedBuisness.delete(feed);
+        };
     }
     
     @Test
@@ -178,10 +187,10 @@ public class FeedBuisnessTest {
         assertNotNull(developpez.toString(), developpez.getId());
 
         // Test de mise à jour
-        List<FeedItem> refreshFeedItems = feedBuisness.refreshFeedItems(developpez.getId());
-        assertTrue(refreshFeedItems.size() == 20);
-        refreshFeedItems = feedBuisness.refreshFeedItems(developpez.getId());
-        assertTrue(refreshFeedItems.size() == 0);
+//        List<FeedItem> refreshFeedItems = feedBuisness.refreshFeedItems(developpez.getId());
+//        assertTrue(refreshFeedItems.size() == 20);
+//        refreshFeedItems = feedBuisness.refreshFeedItems(developpez.getId());
+//        assertTrue(refreshFeedItems.size() == 0);
 
         // Vérification de la mise à jour en parallele
         Map<Feed, List<FeedItem>> feedUpdates = feedBuisness.parallelUpdateAllFeed();
@@ -189,6 +198,12 @@ public class FeedBuisnessTest {
             assertNotNull(itemsUpdate);
             assertNull(feed.getError());
             assertTrue(itemsUpdate.size() + " au lieu de 20 pour le flux : " + feed.toString(), itemsUpdate.size() == 20);
+        });
+        feedUpdates = feedBuisness.parallelUpdateAllFeed();
+        feedUpdates.forEach((Feed feed, List<FeedItem> itemsUpdate) -> {
+            assertNotNull(itemsUpdate);
+            assertNull(feed.getError());
+            assertTrue(itemsUpdate.size() + " au lieu de 0 pour le flux : " + feed.toString(), itemsUpdate.size() == 0);
         });
 
         // Changement de l'url pour simulation de mise à jour
@@ -210,10 +225,6 @@ public class FeedBuisnessTest {
         List<FeedItem> findAllPage2 = feedItemBuisness.findAll(developpez.getId(), 2);
         assertTrue(findAllPage1.size() == 20);
         assertTrue(findAllPage2.size() == 13);
-        developpez = feedBuisness.find(developpez.getId(), true);
-        assertNotNull(developpez);
-        assertNotNull(developpez.getFeedItems());
-        assertTrue(developpez.getFeedItems().size() == (20+13));
     }
     
         
@@ -226,4 +237,20 @@ public class FeedBuisnessTest {
         System.out.println(utils);
     }
     
+    @Test
+    public void feedHasErrorCheckAndNotError() throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
+        Feed developpez = utils.loadDeveloppez();
+        String goodUrl = developpez.getUrl();
+        developpez.setUrl("error");
+        feedBuisness.update(developpez);
+        feedBuisness.parallelUpdateAllFeed();
+        Feed developpezOnError = feedBuisness.find(developpez.getId());
+        assertNotNull(developpezOnError.getError());
+        developpez.setUrl(goodUrl);
+        feedBuisness.update(developpez);
+        System.out.println("avec l'url = " + goodUrl);
+        feedBuisness.parallelUpdateAllFeed();
+        Feed developpezNoError = feedBuisness.find(developpez.getId());
+        assertNull(developpezNoError.getError());
+    }
 }
