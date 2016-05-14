@@ -25,7 +25,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @NamedQueries({
-    @NamedQuery(name = FeedHasError.findAll, query = "SELECT fe FROM FeedHasError fe")
+    @NamedQuery(name = FeedHasError.findAll, query = "SELECT fe FROM FeedHasError fe JOIN FETCH fe.feed")
 })
 @Table(name = "FEED_HAS_ERROR")
 public class FeedHasError {
