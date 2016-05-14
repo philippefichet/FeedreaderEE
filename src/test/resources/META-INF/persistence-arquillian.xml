@@ -7,8 +7,8 @@
             <property name="javax.persistence.jdbc.user"     value="feedreader"/>
             <property name="javax.persistence.jdbc.password" value="a5tY6d4u7"/>
             <property name="javax.persistence.jdbc.url"      value="jdbc:hsqldb:mem:feedreader"/>
-<!--            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-            <property name="hibernate.show_sql" value="true"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+<!--            <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>-->
         </properties>
