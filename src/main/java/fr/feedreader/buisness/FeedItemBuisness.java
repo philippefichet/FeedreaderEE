@@ -139,11 +139,6 @@ public class FeedItemBuisness {
         return query.getResultList();
     }
 
-    @TransactionAttribute(TransactionAttributeType.NEVER)
-    public List<FeedItem> findAll(Feed feed) {
-        return feed.getFeedItems();
-    }
-
     /**
      * Supprime les articles
      * @param id Identifiant du flux dont les articles doivent être supprimer
