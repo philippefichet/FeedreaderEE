@@ -16,6 +16,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.apache.commons.lang3.StringUtils;
 
 @Entity
 @NamedEntityGraphs({
@@ -160,7 +161,21 @@ public class FeedItem {
         if (obj instanceof FeedItem) {
             return ((FeedItem) obj).getFeedItemId().equals(getFeedItemId());
         }
-            return false;
-        }
-
+        return false;
+    }
+    
+    /**
+     * Vérifie si deux objet ont une difference
+     * @param otherFeedItem FeedItem avec lequel comparer
+     * @return 
+     */
+    public boolean isDifferent(FeedItem otherFeedItem) {
+        return 
+            !StringUtils.equals(getEnclosure(), otherFeedItem.getEnclosure()) ||
+            !StringUtils.equals(getFeedItemId(), otherFeedItem.getFeedItemId()) ||
+            !StringUtils.equals(getLink(), otherFeedItem.getLink()) ||
+            !StringUtils.equals(getSummary(), otherFeedItem.getSummary()) ||
+            !StringUtils.equals(getTitle(), otherFeedItem.getTitle()) ||
+            (getUpdated().compareTo(otherFeedItem.getUpdated()) != 0);
+    }
 }
