@@ -31,6 +31,7 @@ public class FeedHasErrorBuisness {
         feedsOnError.getResultList().forEach((fe) -> {
             if (!feedOnError.contains(fe)) {
                 LogManager.getLogger(getClass()).debug("Suppression de l'erreur du flux " + fe.getId() + " qui était en erreur \"" + fe.getError() + "\"");
+                fe.getFeed().setError(null);
                 em.remove(fe);
             }
         });
