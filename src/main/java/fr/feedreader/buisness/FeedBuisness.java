@@ -76,16 +76,6 @@ public class FeedBuisness {
         return em.find(Feed.class, id, hints);
     }
 
-    @TransactionAttribute(TransactionAttributeType.NEVER)
-    public Feed find(Integer id, boolean getFeedItems) {
-        Map<String, Object> hints = new HashMap<>();
-        if (getFeedItems) {
-            EntityGraph<?> entityGraph = em.getEntityGraph(Feed.entityGraphError);
-            hints.put("javax.persistence.fetchgraph", entityGraph);
-        }
-        return em.find(Feed.class, id, hints);
-    }
-
     public Feed update(Feed feed) {
         return em.merge(feed);
     }
@@ -101,7 +91,6 @@ public class FeedBuisness {
     /**
      * Met à jour les articles du flux à partir de son url
      *
-     * @param em Unité de persistance
      * @param id Identifiant du flux
      * @return Liste des articles mise à jour
      * @throws ParserConfigurationException
@@ -240,16 +229,25 @@ public class FeedBuisness {
                 createNamedQuery.setParameter("feedItemId", newFeed.getFeedItemId());
                 try {
                     FeedItem feedItem = createNamedQuery.getSingleResult();
-                    // Mise à jour du flux
-                    feedItem.setEnclosure(newFeed.getEnclosure());
-                    feedItem.setLink(newFeed.getLink());
-                    feedItem.setSummary(newFeed.getSummary());
-                    feedItem.setTitle(newFeed.getTitle());
-                    feedItem.setUpdated(newFeed.getUpdated());
-                    feedItemBuisness.update(feedItem);
-                    logger.info("Article existant : " + newFeed.getFeedItemId());
+                    if (feedItem.isDifferent(newFeed)) {
+                        // Mise à jour du flux
+                        feedItem.setEnclosure(newFeed.getEnclosure());
+                        feedItem.setLink(newFeed.getLink());
+                        feedItem.setSummary(newFeed.getSummary());
+                        feedItem.setTitle(newFeed.getTitle());
+                        feedItem.setUpdated(newFeed.getUpdated());
+                        feedItemBuisness.update(feedItem);
+                        if (logger.isInfoEnabled()) {
+                            logger.info("Article existant mis à jour: " + newFeed.getFeedItemId());
+                        }
+                    }
+                    if (logger.isInfoEnabled()) {
+                        logger.info("Article existant : " + newFeed.getFeedItemId());
+                    }
                 } catch(NoResultException e) {
-                    logger.info("Nouvelle article : " + newFeed.getFeedItemId());
+                    if (logger.isInfoEnabled()) {
+                        logger.info("Nouvelle article : " + newFeed.getFeedItemId());
+                    }
                     newFeed.setFeed(feed);
                     feedItemBuisness.create(newFeed);
                     List<FeedItem> newFeedsList = feedForUpdate.get(feed);
