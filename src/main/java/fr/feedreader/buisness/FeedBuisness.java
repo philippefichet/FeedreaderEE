@@ -194,6 +194,23 @@ public class FeedBuisness {
     }
     
     @TransactionAttribute(TransactionAttributeType.NEVER)
+    public Map<String, FeedItem> getFeedItemFromFeedItemIds(Feed feed, List<String> feedItemIds) {
+        if (feedItemIds.isEmpty()) {
+            return Collections.emptyMap();
+        } else {
+            TypedQuery<FeedItem> feeditemFromNewFeed = em.createNamedQuery(FeedItem.searchByFeedIdAndFeedItemIds, FeedItem.class);
+            feeditemFromNewFeed.setParameter("feedId", feed.getId());
+            feeditemFromNewFeed.setParameter("feedItemIds", feedItemIds);
+            return feeditemFromNewFeed.getResultList().stream().collect(
+                    Collectors.toMap(
+                            fi -> fi.getFeedItemId(),
+                            fi -> fi
+                    )
+            );
+        }
+    }
+    
+    @TransactionAttribute(TransactionAttributeType.NEVER)
     public Map<Feed, List<FeedItem>> parallelUpdateAllFeed() {
         boolean debug = logger.isDebugEnabled();
         boolean info = logger.isInfoEnabled();
@@ -222,21 +239,13 @@ public class FeedBuisness {
             }
             feedForUpdate.put(feed, new ArrayList<>());
             List<String> feedItemIds = newFeeds.stream().map(f -> f.getFeedItemId()).collect(Collectors.toList());
-            TypedQuery<FeedItem> feeditemFromNewFeed = em.createNamedQuery(FeedItem.searchByFeedIdAndFeedItemIds, FeedItem.class);
-            feeditemFromNewFeed.setParameter("feedId", feed.getId());
-            feeditemFromNewFeed.setParameter("feedItemIds", feedItemIds);
-            Map<String, FeedItem> feedItemByFeedItemId = feeditemFromNewFeed.getResultList().stream().collect(
-                    Collectors.toMap(
-                            fi -> fi.getFeedItemId(),
-                            fi -> fi
-                    )
-            );
-            
+            Map<String, FeedItem> feedItemByFeedItemId = getFeedItemFromFeedItemIds(feed, feedItemIds);
+
             newFeeds.stream().forEach((newFeed) -> {
                 if (debug) {
                     logger.debug(feed.getId() + " => " + newFeed.getFeedItemId());
                 }
-                FeedItem feedItem =feedItemByFeedItemId.get(newFeed.getFeedItemId());
+                FeedItem feedItem = feedItemByFeedItemId.get(newFeed.getFeedItemId());
                 if (feedItem != null) {
                     if (feedItem.isDifferent(newFeed)) {
                         // Mise à jour du flux
