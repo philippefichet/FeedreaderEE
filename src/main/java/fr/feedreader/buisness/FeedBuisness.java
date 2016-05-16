@@ -25,17 +25,13 @@ import fr.feedreader.models.FeedItem;
 import fr.feedreader.models.FeedUnreadCounter;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URLConnection;
 import java.util.Collections;
 import java.util.Date;
-import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.persistence.EntityGraph;
 import javax.persistence.PersistenceContext;
@@ -199,7 +195,9 @@ public class FeedBuisness {
     
     @TransactionAttribute(TransactionAttributeType.NEVER)
     public Map<Feed, List<FeedItem>> parallelUpdateAllFeed() {
-        if (logger.isInfoEnabled()) {
+        boolean debug = logger.isDebugEnabled();
+        boolean info = logger.isInfoEnabled();
+        if (info) {
             logger.info("parallelUpdateAllFeed");
         }
         List<Feed> feeds = findAll();
@@ -219,16 +217,27 @@ public class FeedBuisness {
         
         Map<Feed, List<FeedItem>> feedForUpdate = new HashMap<>();
         feedsUpdated.forEach((feed, newFeeds) -> {
-            logger.info("Comparaison avec les articles déjà présant pour \"" + feed.getName() + "\" avec \"" + newFeeds.size() + "\" article(s) trouvés.");
+            if (info) {
+                logger.info("Comparaison avec les articles déjà présant pour \"" + feed.getName() + "\" avec \"" + newFeeds.size() + "\" article(s) trouvés.");
+            }
             feedForUpdate.put(feed, new ArrayList<>());
-
+            List<String> feedItemIds = newFeeds.stream().map(f -> f.getFeedItemId()).collect(Collectors.toList());
+            TypedQuery<FeedItem> feeditemFromNewFeed = em.createNamedQuery(FeedItem.searchByFeedIdAndFeedItemIds, FeedItem.class);
+            feeditemFromNewFeed.setParameter("feedId", feed.getId());
+            feeditemFromNewFeed.setParameter("feedItemIds", feedItemIds);
+            Map<String, FeedItem> feedItemByFeedItemId = feeditemFromNewFeed.getResultList().stream().collect(
+                    Collectors.toMap(
+                            fi -> fi.getFeedItemId(),
+                            fi -> fi
+                    )
+            );
+            
             newFeeds.stream().forEach((newFeed) -> {
-//                logger.debug(feed.getId() + " => " + newFeed.getFeedItemId());
-                TypedQuery<FeedItem> createNamedQuery = em.createNamedQuery(FeedItem.searchByFeedIdAndFeedItemId, FeedItem.class);
-                createNamedQuery.setParameter("feedId", feed.getId());
-                createNamedQuery.setParameter("feedItemId", newFeed.getFeedItemId());
-                try {
-                    FeedItem feedItem = createNamedQuery.getSingleResult();
+                if (debug) {
+                    logger.debug(feed.getId() + " => " + newFeed.getFeedItemId());
+                }
+                FeedItem feedItem =feedItemByFeedItemId.get(newFeed.getFeedItemId());
+                if (feedItem != null) {
                     if (feedItem.isDifferent(newFeed)) {
                         // Mise à jour du flux
                         feedItem.setEnclosure(newFeed.getEnclosure());
@@ -237,15 +246,15 @@ public class FeedBuisness {
                         feedItem.setTitle(newFeed.getTitle());
                         feedItem.setUpdated(newFeed.getUpdated());
                         feedItemBuisness.update(feedItem);
-                        if (logger.isInfoEnabled()) {
+                        if (info) {
                             logger.info("Article existant mis à jour: " + newFeed.getFeedItemId());
                         }
                     }
-                    if (logger.isInfoEnabled()) {
+                    if (info) {
                         logger.info("Article existant : " + newFeed.getFeedItemId());
                     }
-                } catch(NoResultException e) {
-                    if (logger.isInfoEnabled()) {
+                } else {
+                    if (info) {
                         logger.info("Nouvelle article : " + newFeed.getFeedItemId());
                     }
                     newFeed.setFeed(feed);
