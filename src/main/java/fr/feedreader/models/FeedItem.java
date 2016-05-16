@@ -26,7 +26,7 @@ import org.apache.commons.lang3.StringUtils;
     @NamedQuery(name = FeedItem.markToRead, query = "UPDATE FROM FeedItem fi SET fi.readed = true WHERE fi.feed.id = :feedId AND (fi.readed = false OR fi.readed = NULL)"),
     @NamedQuery(name = FeedItem.deleteFromFeedId, query = "DELETE FROM FeedItem fi WHERE fi.feed.id = :feedId"),
     @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId = :feedItemId"),
-    @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemIds, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId IN :feedItemIds"),
+    @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemIds, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId IN (:feedItemIds)"),
     @NamedQuery(name = FeedItem.findAllByFeedId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.id DESC"),
     @NamedQuery(name = FeedItem.findAllByFeedIdReaded, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.readed = :readed ORDER BY fi.id DESC"),
     @NamedQuery(name = FeedItem.countByFeedId, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId"),
