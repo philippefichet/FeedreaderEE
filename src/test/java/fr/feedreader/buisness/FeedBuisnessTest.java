@@ -27,6 +27,7 @@ import org.junit.runner.RunWith;
 import static fr.feedreader.junit.Assert.*;
 import fr.feedreader.junit.Utils;
 import java.net.URL;
+import java.util.stream.Collectors;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
@@ -63,6 +64,7 @@ public class FeedBuisnessTest {
 
         war.addAsResource(new File("./src/test/resources/atom.atom"), "fr/feedreader/junit/atom.atom");
         war.addAsResource(new File("./src/test/resources/developpez.atom"), "fr/feedreader/junit/developpez.atom");
+        war.addAsResource(new File("./src/test/resources/developpez-feedItemChanged.atom"), "/fr/feedreader/junit/developpez-feedItemChanged.atom");
         war.addAsResource(new File("./src/test/resources/developpez-update.atom"), "fr/feedreader/junit/developpez-update.atom");
         war.addAsResource(new File("./src/test/resources/linuxfr.atom"), "fr/feedreader/junit/linuxfr.atom");
         war.addAsResource(new File("./src/test/resources/rss.rss"), "fr/feedreader/junit/rss.rss");
@@ -252,5 +254,22 @@ public class FeedBuisnessTest {
         feedBuisness.parallelUpdateAllFeed();
         Feed developpezNoError = feedBuisness.find(developpez.getId());
         assertNull(developpezNoError.getError());
+    }
+    
+    @Test
+    public void feedItemChanged() {
+        String feedItemIdChanged = "http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/";
+        URL developpezUpdateUrl = getClass().getResource("/fr/feedreader/junit/developpez-feedItemChanged.atom");
+        Feed developpez = utils.loadDeveloppez();   
+        feedBuisness.parallelUpdateAllFeed();
+        List<FeedItem> feedItems = feedItemBuisness.findAll(developpez.getId(), 1);
+        FeedItem feedItem = feedItems.stream().filter(fi -> fi.getFeedItemId().equals(feedItemIdChanged)).collect(Collectors.toList()).get(0);
+        assertEquals("Mise à jour de la FAQ Python, 254 réponses à vos questions dont 36 nouvelles", feedItem.getTitle());
+        developpez.setUrl(developpezUpdateUrl.toString());
+        feedBuisness.update(developpez);
+        feedBuisness.parallelUpdateAllFeed();
+        feedItems = feedItemBuisness.findAll(developpez.getId(), 1);
+        feedItem = feedItems.stream().filter(fi -> fi.getFeedItemId().equals(feedItemIdChanged)).collect(Collectors.toList()).get(0);
+        assertEquals("Mise à jour de la FAQ Python, 254 réponses à vos questions dont 36 nouvelles, que demander de mieux ?!", feedItem.getTitle());
     }
 }

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+  <id>http://www.developpez.com/index/atom</id>
+  <title><![CDATA[Developpez.com, le club des développeurs et IT Pro]]></title>
+  <updated>2014-09-05T13:15:17+02:00</updated>
+  <published>2014-09-05T13:15:17+02:00</published>
+  <link rel="self" href="http://www.developpez.com/index/atom" hreflang="fr-FR"/>
+  <subtitle><![CDATA[Club des développeurs et IT Pro]]></subtitle>
+  <rights>Copyright © 2000-2014 http://www.developpez.com</rights>
+  <logo>http://www.developpez.com/template/favicon.png</logo>
+  <generator>http://www.developpez.com</generator>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/</id>
+    <title><![CDATA[Mise à jour de la FAQ Python, 254 réponses à vos questions dont 36 nouvelles, que demander de mieux ?!]]></title>
+    <updated>2014-09-05T11:24:00+02:00</updated>
+    <link rel="alternate" href="http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/"/>
+    <summary><![CDATA[Chers membres du Club, <br/><br/>La rédaction Python sur Developpez.com a le plaisir de vous annoncer la mise à jour de la <b><a href="http://python.developpez.com/faq/" target="_blank">FAQ Python</a></b>.<br/><br/>Notre FAQ, contenant 254 questions rédigées par 14 auteurs, a été améliorée grâce à plusieurs relectures.<br/><br/><br />
+<b><br />
+<ul><li style=""> 36 Questions/Réponses ont été ajoutées</li></ul><br />
+</b><br/><br/>N'hésitez pas à nous envoyer vos remarques et suggestions sur la FAQ. <img src="http://www.developpez.net/forums/images/smilies/ccool.gif" border="0" alt="" title=":ccool:" class="inlineimg" /><br/><br/><img src="http://python.developpez.com/faq/images/FAQPython.gif" /><br />
+<b>Nos remerciements sincères à tous les contributeurs :</b><br/><br/><ul><li style="">Gestion/management :<br />
+<ul><li style=""><a href="http://www.developpez.net/forums/u588513/lana-bauer/" target="_blank">Lana.Bauer</a></li></ul><br /></li><li style="">Rédaction/relecture technique :<br />
+<ul><li style=""><a href="http://www.developpez.net/forums/u283256/f-leb/" target="_blank">f-leb</a></li><li style=""><a href="http://www.developpez.net/forums/u751933/tarball69/" target="_blank">tarball69</a></li></ul></li></ul><br/><br/><br />
+<b><br />
+<a href="http://python.developpez.com/actu/72220/Appel-a-contributeurs-rubrique-Python-etes-vous-notre-prochain-redacteur-traducteur-moderateur-newser/" target="_blank">Vous aussi vous pouvez contribuer...</a></b>]]></summary>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://python.developpez.com/actu/74929/Mise-a-jour-de-la-FAQ-Python-254-reponses-a-vos-questions-dont-36-nouvelles/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/74922/Le-moteur-de-jeux-pour-PC-et-mobiles-Donkey-Tech-3-passe-Open-Source-et-offre-un-editeur-de-scripts-visuel/</id>
+    <title><![CDATA[Le moteur de jeux pour PC et mobiles Donkey Tech 3 devient open source, et offre un éditeur de scripts visuel]]></title>
+    <updated>2014-09-05T09:37:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/74922/Le-moteur-de-jeux-pour-PC-et-mobiles-Donkey-Tech-3-passe-Open-Source-et-offre-un-editeur-de-scripts-visuel/"/>
+    <summary><![CDATA[<b>Le moteur de jeux pour PC et mobiles Donkey Tech 3 passe Open Source</b><br/><br/>Le moteur de jeux pour PC et mobiles <b>Donkey Tech 3</b>, un moteur interne, passe Open Source. Le moteur est programmé C++ utilisant Qt. Le moteur inclut un éditeur de monde 3D ainsi qu'un système de script visuel, comparable aux blueprints de Unreal Engine.<br/><br/>
+
+<br />
+Le moteur de jeux est construit pour être le plus générique possible et permet donc de faire aussi bien des jeux 2D et 3D.<br/><br/>Le code est disponible <a href="https://github.com/smellslikedonkey" target="_blank">sur Github</a>.<br/><br/><b>Source</b><br/><br/><a href="http://smellslikedonkey.com/wordpress/" target="_blank">Site officiel...</a>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/74922/Le-moteur-de-jeux-pour-PC-et-mobiles-Donkey-Tech-3-passe-Open-Source-et-offre-un-editeur-de-scripts-visuel/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/74921/Sony-met-en-Open-Source-un-editeur-de-niveau-generique-sous-licence-Apache-2-et-reposant-sur-leur-framework-Open-Source/</id>
+    <title><![CDATA[Sony met en open source un éditeur de niveau générique, sous licence Apache 2 et reposant sur leur framework open source]]></title>
+    <updated>2014-09-05T09:32:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/74921/Sony-met-en-Open-Source-un-editeur-de-niveau-generique-sous-licence-Apache-2-et-reposant-sur-leur-framework-Open-Source/"/>
+    <summary><![CDATA[<b>Sony met en Open Source un éditeur de niveau générique</b><br/><br/>Il y a quelques mois, Sony avait publié <a href="http://jeux.developpez.com/actu/68618/Authoring-Tools-Framework-l-outil-de-Sony-est-maintenant-disponible-en-Open-Source-et-vous-aidera-a-creer-vos-outils-pour-vos-jeux-video/" target="_blank">son outil de création d'outils en C#/.NET</a> : <b>Authoring Tools Framework (ATF)</b>. Grâce à celui-ci, les développeurs pouvaient ainsi facilement automatiser leurs tâches, ou encore, créer leurs propres outils et ainsi rendre le développement d'un jeu plus simple.<br/><br/><a href="http://jeux.developpez.com/images/news/sony-level-editor-Terrain.png" target="_blank"><img src="http://jeux.developpez.com/images/news/sony-level-editor-Terrain-thumb.png" /></a><br />
+C'est d'ailleurs grâce à cet outil dont le code avec été publié en Open Source que Sony a pu créer un éditeur de niveaux, maintenant, Open Source,...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/74921/Sony-met-en-Open-Source-un-editeur-de-niveau-generique-sous-licence-Apache-2-et-reposant-sur-leur-framework-Open-Source/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://open-source.developpez.com/actu/74888/Gravit-un-open-source-de-design-complet-en-version-Beta-0-0-3-1-pour-remplacer-Freehand-et-Stagestack/</id>
+    <title><![CDATA[Gravit : un outil open source de design complet sort en version bêta 0.0.3.1 pour remplacer Freehand et Stagestack]]></title>
+    <updated>2014-09-05T09:00:00+02:00</updated>
+    <link rel="alternate" href="http://open-source.developpez.com/actu/74888/Gravit-un-open-source-de-design-complet-en-version-Beta-0-0-3-1-pour-remplacer-Freehand-et-Stagestack/"/>
+    <summary><![CDATA[<b>Gravit : un open source de design complet en version Beta 0.0.3.1<br />
+pour remplacer Freehand et Stagestack</b><br/><br/>Gravit est une application de design, offrant les possibilités créatives d'une suite de conception complète, tout en restant de taille confortable. Puissant mais facile à manipuler, Gravit a été conçu en mettant l'accent sur la polyvalence, la fluidité et l'élégance. Les tâches de conception complexes sont simplifiées grâce à sa suite d'outils robustes et un environnement de travail très réactif.<br/><br/><img src="http://gravit.io/img/home/desktop.png" /><br />
+Gravit...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/open-source.png" type="image/jpeg" length="3514"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://open-source.developpez.com/actu/74888/Gravit-un-open-source-de-design-complet-en-version-Beta-0-0-3-1-pour-remplacer-Freehand-et-Stagestack/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74916/Cplusplus-AMP-s-ouvre-a-d-autres-plateformes-une-version-libre-de-l-outil-de-conception-d-applications-paralleles-en-Cplusplus-utilisant-la-puissance-du-GPU-sort/</id>
+    <title><![CDATA[C++ AMP s'ouvre à d'autres plateformes, une version libre de l'outil de conception d'applications parallèles en C++ utilisant la puissance du GPU sort]]></title>
+    <updated>2014-09-04T19:18:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74916/Cplusplus-AMP-s-ouvre-a-d-autres-plateformes-une-version-libre-de-l-outil-de-conception-d-applications-paralleles-en-Cplusplus-utilisant-la-puissance-du-GPU-sort/"/>
+    <summary><![CDATA[<b>C++ AMP s'ouvre à d'autres plateformes</b><br />
+<b>une version libre de l'outil de conception d'applications parallèles en C++ utilisant la puissance du GPU sort</b><br/><br/>C++ AMP (Accelerated Massive Parallelism), l'outil développé initialement par Microsoft et disponible uniquement sur Windows peut désormais être utilisé sur d'autres plateformes.<br/><br/>Les développeurs d'AMD, en collaboration avec Microsoft, ont publié C++ AMP version 1.2, un compilateur open source  qui est disponible à la fois pour Linux, Windows et pourra...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/c++.gif" type="image/jpeg" length="3259"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74916/Cplusplus-AMP-s-ouvre-a-d-autres-plateformes-une-version-libre-de-l-outil-de-conception-d-applications-paralleles-en-Cplusplus-utilisant-la-puissance-du-GPU-sort/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74912/Java-pourrait-etre-dote-d-un-interpreteur-boucle-lecture-moins-evaluation-moins-impression-REPL-le-projet-Kulla-nait-sur-OpenJDK/</id>
+    <title><![CDATA[Java pourrait être doté d'un interpréteur boucle : lecture - évaluation - impression (REPL), le projet Kulla nait sur OpenJDK]]></title>
+    <updated>2014-09-04T18:27:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74912/Java-pourrait-etre-dote-d-un-interpreteur-boucle-lecture-moins-evaluation-moins-impression-REPL-le-projet-Kulla-nait-sur-OpenJDK/"/>
+    <summary><![CDATA[<b>Java pourrait être doté d'un interpréteur boucle : lecture - évaluation  impression (REPL)</b><br />
+<b>le projet Kulla nait sur OpenJDK</b><br/><br/>La plateforme Java pourrait dans le futur être dotée de fonctionnalités REPL (Read Evaluate Print Loop) comme pour le langage de programmation LISP.<br/><br/>Les développeurs d'OpenJDK, la déclinaison open source de Java, étudient la possibilité d'ajouter officiellement l'outil au langage de programmation.<br/><br/>La discussion est effectuée dans le cadre du projet  Kulla, qui a vu le jour le...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/java-2.gif" type="image/jpeg" length="3131"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74912/Java-pourrait-etre-dote-d-un-interpreteur-boucle-lecture-moins-evaluation-moins-impression-REPL-le-projet-Kulla-nait-sur-OpenJDK/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74906/Conference-IDC-DevOps-comment-reconcilier-ses-equipes-developpement-et-operations-Rendez-vous-le-18-septembre-prochain-a-Paris/</id>
+    <title><![CDATA[Conférence IDC DevOps : comment réconcilier ses équipes développement et opérations ? Rendez-vous le 18 septembre prochain à Paris]]></title>
+    <updated>2014-09-04T15:51:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74906/Conference-IDC-DevOps-comment-reconcilier-ses-equipes-developpement-et-operations-Rendez-vous-le-18-septembre-prochain-a-Paris/"/>
+    <summary><![CDATA[<b>Conférence IDC DevOps : comment réconcilier ses équipes développement et opérations ?<br />
+<i>Agilité, Tests &amp; Qualité, Collaboration aux centres de l'événement</i></b><br/><br/>IDC organise une matinée sur les enjeux d'une stratégie DevOps, qui sera l'occasion de partager quelques clés sur les bonnes pratiques afin de réconcilier IT et Business, d'accélérer le Time to Market et de répondre plus dynamiquement aux besoins métiers. <br/><br/>L'événement aura lieu le jeudi 18 septembre prochain, au Cercle National des Armées, Paris...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/event.gif" type="image/jpeg" length="2883"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74906/Conference-IDC-DevOps-comment-reconcilier-ses-equipes-developpement-et-operations-Rendez-vous-le-18-septembre-prochain-a-Paris/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74891/IFA-2014-Microsoft-va-a-l-assaut-d-Android-et-des-Chromebooks-avec-des-tablettes-Windows-a-moins-de-150-et-des-PC-low-cost/</id>
+    <title><![CDATA[IFA 2014 : Microsoft va à l'assaut d'Android et des Chromebooks avec des tablettes Windows à moins de 150$ et des PC low cost]]></title>
+    <updated>2014-09-04T13:32:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74891/IFA-2014-Microsoft-va-a-l-assaut-d-Android-et-des-Chromebooks-avec-des-tablettes-Windows-a-moins-de-150-et-des-PC-low-cost/"/>
+    <summary><![CDATA[<b>Microsoft va à l'assaut d'Android et des Chromebooks</b><br />
+<b>avec des tablettes Windows à moins de 150 $ et des PC low cost</b><br/><br/>Android a pu s'imposer sur le marché des tablettes grâce à des dispositifs à faible coût. Les Chromebooks ont également enregistré une forte croissance, selon les derniers chiffres de Gartner, notamment grâce à leurs prix compétitifs.<br/><br/>Comment rivaliser avec Google qui offre  Chrome OS et Android gratuitement aux constructeurs d'appareils ? Microsoft a trouvé la solution au sein d'une...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/win8-pre-2.gif" type="image/jpeg" length="5055"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74891/IFA-2014-Microsoft-va-a-l-assaut-d-Android-et-des-Chromebooks-avec-des-tablettes-Windows-a-moins-de-150-et-des-PC-low-cost/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/protocole-delegation/</id>
+    <title><![CDATA[Apprendre Swift à partir d'Objective-C : Protocoles et Délégations, un tutoriel par Chris Ching]]></title>
+    <updated>2014-09-04T12:00:00+02:00</updated>
+    <link rel="alternate" href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/protocole-delegation/"/>
+    <summary><![CDATA[Bonjour,<br/><br/>Je vous présente cet article de Chris Ching intitulé :<br/><br/><a href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/protocole-delegation/" target="_blank"><b>Apprendre Swift à partir d'Objective-C <br/><br/>Partie 4 : Protocoles et Délégations</b></a><br/><br/>
+	
+		
+			Ce tutoriel est la suite des parties <a href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/variable-classe-methode-propriete/" target="_blank">deux</a> et <a href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/condition-structure-controle-colle" target="_blank">trois</a> où nous avons comparé Swift et Objective-C sur différentes opérations impliquant des variables, des classes, des méthodes et des propriétés.<br />
+Ce tutoriel est plus adapté pour les personnes qui connaissent déjà Objective-C (au moins les bases) et qui veulent voir les équivalences dans Swift.<br/><br/><b><a href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/devriez-vous-continuer-apprendre-objective-c/#LIV" target="_blank">Retrouvez...</a></b>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/swift.png" type="image/jpeg" length="3944"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74883/Android-Chrome-37-se-met-au-Material-Design-Firefox-introduit-de-nouvelles-options-pour-personnaliser-la-navigation/</id>
+    <title><![CDATA[Android : Chrome 37 se met au Material Design, Firefox introduit de nouvelles options pour personnaliser la navigation]]></title>
+    <updated>2014-09-04T11:32:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74883/Android-Chrome-37-se-met-au-Material-Design-Firefox-introduit-de-nouvelles-options-pour-personnaliser-la-navigation/"/>
+    <summary><![CDATA[<b>Android : Chrome 37 se met au Material Design</b><br />
+<b>Firefox introduit de nouvelles options pour personnaliser la navigation</b><br/><br/>Google a dévoilé la version finale de son navigateur Chrome pour les utilisateurs de terminaux sous son OS mobile Android. Chrome 37 s'illustre avec les modifications apportées à son interface utilisateur pour se mettre au Material Design.<br/><br/>Material Design est une nouvelle charte graphique qui se veut plus plate, plus épurée, plus colorée, plus intuitive et surtout centrée sur les...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/android.gif" type="image/jpeg" length="1990"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74883/Android-Chrome-37-se-met-au-Material-Design-Firefox-introduit-de-nouvelles-options-pour-personnaliser-la-navigation/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74881/MATLAB-EXPO-2014-l-edition-francaise-de-la-conference-gratuite-aura-lieu-le-2-octobre-venez-decouvrir-echanger-et-innover-avec-MATLAB-et-Simulink/</id>
+    <title><![CDATA[MATLAB EXPO 2014 : l'édition française de la conférence gratuite aura lieu le 2 octobre, venez découvrir, échanger et innover avec MATLAB et Simulink]]></title>
+    <updated>2014-09-04T10:38:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74881/MATLAB-EXPO-2014-l-edition-francaise-de-la-conference-gratuite-aura-lieu-le-2-octobre-venez-decouvrir-echanger-et-innover-avec-MATLAB-et-Simulink/"/>
+    <summary><![CDATA[<b>MATLAB EXPO 2014 : l'édition française de la conférence gratuite aura lieu le 2 octobre</b><br />
+<b>venez  découvrir, échanger et innover avec MATLAB et Simulink</b><br/><br/>MathWorks, l'éditeur de MATLAB et de Simulink, organise la première <a href="http://www.developpez.com/redirect/1273" target="_blank">MATLAB EXPO</a> française qui se tiendra jeudi 2 octobre à Paris.<br/><br/>MATLAB EXPO 2014 est une conférence d'une journée, organisée dans les plus grands pays d'Europe et d'Asie. Avec une dizaine de témoignages utilisateurs, tous secteurs confondus, parmi lesquels : Airbus, Bosch, CNP Assurances,...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/matlab.gif" type="image/jpeg" length="3017"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74881/MATLAB-EXPO-2014-l-edition-francaise-de-la-conference-gratuite-aura-lieu-le-2-octobre-venez-decouvrir-echanger-et-innover-avec-MATLAB-et-Simulink/#comments</wfw:comment>
+  </entry>
+  <entry>
+    <id>http://jeux.developpez.com/tutoriels/directx-11-rastertek/tutoriel-8-lecture-modele-OBJ/</id>
+    <title><![CDATA[Tutoriel DirectX 11 : chargement de modèles 3D, le huitième tutoriel de la série sur DirectX 11]]></title>
+    <updated>2014-09-04T08:30:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/tutoriels/directx-11-rastertek/tutoriel-8-lecture-modele-OBJ/"/>
+    <summary><![CDATA[Bonjour,<br/><br/>La rubrique 2D/3D/Jeux a le plaisir de vous apporter le huitième tutoriel de <a href="http://jeux.developpez.com/tutoriels/directx-11-rastertek/" target="_blank">la série de tutoriels sur DirectX 11</a>. <br />
+Ce <a href="http://jeux.developpez.com/tutoriels/directx-11-rastertek/tutoriel-8-lecture-modele-OBJ/" target="_blank">huitième tutoriel</a> va vous aider à convertir un format de modèle 3D provenant de Maya vers le format étudié dans le tutoriel précédent. Ainsi vous pourrez l'afficher dans votre scène en DirectX 11.<br/><br/><b><a href="http://jeux.developpez.com/tutoriels/directx-11-rastertek/tutoriel-8-lecture-modele-OBJ/" target="_blank">Bonne lecture</a></b>.]]></summary>
+  </entry>
+  <entry>
+    <id>http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/condition-structure-controle-collection/</id>
+    <title><![CDATA[Apprendre Swift à partir d'Objective-C : Les conditions, les structures de contrôle et les collections, un tutoriel par Chris Ching]]></title>
+    <updated>2014-09-04T07:00:00+02:00</updated>
+    <link rel="alternate" href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/condition-structure-controle-collection/"/>
+    <summary><![CDATA[Bonjour,<br/><br/>Je vous présente cet article de Chris Ching intitulé :<br/><br/><a href="http://codewithchris.developpez.com/tutoriels/swift/debuter/apprendre-swift-a-partir-objective-c/condition-structure-controle-collection/" target="_blank"><b>Apprendre Swift à partir d'Objective-C <br/><br/>Partie 3 : Les conditions, les structures de contrôle et les collections</b></a><br/><br/>
+	
+		
+			Dans cette série d'articles, nous allons voir quelques-unes des différences présentes entre Swift et l'Objective-C. Ce tutoriel est plus approprié à ceux connaissant déjà l'Objective-C (au moins ses bases) et qui veulent connaître quels sont les équivalents avec Swift.Eh bien, allons-y ! Voici un guide très pratique...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/swift.png" type="image/jpeg" length="3944"/>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74877/Un-bloggeur-d-un-magazine-pro-Apple-expose-les-differentes-strategies-employees-par-l-entreprise-pour-manipuler-les-medias/</id>
+    <title><![CDATA[Un bloggeur d'un magazine pro-Apple expose les différentes stratégies employées par l'entreprise pour manipuler les médias]]></title>
+    <updated>2014-09-03T16:17:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74877/Un-bloggeur-d-un-magazine-pro-Apple-expose-les-differentes-strategies-employees-par-l-entreprise-pour-manipuler-les-medias/"/>
+    <summary><![CDATA[<b>Un blogueur d'un magazine pro-Apple expose les différentes stratégies employées par l'entreprise  </b><br />
+<b>pour manipuler les médias</b><br/><br/>Mark Gurman, un des blogueurs les plus célèbres couvrant les actualités Apple pour le compte de 9to5mac, a rédigé un article décrivant comment l'équipe chargée des relations publiques d'Apple manipule les médias. «<i> Le département des relations publiques (PR) d'Apple est certainement le meilleur au monde (). Avant que les clients n'aient pu avoir l'opportunité de voir ou de...</i>]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/apple.gif" type="image/jpeg" length="2708"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74877/Un-bloggeur-d-un-magazine-pro-Apple-expose-les-differentes-strategies-employees-par-l-entreprise-pour-manipuler-les-medias/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74876/Microsoft-Chine-devoile-le-nom-et-le-logo-de-Windows-9/</id>
+    <title><![CDATA[Microsoft Chine dévoile le nom et le logo de Windows 9]]></title>
+    <updated>2014-09-03T13:40:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74876/Microsoft-Chine-devoile-le-nom-et-le-logo-de-Windows-9/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/win8-2.gif" type="image/jpeg" length="3499"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74876/Microsoft-Chine-devoile-le-nom-et-le-logo-de-Windows-9/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74875/Windows-9-les-partenaires-de-Microsoft-auraient-deja-acces-a-la-preversion-de-l-OS-pour-effectuer-des-tests-avant-sa-sortie-le-30-septembre/</id>
+    <title><![CDATA[Windows 9 : les partenaires de Microsoft auraient déjà accès à la préversion de l'OS pour effectuer des tests avant sa sortie le 30 septembre]]></title>
+    <updated>2014-09-03T13:28:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74875/Windows-9-les-partenaires-de-Microsoft-auraient-deja-acces-a-la-preversion-de-l-OS-pour-effectuer-des-tests-avant-sa-sortie-le-30-septembre/"/>
+    <summary><![CDATA[<b>Windows 9 : les partenaires de Microsoft auraient déjà accès à la préversion de l'OS</b><br />
+<b>pour effectuer des tests avant sa sortie le 30 septembre </b><br/><br/>Windows 9 s'approche d'une première version de test qui  pourrait être mise à la disposition du public à partir du 30 septembre. Mais avant,  Microsoft doit permettre à ses partenaires constructeurs d'appareils de se faire une idée des nouveautés de l'OS et de le prendre en main.<br/><br/>Selon Brad Sams de Neowin, qui cite des sources proches de Microsoft, la firme...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/windows-phone-8-2.gif" type="image/jpeg" length="3793"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74875/Windows-9-les-partenaires-de-Microsoft-auraient-deja-acces-a-la-preversion-de-l-OS-pour-effectuer-des-tests-avant-sa-sortie-le-30-septembre/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74871/Droidcon-la-nouvelle-edition-de-la-conference-100-pourcent-Android-se-tiendra-a-Paris-les-22-et-23-septembre-decouvrez-quelques-unes-des-sessions/</id>
+    <title><![CDATA[Droidcon : la nouvelle édition de la conférence 100% Android se tiendra à Paris les 22 et 23 septembre, découvrez quelques-unes des sessions]]></title>
+    <updated>2014-09-03T13:01:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74871/Droidcon-la-nouvelle-edition-de-la-conference-100-pourcent-Android-se-tiendra-a-Paris-les-22-et-23-septembre-decouvrez-quelques-unes-des-sessions/"/>
+    <summary><![CDATA[<b>Droidcon : la nouvelle édition de la conférence 100% Android se tiendra à Paris les 22 et 23 septembre, </b><br />
+<b>découvrez quelques-unes des sessions </b><br/><br/>Les 22 et 23 septembre se tiendra au Tapis Rouge de Paris la conférence Droidcon, la plus grande conférence européenne articulée autour d'Android. Durant ces deux jours, plus de 500 participants venant des quatre coins de la planète sont attendus. Près de 30 conférenciers internationaux exposeront sur 45 minutes en Anglais et en Français sur trois thèmes...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/android.gif" type="image/jpeg" length="1990"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74871/Droidcon-la-nouvelle-edition-de-la-conference-100-pourcent-Android-se-tiendra-a-Paris-les-22-et-23-septembre-decouvrez-quelques-unes-des-sessions/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://www.developpez.com/actu/74866/Photos-des-stars-nues-Apple-defend-la-securite-d-iCloud-et-affirme-que-les-comptes-ont-ete-compromis-suite-a-des-attaques-tres-ciblees/</id>
+    <title><![CDATA[Photos des stars nues : Apple défend la sécurité d'iCloud et affirme que les comptes ont été compromis suite à des « attaques très ciblées »]]></title>
+    <updated>2014-09-03T11:44:00+02:00</updated>
+    <link rel="alternate" href="http://www.developpez.com/actu/74866/Photos-des-stars-nues-Apple-defend-la-securite-d-iCloud-et-affirme-que-les-comptes-ont-ete-compromis-suite-a-des-attaques-tres-ciblees/"/>
+    <summary><![CDATA[<b>Photos des stars nues : Apple défend la sécurité d'iCloud</b><br />
+<b>et affirme que les comptes ont été compromis suite à des « attaques très ciblées » </b><br/><br/>Suite à la publication de photos privées d'une centaine de célébrités nues, dont Jennifer Lawrence  et Rihanna, après une violation de leur comptes iCloud, Apple avait annoncé avoir ouvert une enquête sur le sujet. <br/><br/>Après 40 heures d'investigations actives, la firme livre ses premières découvertes. Selon un communiqué publié par l'entreprise, la sécurité d'iCloud...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/apple.gif" type="image/jpeg" length="2708"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.developpez.com/actu/74866/Photos-des-stars-nues-Apple-defend-la-securite-d-iCloud-et-affirme-que-les-comptes-ont-ete-compromis-suite-a-des-attaques-tres-ciblees/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://jeux.developpez.com/actu/74856/Gideros-le-moteur-de-jeux-Lua-est-abandonne-son-code-passe-open-source-sous-licence-MIT/</id>
+    <title><![CDATA[Gideros, le moteur de jeux Lua  abandonné : son code passe open source sous licence MIT]]></title>
+    <updated>2014-09-03T10:57:00+02:00</updated>
+    <link rel="alternate" href="http://jeux.developpez.com/actu/74856/Gideros-le-moteur-de-jeux-Lua-est-abandonne-son-code-passe-open-source-sous-licence-MIT/"/>
+    <summary><![CDATA[<b>Gideros, le moteur de jeux Lua est abandonné : son code passe open source</b><br/><br/><b>Gideros</b> est un moteur de jeux 2D multi-plateforme utilisable en LUA. L'équipe officielle abandonne son développement et suite à cette décision, le code source a été publié sur <a href="https://github.com/gideros/gideros" target="_blank">Github</a> sous licence MIT. Malheureusement, pour que cette publication soit utilisable, une partie des changements commencés par les développeurs a du être annulé.<br/><br/>En plus de cette première version, une seconde version, de développement est disponible, toujours...]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/jeux.gif" type="image/jpeg" length="2768"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://jeux.developpez.com/actu/74856/Gideros-le-moteur-de-jeux-Lua-est-abandonne-son-code-passe-open-source-sous-licence-MIT/#comments</wfw:comment>
+  </entry>
+  <entry xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <id>http://open-source.developpez.com/actu/74859/Tox-un-Skype-made-in-hacker-sortie-en-version-alpha/</id>
+    <title><![CDATA[Tox : un Skype made in hacker pour sécuriser les échanges des internautes, l'outil disponible en version Alpha]]></title>
+    <updated>2014-09-03T09:30:00+02:00</updated>
+    <link rel="alternate" href="http://open-source.developpez.com/actu/74859/Tox-un-Skype-made-in-hacker-sortie-en-version-alpha/"/>
+    <summary><![CDATA[]]></summary>
+    <link rel="enclosure" href="http://www.developpez.com/images/logos/libres-open-source.png" type="image/jpeg" length="3386"/>
+    <wfw:comment xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://open-source.developpez.com/actu/74859/Tox-un-Skype-made-in-hacker-sortie-en-version-alpha/#comments</wfw:comment>
+  </entry>
+</feed>
