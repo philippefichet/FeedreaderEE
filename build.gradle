@@ -12,6 +12,7 @@ buildscript {
         classpath 'com.bmuschko:gradle-cargo-plugin:2.2.2'
         classpath "com.moowork.gradle:gradle-node-plugin:0.12"
         classpath 'com.moowork.gradle:gradle-gulp-plugin:0.12'
+        classpath "org.wildfly.swarm:wildfly-swarm-plugin:1.0.0.CR1"
     }
 }
 
@@ -26,6 +27,7 @@ apply plugin: 'war'
 apply plugin: 'com.bmuschko.cargo'
 apply plugin: 'com.moowork.node'
 apply plugin: 'com.moowork.gulp'
+apply plugin: 'wildfly-swarm'
 group = 'feedreader'
 version = '1.0'
 
@@ -73,6 +75,14 @@ dependencies {
     compile 'org.webjars.npm:jquery:2.2.1'
     compile 'org.webjars.npm:react:0.14.7'
     compile 'org.webjars.npm:react-dom:0.14.7'
+    
+    // Wildfly swarw
+    compile "org.wildfly.swarm:jaxrs-cdi:1.0.0.CR1"
+    compile "org.wildfly.swarm:cdi:1.0.0.CR1"
+    compile "org.wildfly.swarm:datasources:1.0.0.CR1"
+    compile "org.wildfly.swarm:jpa:1.0.0.CR1"
+    compile "org.wildfly.swarm:ejb:1.0.0.CR3"
+    compile "org.wildfly.swarm:transactions:1.0.0.CR1"
     
     // Security
     compile group: 'org.apache.shiro', name: 'shiro-web', version:'1.2.3'
@@ -212,6 +222,12 @@ task jaxrsAnalyzer (type: Exec) {
     }
     workingDir "build/classes/main"
     commandLine "java", "-jar", "../../jaxrs-analyzer.jar", "-b", "asciidoc", "-n", "feedreader", "-o", "../API.asciidoc", "."
+}
+
+
+swarm {
+    mainClassName = 'fr.feedreader.SwarmMain'
+    moduleDirs = [new File(buildDir, 'resources/main/modules')]
 }
 
 // shortcut deployment
