@@ -17,9 +17,10 @@ ENV WILDFLY_HOME /opt/wildfly/wildfly-$WILDFLY_VERSION
 ENV WILDFLY_ADMIN_USER admin
 ENV WILDFLY_ADMIN_PASSWORD megapassword
 RUN mkdir -p /opt/wildfly/
-RUN wget http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz -O /opt/wildfly/wildfly-$WILDFLY_VERSION.tar.gz
-RUN gunzip /opt/wildfly/wildfly-$WILDFLY_VERSION.tar.gz
-RUN tar xvf /opt/wildfly/wildfly-$WILDFLY_VERSION.tar -C /opt/wildfly/
+RUN cd /opt/wildfly/ && \
+    wget http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz -O - | \
+    gunzip | \
+    tar xvf -
 
 # Configure admin
 RUN $WILDFLY_HOME/bin/add-user.sh --silent -u $WILDFLY_ADMIN_USER -p $WILDFLY_ADMIN_PASSWORD -e
